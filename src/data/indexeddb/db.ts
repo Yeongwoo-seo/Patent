@@ -6,42 +6,58 @@ let dbPromise: Promise<IDBPDatabase<HoedokshilDB>> | null = null;
 export function getDb(): Promise<IDBPDatabase<HoedokshilDB>> {
   if (!dbPromise) {
     dbPromise = openDB<HoedokshilDB>(DB_NAME, DB_VERSION, {
-      upgrade(db) {
-        const attemptEvents = db.createObjectStore('attemptEvents', { keyPath: 'eventId' });
-        attemptEvents.createIndex('byItem', 'itemId');
-        attemptEvents.createIndex('byStudyDay', 'studyDay');
-        attemptEvents.createIndex('byLearner', 'learnerId');
+      // 21.2: 서비스 워커/앱 갱신을 이유로 학습 DB를 삭제하지 않는다 — 기존 store는 그대로
+      // 두고, oldVersion 기준으로 새로 필요한 store만 추가한다.
+      upgrade(db, oldVersion) {
+        if (oldVersion < 1) {
+          const attemptEvents = db.createObjectStore('attemptEvents', { keyPath: 'eventId' });
+          attemptEvents.createIndex('byItem', 'itemId');
+          attemptEvents.createIndex('byStudyDay', 'studyDay');
+          attemptEvents.createIndex('byLearner', 'learnerId');
 
-        const exposureEvents = db.createObjectStore('exposureEvents', { keyPath: 'eventId' });
-        exposureEvents.createIndex('byItem', 'itemId');
+          const exposureEvents = db.createObjectStore('exposureEvents', { keyPath: 'eventId' });
+          exposureEvents.createIndex('byItem', 'itemId');
 
-        const reviewStates = db.createObjectStore('reviewStates', {
-          keyPath: ['learnerId', 'itemId', 'learningEpoch'],
-        });
-        reviewStates.createIndex('byLearner', 'learnerId');
-        reviewStates.createIndex('byDueStudyDay', 'dueStudyDay');
+          const reviewStates = db.createObjectStore('reviewStates', {
+            keyPath: ['learnerId', 'itemId', 'learningEpoch'],
+          });
+          reviewStates.createIndex('byLearner', 'learnerId');
+          reviewStates.createIndex('byDueStudyDay', 'dueStudyDay');
 
-        const learningItems = db.createObjectStore('learningItems', { keyPath: 'id' });
-        learningItems.createIndex('bySubject', 'subjectId');
+          const learningItems = db.createObjectStore('learningItems', { keyPath: 'id' });
+          learningItems.createIndex('bySubject', 'subjectId');
 
-        db.createObjectStore('gradingSpecs', { keyPath: 'id' });
+          db.createObjectStore('gradingSpecs', { keyPath: 'id' });
 
-        const durationRules = db.createObjectStore('durationRules', { keyPath: 'id' });
-        durationRules.createIndex('bySubject', 'subjectId');
+          const durationRules = db.createObjectStore('durationRules', { keyPath: 'id' });
+          durationRules.createIndex('bySubject', 'subjectId');
 
-        const syncOutbox = db.createObjectStore('syncOutbox', { keyPath: 'outboxId' });
-        syncOutbox.createIndex('byStatus', 'status');
+          const syncOutbox = db.createObjectStore('syncOutbox', { keyPath: 'outboxId' });
+          syncOutbox.createIndex('byStatus', 'status');
 
-        const timeSegments = db.createObjectStore('timeSegments', { keyPath: 'id' });
-        timeSegments.createIndex('byDate', 'date');
+          const timeSegments = db.createObjectStore('timeSegments', { keyPath: 'id' });
+          timeSegments.createIndex('byDate', 'date');
 
-        const plannerBlocks = db.createObjectStore('plannerBlocks', { keyPath: 'id' });
-        plannerBlocks.createIndex('byDate', 'date');
+          const plannerBlocks = db.createObjectStore('plannerBlocks', { keyPath: 'id' });
+          plannerBlocks.createIndex('byDate', 'date');
 
-        const dailyPlans = db.createObjectStore('dailyPlans', {
-          keyPath: ['learnerId', 'studyDay', 'planVersion'],
-        });
-        dailyPlans.createIndex('byStudyDay', 'studyDay');
+          const dailyPlans = db.createObjectStore('dailyPlans', {
+            keyPath: ['learnerId', 'studyDay', 'planVersion'],
+          });
+          dailyPlans.createIndex('byStudyDay', 'studyDay');
+        }
+
+        if (oldVersion < 2) {
+          const textbookParagraphs = db.createObjectStore('textbookParagraphs', { keyPath: 'id' });
+          textbookParagraphs.createIndex('bySubject', 'subjectId');
+
+          const contentLinks = db.createObjectStore('contentLinks', { keyPath: 'id' });
+          contentLinks.createIndex('byFrom', 'fromId');
+          contentLinks.createIndex('byTo', 'toId');
+
+          const annotations = db.createObjectStore('annotations', { keyPath: 'id' });
+          annotations.createIndex('byParagraph', 'paragraphId');
+        }
       },
     });
   }

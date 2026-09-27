@@ -57,7 +57,7 @@ async function bootstrap() {
         await renderStudy(main, db, settings);
         break;
       case 'library':
-        await renderLibrary(main, db);
+        await renderLibrary(main, db, settings);
         break;
       case 'records':
         await renderRecords(main, db, settings);

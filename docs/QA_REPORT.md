@@ -8,7 +8,7 @@
 | 검사 | 명령 | 결과 |
 |---|---|---|
 | 타입체크 | `npm run typecheck` (`tsc --noEmit`) | 통과, 오류 0 |
-| 단위 테스트 | `npm test` (`vitest run`) | **46/46 통과**, 6개 파일 |
+| 단위 테스트 | `npm test` (`vitest run`) | **50/50 통과**, 7개 파일 |
 | 프로덕션 빌드 | `npm run build` | 통과. JS 번들 gzip 약 15KB (초기 목표 250KB 이내, 23.1) |
 
 ### 단위 테스트 범위
@@ -24,6 +24,8 @@
 - `tests/unit/domain/buildDailyPlan.test.ts` — 대분류 균등 배분, 예산 재배분,
   컨텍스트 필터링, 약점 우선순위, 계획 안정성(12.6), 최소 목표(12.7) 6개
 - `tests/unit/domain/timeTracking.test.ts` — 중복 구간 합집합 계산(13.4) 3개
+- `tests/unit/domain/paragraphStats.test.ts` — 문단 통계 계산(9.2), 미시도/‘new’
+  상태를 미확인으로 정확히 분류하는지, 관계없는 항목의 통계를 끌어오지 않는지 4개
 - `tests/unit/data/attemptRepository.test.ts` — IndexedDB 트랜잭션 원자성(19.1),
   미검증 스펙의 무변화, 노출 이벤트의 최소 간격 반영 4개 (fake-indexeddb 사용)
 
@@ -46,6 +48,9 @@
       항목만 후보가 됨을 확인(12.3-3 반영)
 - [x] 기록 탭: 10분 그리드 셀 탭 → `plannerBlocks`에 저장/삭제 토글 확인
 - [x] 설정 탭 렌더링 확인
+- [x] **리더 왕복(9.2)**: 서재 탭 → 문단 카드(연결/오답/미확인 수 표시) → 문단
+      상세 → 형광펜 토글(on 확인) → 연결된 학습 항목 열기 → OX 풀이 제출 →
+      결과 화면의 "근거 문단 보기" 버튼 → 원래 문단으로 복귀까지 오류 없이 확인
 
 이 목록은 **자동화 스모크 테스트**이며 다음을 검증하지 않는다: 실제 iPhone
 Safari/홈 화면 설치 동작, 안전 영역 inset의 실기기 렌더링, 소프트 키보드 겹침,

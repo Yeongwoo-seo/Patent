@@ -11,8 +11,11 @@
 
 ## 이번 세션에 만든 초기 스키마
 
-IndexedDB 데이터베이스 `hoedokshil`, 버전 `1`(`src/data/indexeddb/schema.ts`,
-`src/data/indexeddb/db.ts`)에 다음 object store를 처음 생성했다.
+IndexedDB 데이터베이스 `hoedokshil`, 버전 `2`(`src/data/indexeddb/schema.ts`,
+`src/data/indexeddb/db.ts`)에 다음 object store를 생성했다. v1은 핵심 학습
+엔진 store, v2는 같은 세션 안에서 9장 리더용 store 3개를 추가한 것이며,
+`upgrade(db, oldVersion)`의 `oldVersion` 분기로 처리해 기존 store를 다시
+만들거나 지우지 않는다(21.2).
 
 | store | keyPath | 용도 |
 |---|---|---|
@@ -26,6 +29,9 @@ IndexedDB 데이터베이스 `hoedokshil`, 버전 `1`(`src/data/indexeddb/schema
 | `timeSegments` | `id` | 실제 학습 시간 원본(현재 미사용 — 세션 타이머 미연동) |
 | `plannerBlocks` | `id` | 10분 블록 표시용 |
 | `dailyPlans` | `[learnerId, studyDay, planVersion]` | 일일 계획(현재 메모리에서만 사용, 저장 연동은 다음 세션 과제) |
+| `textbookParagraphs` (v2) | `id` | 기본서 문단(9장 리더, 3개 과목 대표 예시만) |
+| `contentLinks` (v2) | `id` | 학습 항목 ↔ 문단 다대다 연결(4.1) |
+| `annotations` (v2) | `id` | 사용자 형광펜/메모(9.1, 원본과 분리 저장) |
 
 시딩 데이터는 `src/data/fixtures/demoContent.ts`의 **테스트용 가상 자료**뿐이며,
 `seedDemoContentIfEmpty()`가 `learningItems` store가 비어 있을 때만 1회 실행한다

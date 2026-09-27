@@ -5,6 +5,7 @@ import { getAllLearningItems, getAllReviewStatesForLearner, getGradingSpec } fro
 import { LOCAL_LEARNER_ID } from '../../app/session';
 import type { AppSettings } from '../../app/settings';
 import { mountItemAnswerFlow } from '../item/itemAnswerFlow';
+import { renderParagraphView } from '../reader/renderParagraphView';
 import type { HoedokshilDB } from '../../data/indexeddb/schema';
 import type { LearningContext } from '../../domain/types';
 import type { DailyPlan, QuestItem } from '../../domain/quest/types';
@@ -152,6 +153,13 @@ export async function renderToday(main: HTMLElement, db: IDBPDatabase<Hoedokshil
       onDone: () => {
         planVersion += 1;
         void renderToday(main, db, settings);
+      },
+      onViewParagraph: (paragraphId) => {
+        void renderParagraphView(main, paragraphId, {
+          db,
+          onBack: () => void renderToday(main, db, settings),
+          onOpenItem: (nextItemId) => void openItem(nextItemId),
+        });
       },
     });
   }

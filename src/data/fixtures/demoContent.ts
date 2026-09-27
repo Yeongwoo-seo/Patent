@@ -13,6 +13,7 @@ import type {
   LearningItem,
   LegalValidity,
 } from '../../domain/types';
+import type { ContentLink, TextbookParagraph } from '../../domain/reader/types';
 
 const SYN = '(테스트용 가상 자료) ';
 
@@ -419,4 +420,66 @@ export const demoDurationRules: DurationRule[] = [
     whyExplanation: null,
     whyEvidenceType: 'unavailable',
   },
+];
+
+/**
+ * 9장 리더 최소 구현용 기본서 문단 — 일부 과목(민법·특허·물리)에만 대표로 넣었다.
+ * 나머지 과목의 문단은 이번 세션 범위 밖이다(KNOWN_LIMITATIONS.md).
+ */
+export const demoTextbookParagraphs: TextbookParagraph[] = [
+  {
+    id: 'demo-para-civil-1',
+    subjectId: 'civil',
+    bookId: 'demo-civil-basic-book',
+    chapter: '총칙',
+    section: '신의성실의 원칙',
+    paragraphIndex: 1,
+    role: 'principle',
+    text:
+      SYN +
+      '신의칙은 권리 행사와 의무 이행이 서로의 신뢰를 저버리지 않는 방식으로 이루어져야 한다는 원칙이다(가상 설명). ' +
+      '판례는 사실관계에 따라 신의칙 위반 여부를 개별적으로 판단하며, 하나의 결론을 모든 사안에 그대로 적용하지 않는다.',
+    assetIds: [],
+    isSynthetic: true,
+  },
+  {
+    id: 'demo-para-patent-1',
+    subjectId: 'patent',
+    bookId: 'demo-ip-basic-book',
+    chapter: '출원·심사',
+    section: '심사청구 기간',
+    paragraphIndex: 1,
+    role: 'requirement',
+    text:
+      SYN +
+      '가상 특허법상 심사청구는 출원일로부터 일정 기간 내에 해야 하며, 기간 내 청구가 없으면 해당 출원은 취하된 것으로 본다. ' +
+      '실용신안은 별도 규정을 두므로 특허의 기간을 그대로 적용하지 않는다.',
+    assetIds: [],
+    isSynthetic: true,
+  },
+  {
+    id: 'demo-para-physics-1',
+    subjectId: 'physics',
+    bookId: 'demo-science-basic-book',
+    chapter: '역학',
+    section: '뉴턴의 운동 법칙',
+    paragraphIndex: 1,
+    role: 'formula',
+    text:
+      SYN +
+      'F=ma는 물체에 작용하는 알짜힘(F)이 질량(m)과 가속도(a)의 곱과 같다는 뉴턴 제2법칙이다. ' +
+      '단위는 힘(N), 질량(kg), 가속도(m/s^2)를 사용하며, 알짜힘이 0이면 가속도도 0이다(관성의 법칙과 연결).',
+    assetIds: [],
+    isSynthetic: true,
+  },
+];
+
+/** 9.2: 문제 <-> 문단 양방향 연결. relation은 "이 학습 항목이 이 문단에 근거해 판단된다"는 뜻으로 통일한다. */
+export const demoContentLinks: ContentLink[] = [
+  { id: 'link-civil-1', fromId: 'demo-civil-statement-1', toId: 'demo-para-civil-1', relation: 'derived_from', sourceLocation: '문단 1문장' },
+  { id: 'link-civil-2', fromId: 'demo-civil-statement-2', toId: 'demo-para-civil-1', relation: 'derived_from', sourceLocation: '문단 2문장' },
+  { id: 'link-patent-1', fromId: 'demo-patent-duration-1', toId: 'demo-para-patent-1', relation: 'derived_from', sourceLocation: '문단 1문장' },
+  { id: 'link-patent-2', fromId: 'demo-patent-procedure-1', toId: 'demo-para-patent-1', relation: 'derived_from', sourceLocation: '문단 1문장' },
+  { id: 'link-physics-1', fromId: 'demo-physics-formula-recall-1', toId: 'demo-para-physics-1', relation: 'derived_from', sourceLocation: '문단 1문장' },
+  { id: 'link-physics-2', fromId: 'demo-physics-independent-1', toId: 'demo-para-physics-1', relation: 'derived_from', sourceLocation: '문단 1문장' },
 ];

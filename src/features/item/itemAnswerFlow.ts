@@ -2,6 +2,7 @@ import type { IDBPDatabase } from 'idb';
 import { submitAttempt, recordExposure, type UserSettings } from '../../data/repositories/attemptRepository';
 import { demoChoiceOptions } from '../../data/fixtures/demoContent';
 import { getDeviceId, nextDeviceSequence, newCorrelationId, sessionId, LOCAL_LEARNER_ID } from '../../app/session';
+import { getLinkedParagraphIdsForItem, getTextbookParagraph } from '../../data/repositories/contentRepository';
 import type { AnswerPayload, Assistance, Confidence, GradingSpec, LearningItem } from '../../domain/types';
 import type { HoedokshilDB } from '../../data/indexeddb/schema';
 import { el } from '../../app/dom';
@@ -10,6 +11,8 @@ export type ItemFlowDeps = {
   db: IDBPDatabase<HoedokshilDB>;
   settings: UserSettings;
   onDone: () => void;
+  /** 9.2: 문제에서 관련 문단으로 이동. 없으면 "근거 문단 보기" 버튼을 표시하지 않는다. */
+  onViewParagraph?: (paragraphId: string) => void;
 };
 
 function syntheticBadge(item: LearningItem): HTMLElement | string {
@@ -52,7 +55,13 @@ async function doSubmit(
   return { outcome: event.outcome, dueStudyDay: state?.dueStudyDay ?? null };
 }
 
-function renderResult(container: HTMLElement, outcome: string, dueStudyDay: string | null, onNext: () => void) {
+async function renderResult(
+  container: HTMLElement,
+  item: LearningItem,
+  deps: ItemFlowDeps,
+  outcome: string,
+  dueStudyDay: string | null,
+) {
   const outcomeLabel: Record<string, string> = {
     correct: '정답',
     incorrect: '오답',
@@ -67,7 +76,29 @@ function renderResult(container: HTMLElement, outcome: string, dueStudyDay: stri
         : el('div', { className: 'muted', text: '이 시도는 복습 일정에 반영되지 않았습니다.' }),
     ]),
   );
-  container.append(el('div', { className: 'sticky-actions' }, [el('button', { className: 'btn btn-primary', text: '다음', onclick: onNext })]));
+
+  if (deps.onViewParagraph) {
+    const paragraphIds = await getLinkedParagraphIdsForItem(item.id, deps.db);
+    if (paragraphIds.length > 0) {
+      const buttons: HTMLElement[] = [];
+      for (const pid of paragraphIds) {
+        const paragraph = await getTextbookParagraph(pid, deps.db);
+        if (!paragraph) continue;
+        buttons.push(
+          el('button', {
+            className: 'btn',
+            text: `근거 문단 보기 · ${paragraph.section}`,
+            onclick: () => deps.onViewParagraph!(pid),
+          }),
+        );
+      }
+      if (buttons.length > 0) container.append(el('div', { className: 'btn-row' }, buttons));
+    }
+  }
+
+  container.append(
+    el('div', { className: 'sticky-actions' }, [el('button', { className: 'btn btn-primary', text: '다음', onclick: deps.onDone })]),
+  );
 }
 
 /** 10.1 OX/객관식류 기본 흐름: 제시 -> O/X/모름 -> 확실/애매 -> 제출 -> 정답/해설 -> 다음 */
@@ -111,7 +142,7 @@ function renderOxFlow(container: HTMLElement, deps: ItemFlowDeps, item: Learning
               const { outcome, dueStudyDay } = await doSubmit(deps, item, spec, answer, confidence!, 'none', false, 'ox_review');
               await recordExposure({ learnerId: LOCAL_LEARNER_ID, item, kind: 'answer_reveal', now: () => new Date(), settings: deps.settings }, deps.db);
               body.replaceChildren();
-              renderResult(body, outcome, dueStudyDay, deps.onDone);
+              void renderResult(body, item, deps, outcome, dueStudyDay);
             },
           }),
         ]),
@@ -166,7 +197,7 @@ function renderChoiceFlow(container: HTMLElement, deps: ItemFlowDeps, item: Lear
               const { outcome, dueStudyDay } = await doSubmit(deps, item, spec, answer, confidence!, 'none', false, 'choice_review');
               await recordExposure({ learnerId: LOCAL_LEARNER_ID, item, kind: 'answer_reveal', now: () => new Date(), settings: deps.settings }, deps.db);
               body.replaceChildren();
-              renderResult(body, outcome, dueStudyDay, deps.onDone);
+              void renderResult(body, item, deps, outcome, dueStudyDay);
             },
           }),
         ]),
@@ -241,7 +272,7 @@ function renderIndependentFlow(container: HTMLElement, deps: ItemFlowDeps, item:
     const confidence: Confidence = selfReportValue === 'independent' ? 'sure' : 'unsure';
     const { outcome, dueStudyDay } = await doSubmit(deps, item, spec, answer, confidence, assistance, true, 'independent_solve');
     body.replaceChildren();
-    renderResult(body, outcome, dueStudyDay, deps.onDone);
+    void renderResult(body, item, deps, outcome, dueStudyDay);
   }
 
   draw();
@@ -276,7 +307,7 @@ function renderSequenceFlow(container: HTMLElement, deps: ItemFlowDeps, item: Le
               const answer: AnswerPayload = { kind: 'sequence', orderedIds: picked };
               const { outcome, dueStudyDay } = await doSubmit(deps, item, spec, answer, 'sure', 'none', false, 'sequence_review');
               body.replaceChildren();
-              renderResult(body, outcome, dueStudyDay, deps.onDone);
+              void renderResult(body, item, deps, outcome, dueStudyDay);
             },
           }),
         ]),

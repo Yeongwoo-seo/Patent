@@ -1,6 +1,7 @@
 import type { IDBPDatabase } from 'idb';
 import { getAllLearningItems, getGradingSpec } from '../../data/repositories/contentRepository';
 import { mountItemAnswerFlow } from '../item/itemAnswerFlow';
+import { renderParagraphView } from '../reader/renderParagraphView';
 import type { AppSettings } from '../../app/settings';
 import type { HoedokshilDB } from '../../data/indexeddb/schema';
 import { SUBJECT_GROUP_OF, type SubjectId } from '../../domain/types';
@@ -71,6 +72,13 @@ export async function renderStudy(main: HTMLElement, db: IDBPDatabase<Hoedokshil
       db,
       settings: { timeZone: settings.timeZone, dayBoundaryMinutes: settings.dayBoundaryMinutes, settingsVersion: settings.settingsVersion },
       onDone: () => void renderStudy(main, db, settings),
+      onViewParagraph: (paragraphId) => {
+        void renderParagraphView(main, paragraphId, {
+          db,
+          onBack: () => void renderStudy(main, db, settings),
+          onOpenItem: (nextItemId) => void openItem(nextItemId),
+        });
+      },
     });
   }
 }
