@@ -279,6 +279,66 @@
   저장소) — `civil-import/tools/convert_civil_samples.py`(변환기 코드)만
   커밋한다.
 
+## 민법 680문항 전체 배치 변환(후속 세션) 관련 결정
+
+- **`samples/*.complete.json`을 미리 뽑아 두는 중간 단계를 두지 않고,
+  변환기가 패키지의 `tools/read_question.py::render_question`을 문항마다
+  직접 import해서 호출하도록 바꿨다.** 원래 독스트링은 "read_question.py로
+  680개 파일을 미리 뽑아 samples/ 상당 위치에 저장한 뒤 변환기가 그걸
+  읽게 하라"고 되어 있었지만, 렌더링 결과(문항당 약 160KB, 680개면 100MB+)를
+  디스크에 두 번 쓸 이유가 없어 함수를 바로 호출하는 쪽을 택했다 - 렌더링
+  로직은 여전히 패키지 쪽 `read_question.py`에만 있고 이 변환기는 그 출력
+  형태만 소비하므로 원래 의도(33개 원본 컬렉션을 직접 순회하지 않는다)는
+  그대로 지켰다.
+- **`PackageReader`를 문항마다 새로 만들지 않고 공유 인스턴스로 캐싱했다.**
+  `render_question()`은 호출마다 `PackageReader(root)`를 새로 만드는데,
+  그 생성자가 `registry/entities.jsonl`(68,618행, 25MB)을 매번 처음부터
+  다시 인덱싱한다 - 680번 반복하면 이 재인덱싱만으로 수십 분이 걸린다(실측:
+  최적화 전 680문항 중 600개 처리에 2분 30초 넘게 걸리고도 안 끝남).
+  패키지 파일이 실행 중 바뀌지 않는다는 전제로 `PackageReader`를 한 번만
+  만들고 이후 생성자 호출은 그 인스턴스의 `__dict__`를 복제하도록
+  바꿔치기해서, 680문항 전체 변환이 20초 내외로 끝나게 했다. 변환 로직
+  자체는 건드리지 않았다(성능 최적화만).
+- **이미지 전용 문항(160건)에서 실제로 드러난 버그를 고쳤다: 지문이 여러
+  개인 문항에서 마지막 지문만 남는 문제.** 텍스트 문항(2011-08/14)의
+  해설은 항상 `targetEntityType: 'Statement'`를 가리켜 분석 단위 id가
+  자연히 서로 달랐지만, 이미지 전용 문항의 해설은 `targetEntityType:
+  'Question'`이라 `targetEntityId`가 곧 문항 id 자신이다. 기존 변환기가
+  그 값을 그대로 분석 단위 id로 썼기 때문에, 한 문항에 지문이 여러 개(예:
+  2010-01은 5개)면 `analysis_units[qid]`/`learning_items[qid]`가 계속
+  덮어써져 마지막 지문 하나만 남았을 것이다(2문항 검증 때는 둘 다 텍스트
+  문항이라 이 경로를 타지 않아 발견되지 않았다). explanation 자신의 id를
+  분석 단위 id로 쓰도록 고쳐 지문마다 별도 학습 항목이 생기게 했다 - 실행
+  결과 이 경로로 777개 학습 항목이 만들어졌고, 대표로 확인한 2010-01은
+  지문 5개가 모두 살아있음을 확인했다.
+- **이미지 전용 문항의 스캔 페이지 이미지을 `source-assets.jsonl` +
+  `assets/`로 이번에 처음 내보냈다.** 기존 변환기는 `questionAssetId`를
+  항상 `None`으로 고정해 두고 있었다(자산 지원 자체가 없었음). 자연과학
+  변환기(`astra-import/tools/convert_astra_samples.py`)가 이미 같은 문제를
+  풀어 둔 패턴(자산 id로 중복 등록 방지 + 파일 복사 + `path`/`mimeType`/
+  `sha256` 기록)을 그대로 재사용했다 - 민법 패키지의 `exam.assets` 레코드는
+  sha256/byteLength를 이미 갖고 있어 재계산하지 않고 그대로 신뢰했다(패키지
+  전체가 `SHA256SUMS.txt`와 자체 검증기로 이미 무결성 확인됨). 결과: 고유
+  스캔 이미지 75개(11MB) - 160개 문항이 페이지를 공유해서(한 페이지에 문항
+  최대 3개) 이미지 수보다 문항 수가 많다. 2페이지짜리 문항 1건(2010-19)은
+  `ExamQuestion.questionAssetId`(단일 값 타입)엔 첫 페이지만 담기고, 두
+  페이지 다 필요하다는 사실은 `LearningItem.requiredAssetIds`에만 남는다 -
+  타입을 배열로 바꾸는 건 이번 범위 밖이라 알려진 한계로 남겼다.
+- **결과물을 `parseContentPackage`/`validatePackage`(앱이 실제 수입 UI에서
+  쓰는 코드 그대로)로 검증했다.** 680문항 → learningItems 3306,
+  examQuestions 680, analysisUnits 3306, evidenceLinks 1962,
+  explanationSegments 6612, hints 6612, sourceAssets 75, textbookParagraphs
+  779 - parseErrors 0, validationIssues(중복 id/끊긴 참조/누락 자산 등) 0.
+  다만 2문항 때처럼 Chromium으로 "설정 탭 → 가져오기" UI를 실제로 클릭해
+  680문항 전체를 IndexedDB에 적용해보는 것까지는 하지 않았다(UI 경로 자체는
+  2문항 때 이미 확인된 것을 재사용) - 다음에 실제 적용해볼 때 처음
+  발견되는 문제가 있을 수 있다.
+- **변환된 680문항 결과물(JSONL + 스캔 이미지)은 이번에도 저장소에
+  커밋하지 않고 사용자에게 파일로 전달했다.** 원본 패키지와 같은 이유
+  (`licenseScope: personal-exam-prep-restricted`, 이 저장소는 public) -
+  이 세션에서 저장소에 커밋한 것은 `convert_civil_samples.py`의 수정과
+  이 문서들뿐이다.
+
 ## 로컬 전용 모드
 
 - 19.6절대로 로그인 없이 로컬 모드로 동작하며, `learnerId`는 고정 문자열

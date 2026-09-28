@@ -1,29 +1,60 @@
 #!/usr/bin/env python3
-"""민법 최종 콘텐츠 패키지(hoedoksil_civil_final_v1)의 공식 샘플 2문항(2011-08,
-2011-14)을 회독실 앱의 content-package 포맷(JSONL, 도메인 타입 1:1 대응)으로
-변환한다.
+"""민법 최종 콘텐츠 패키지(hoedoksil_civil_final_v1)를 회독실 앱의
+content-package 포맷(JSONL, 도메인 타입 1:1 대응)으로 변환한다.
 
-패키지 자체가 이미 문항별로 완결된 samples/*.complete.json(원문+지문+선지+
-진술+제공 해설+AI 학습자료+근거 연결+참조 문단까지 전부 포함)을 제공하므로,
-이 스크립트는 33개 원본 컬렉션(schemas/collections.json)을 직접 순회하지
-않고 그 완결 샘플만 소비한다. 680문항 전체로 확장하려면 패키지의
-tools/read_question.py로 각 문항의 완결 뷰를 미리 뽑아 samples/ 상당 위치에
-저장한 뒤 SAMPLE_IDS를 넓히면 된다(변환 로직 자체는 바뀌지 않는다).
+패키지가 문항별 완결 뷰(원문+지문+선지+진술+제공 해설+AI 학습자료+근거 연결+
+참조 문단까지 전부 포함)를 만드는 로직을 패키지 자신의 tools/read_question.py
+(render_question)로 이미 제공하므로, 이 스크립트는 33개 원본 컬렉션(schemas/
+collections.json)을 직접 순회하지 않고 그 함수를 그대로 호출해 문항 하나씩
+렌더링 결과만 소비한다 - 패키지 내부 스키마가 바뀌어도 이 스크립트는 영향받지
+않는다. 기본은 공식 샘플 2문항(2011-08, 2011-14)만 변환하고, --all을 주면
+exam/content/questions.jsonl에 있는 680문항 전체를 변환한다.
 
 이 스크립트는 "만드는" 쪽만 담당한다. 실제 반영(가져오기)은
 src/features/importer/renderImporter.ts + src/data/repositories/importRepository.ts가 한다.
 
 실행: python3 civil-import/tools/convert_civil_samples.py \
         --pack /tmp/civil-law-pack/hoedoksil_civil_final_v1 \
-        --out /tmp/civil-converted
+        --out /tmp/civil-converted [--all]
 """
 from __future__ import annotations
 import argparse
 import hashlib
 import json
+import shutil
+import sys
 from pathlib import Path
 
 SAMPLE_IDS = ["2011-08", "2011-14"]
+
+IMAGE_MIME_BY_EXT = {".webp": "image/webp", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg"}
+
+
+def load_render_question(pack_root: Path):
+    """패키지 자신의 tools/read_question.py::render_question을 그대로 불러와 쓴다.
+
+    render_question()은 내부에서 매 호출마다 PackageReader(root)를 새로 만드는데,
+    PackageReader.__init__이 registry/entities.jsonl(68,618행, 약 25MB)을 매번
+    다시 인덱싱한다 - 680문항 전부를 호출하면 이 재인덱싱이 O(n^2)로 누적돼
+    수십 분이 걸린다. 인덱스는 패키지 내용이 바뀌지 않는 한 재사용해도 안전하므로,
+    PackageReader를 한 번만 만들어 이후 생성자 호출은 그 인스턴스를 복제하도록
+    바꿔치기한다(변환 결과에는 영향 없음 - 순수 성능 최적화).
+    """
+    tools_dir = str(pack_root / "tools")
+    if tools_dir not in sys.path:
+        sys.path.insert(0, tools_dir)
+    import package_io
+    import read_question
+
+    shared_reader = package_io.PackageReader(pack_root)
+    original_cls = package_io.PackageReader
+
+    class _CachedPackageReader(original_cls):
+        def __init__(self, root: Path) -> None:
+            self.__dict__.update(shared_reader.__dict__)
+
+    read_question.PackageReader = _CachedPackageReader
+    return read_question.render_question
 
 # 민법 패키지 evidenceBindings.relationRole -> 앱 EvidenceRole (자연과학 패키지와 이름이
 # 조금 다르다: 'exception'/'example'이 아니라 'exception_or_limitation'/'source_example').
@@ -86,7 +117,8 @@ def answer_claim(raw: dict, option_by_ordinal: dict[int, str]) -> dict:
 
 
 class Converter:
-    def __init__(self, out_dir: Path):
+    def __init__(self, pack_root: Path, out_dir: Path):
+        self.pack_root = pack_root
         self.out_dir = out_dir
         self.learning_items: dict = {}
         self.grading_specs: dict = {}
@@ -97,7 +129,36 @@ class Converter:
         self.evidence_links: dict = {}
         self.explanation_segments: dict = {}
         self.hints: dict = {}
+        self.source_assets: dict = {}
         self._evidence_link_seq = 0
+
+    def register_asset(self, asset: dict) -> str:
+        """이미지 전용 문항(160건)의 스캔 페이지를 SourceAsset으로 등록하고 파일을 복사한다.
+        패키지의 exam.assets 레코드는 sha256/byteLength를 이미 갖고 있고(패키지 자체
+        검증기·SHA256SUMS.txt로 이미 무결성 확인함), 이 스크립트가 다시 계산하지 않는다."""
+        aid = asset["id"]
+        if aid in self.source_assets:
+            return aid
+        rel_path = asset["path"]  # 예: 'exam/assets/scan_pages/p0084.png' (패키지 루트 기준)
+        dest_rel = "assets/" + rel_path
+        ext = Path(rel_path).suffix.lower()
+        mime = asset.get("mediaType") or IMAGE_MIME_BY_EXT.get(ext, "application/octet-stream")
+        self.source_assets[aid] = {
+            "id": aid,
+            "kind": "image" if mime.startswith("image/") else "document",
+            "path": dest_rel,
+            "mimeType": mime,
+            "sha256": asset["sha256"],
+            "byteSize": asset["byteLength"],
+            "isSynthetic": False,
+            "licenseScope": "personal-exam-prep-restricted",
+            "sourceLocation": None,
+        }
+        dest = self.out_dir / dest_rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if not dest.exists():
+            shutil.copyfile(self.pack_root / rel_path, dest)
+        return aid
 
     def register_paragraph(self, block: dict) -> None:
         bid = block["id"]
@@ -118,8 +179,7 @@ class Converter:
             "isSynthetic": False,
         }
 
-    def convert_sample(self, sample_path: Path) -> None:
-        d = json.loads(sample_path.read_text(encoding="utf8"))
+    def convert_sample(self, d: dict) -> None:
         q = d["sourceQuestion"]
         qid = q["id"]
 
@@ -129,6 +189,13 @@ class Converter:
 
         choices = [{"id": o["id"], "label": o["label"], "textDisplay": o["normalizedText"]} for o in d["options"]]
 
+        # 이미지 전용 문항(160건 - 원문 자체가 텍스트가 아니라 스캔 페이지)의 스캔 이미지를
+        # SourceAsset으로 등록한다. 2건(originalAssetIds 2개)은 questionAssetId에 첫 장만
+        # 담는다 - ExamQuestion.questionAssetId가 단일 값이라서다(도메인 타입 변경은 범위 밖).
+        assets_by_id = {a["id"]: a for a in d["assets"]}
+        question_asset_ids = [self.register_asset(assets_by_id[aid]) for aid in q.get("originalAssetIds", []) if aid in assets_by_id]
+        question_asset_id = question_asset_ids[0] if question_asset_ids else None
+
         ar = q["answerReview"]
         self.exam_questions[qid] = {
             "id": qid,
@@ -137,7 +204,7 @@ class Converter:
             "examYear": q["year"],
             "examNumber": q["questionNumber"],
             "textNative": q["originalText"],
-            "questionAssetId": None,
+            "questionAssetId": question_asset_id,
             "choices": choices,
             "officialAnswer": answer_claim(ar["officialAnswer"], option_by_ordinal),
             "providedAnswer": answer_claim(ar["providedExplanationAnswer"], option_by_ordinal),
@@ -166,9 +233,18 @@ class Converter:
         for e in d["explanations"]:
             sr = e["sourceRecord"]
             eid = sr["id"]
-            target_id = sr["targetEntityId"]
-            target = statements_by_id.get(target_id) or options_by_id.get(target_id)
-            target_text = target["normalizedText"] if target else (sr.get("quotedQuestionOrStatementText") or "")
+            target = statements_by_id.get(sr["targetEntityId"]) or options_by_id.get(sr["targetEntityId"])
+            if target is not None:
+                target_id = sr["targetEntityId"]
+                target_text = target["normalizedText"]
+            else:
+                # 이미지 전용 문항: explanation이 개별 Statement/Option이 아니라 Question
+                # 자체를 가리킨다(targetEntityType == "Question", 지문별로 별도 레코드가
+                # 없음). 한 문항에 이런 explanation이 여러 개(지문 1/2/3...) 있을 수 있으므로
+                # targetEntityId(=qid)를 그대로 쓰면 서로 덮어써 마지막 지문만 남는다 -
+                # explanation 자신의 id를 분석 단위 id로 써서 지문마다 별도 학습 항목을 만든다.
+                target_id = eid
+                target_text = sr.get("quotedQuestionOrStatementText") or sr.get("issueTitle") or sr.get("sourceHeader") or ""
 
             truth = {"O": True, "X": False}.get(sr.get("providedJudgmentLabel"))
             truth_status = {True: "true", False: "false"}.get(truth, "unresolved_or_not_applicable")
@@ -231,7 +307,7 @@ class Converter:
                 "learningEpoch": 0,
                 "topicIds": [q["sourceQuestionPrimaryChapterId"]] if q.get("sourceQuestionPrimaryChapterId") else [],
                 "relatedItemIds": [],
-                "requiredAssetIds": [],
+                "requiredAssetIds": question_asset_ids,
                 "availableContexts": ["micro", "focused"],
                 "canStandaloneOX": False,
                 "requiresIndependentSolve": False,
@@ -302,20 +378,26 @@ class Converter:
             ("evidence-links.jsonl", self.evidence_links),
             ("explanation-segments.jsonl", self.explanation_segments),
             ("hints.jsonl", self.hints),
+            ("source-assets.jsonl", self.source_assets),
         ]:
             rel, count = self.write_jsonl(name, records)
             full = self.out_dir / rel
             files.append({"path": rel, "sha256": sha256_file(full), "byteSize": full.stat().st_size, "recordCount": count})
 
+        is_full_batch = len(self.exam_questions) > len(SAMPLE_IDS)
         manifest = {
             "schemaVersion": "1.0.0",
-            "packId": "hoedoksil-civil-samples-v1",
+            "packId": "hoedoksil-civil-full-v1" if is_full_batch else "hoedoksil-civil-samples-v1",
             "namespace": "hoedoksil-civil",
-            "contentVersion": "1.0.0-samples",
+            "contentVersion": "1.0.0" if is_full_batch else "1.0.0-samples",
             "isSynthetic": False,
             "subjectIds": ["civil"],
             "generatedAt": "1970-01-01T00:00:00Z",
-            "generatedBy": "civil-import/tools/convert_civil_samples.py (공식 샘플 2문항만 - 680문항 전체 아님)",
+            "generatedBy": (
+                f"civil-import/tools/convert_civil_samples.py --all ({len(self.exam_questions)}문항)"
+                if is_full_batch
+                else "civil-import/tools/convert_civil_samples.py (공식 샘플 2문항만 - 680문항 전체 아님)"
+            ),
             "licenseScope": "personal-exam-prep-restricted",
             "files": files,
             "legacyIdMap": {},
@@ -328,18 +410,30 @@ def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--pack", type=Path, required=True, help="병합된 민법 최종 패키지 루트(hoedoksil_civil_final_v1)")
     p.add_argument("--out", type=Path, required=True, help="출력 디렉터리(회독실 content-package 포맷)")
-    p.add_argument("--samples", nargs="*", default=SAMPLE_IDS)
+    p.add_argument("--samples", nargs="*", default=SAMPLE_IDS, help="변환할 문항 id 목록(기본: 공식 샘플 2문항)")
+    p.add_argument("--all", action="store_true", help="exam/content/questions.jsonl의 680문항 전체를 변환한다(--samples 무시)")
     args = p.parse_args()
 
-    conv = Converter(args.out)
-    for sid in args.samples:
-        conv.convert_sample(args.pack / "samples" / f"{sid}.complete.json")
+    pack_root = args.pack.resolve()
+    render_question = load_render_question(pack_root)
+
+    if args.all:
+        with (pack_root / "exam/content/questions.jsonl").open(encoding="utf8") as f:
+            sample_ids = [json.loads(line)["id"] for line in f if line.strip()]
+    else:
+        sample_ids = args.samples
+
+    conv = Converter(pack_root, args.out)
+    for i, sid in enumerate(sample_ids, 1):
+        conv.convert_sample(render_question(pack_root, sid))
+        if args.all and i % 100 == 0:
+            print(f"  진행: {i}/{len(sample_ids)}", file=sys.stderr)
     conv.write_all()
 
     print(f"변환 완료: learningItems={len(conv.learning_items)} examQuestions={len(conv.exam_questions)} "
           f"analysisUnits={len(conv.analysis_units)} evidenceLinks={len(conv.evidence_links)} "
           f"explanationSegments={len(conv.explanation_segments)} textbookParagraphs={len(conv.textbook_paragraphs)} "
-          f"hints={len(conv.hints)}")
+          f"hints={len(conv.hints)} sourceAssets={len(conv.source_assets)}")
 
 
 if __name__ == "__main__":
