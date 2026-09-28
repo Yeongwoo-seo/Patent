@@ -1,0 +1,720 @@
+{"id":"hint:B001:01","questionId":"B001","text":"‘콜라겐’은 피부라는 용도보다 구성 단량체로 분류한다.","specificity":"question_specific_ai"}
+{"id":"hint:B002:01","questionId":"B002","text":"결합 생성의 탈수와 결합 분해의 가수를 반대로 기억하지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:B003:01","questionId":"B003","text":"먼저 「생명 과학의 탐구와 생체 물질」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B004:01","questionId":"B004","text":"먼저 「생명 과학의 탐구와 생체 물질」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B005:01","questionId":"B005","text":"핵이 없다는 말을 유전물질이 없다는 말로 바꾸지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:B006:01","questionId":"B006","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B007:01","questionId":"B007","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B008:01","questionId":"B008","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B009:01","questionId":"B009","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B010:01","questionId":"B010","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B011:01","questionId":"B011","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B012:01","questionId":"B012","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B013:01","questionId":"B013","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B014:01","questionId":"B014","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B015:01","questionId":"B015","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B016:01","questionId":"B016","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B017:01","questionId":"B017","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B018:01","questionId":"B018","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B019:01","questionId":"B019","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B020:01","questionId":"B020","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B021:01","questionId":"B021","text":"먼저 「세포의 구조와 물질 수송」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B022:01","questionId":"B022","text":"‘단백질 효소가 존재한다’와 ‘효소는 전부 단백질이다’는 다른 문장이다.","specificity":"question_specific_ai"}
+{"id":"hint:B023:01","questionId":"B023","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B024:01","questionId":"B024","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B025:01","questionId":"B025","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B026:01","questionId":"B026","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B027:01","questionId":"B027","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B028:01","questionId":"B028","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B029:01","questionId":"B029","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B030:01","questionId":"B030","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B031:01","questionId":"B031","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B032:01","questionId":"B032","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B033:01","questionId":"B033","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B034:01","questionId":"B034","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B035:01","questionId":"B035","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B036:01","questionId":"B036","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B037:01","questionId":"B037","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B038:01","questionId":"B038","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B039:01","questionId":"B039","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B040:01","questionId":"B040","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B041:01","questionId":"B041","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B042:01","questionId":"B042","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B043:01","questionId":"B043","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B044:01","questionId":"B044","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B045:01","questionId":"B045","text":"먼저 「세포 호흡과 광합성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B046:01","questionId":"B046","text":"먼저 「세포 주기와 세포 분열」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B047:01","questionId":"B047","text":"먼저 「세포 주기와 세포 분열」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B048:01","questionId":"B048","text":"먼저 「세포 주기와 세포 분열」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B049:01","questionId":"B049","text":"먼저 「세포 주기와 세포 분열」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B050:01","questionId":"B050","text":"먼저 「세포 주기와 세포 분열」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B051:01","questionId":"B051","text":"먼저 「세포 주기와 세포 분열」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B052:01","questionId":"B052","text":"먼저 「세포 주기와 세포 분열」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B053:01","questionId":"B053","text":"먼저 「세포 주기와 세포 분열」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B054:01","questionId":"B054","text":"먼저 「유전 원리와 사람의 유전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B055:01","questionId":"B055","text":"먼저 「유전 원리와 사람의 유전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B056:01","questionId":"B056","text":"먼저 「유전 원리와 사람의 유전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B057:01","questionId":"B057","text":"먼저 「유전 원리와 사람의 유전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B058:01","questionId":"B058","text":"먼저 「유전 원리와 사람의 유전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B059:01","questionId":"B059","text":"먼저 「유전 원리와 사람의 유전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B060:01","questionId":"B060","text":"먼저 「유전 원리와 사람의 유전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B061:01","questionId":"B061","text":"먼저 「유전 원리와 사람의 유전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B062:01","questionId":"B062","text":"먼저 「유전 원리와 사람의 유전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B063:01","questionId":"B063","text":"‘모든’·‘없다’ 같은 표현과 생물의 원핵/진핵 구분을 함께 본다.","specificity":"question_specific_ai"}
+{"id":"hint:B064:01","questionId":"B064","text":"두 고리 A·G / 한 고리 C·T·U로 묶는다.","specificity":"question_specific_ai"}
+{"id":"hint:B065:01","questionId":"B065","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B066:01","questionId":"B066","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B067:01","questionId":"B067","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B068:01","questionId":"B068","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B069:01","questionId":"B069","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B070:01","questionId":"B070","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B071:01","questionId":"B071","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B072:01","questionId":"B072","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B073:01","questionId":"B073","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B074:01","questionId":"B074","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B075:01","questionId":"B075","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B076:01","questionId":"B076","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B077:01","questionId":"B077","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B078:01","questionId":"B078","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B079:01","questionId":"B079","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B080:01","questionId":"B080","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B081:01","questionId":"B081","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B082:01","questionId":"B082","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B083:01","questionId":"B083","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B084:01","questionId":"B084","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B085:01","questionId":"B085","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B086:01","questionId":"B086","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B087:01","questionId":"B087","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B088:01","questionId":"B088","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B089:01","questionId":"B089","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B090:01","questionId":"B090","text":"먼저 「유전 정보의 구조·발현과 조절」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B091:01","questionId":"B091","text":"파지·세포 접촉·외부 DNA라는 매개체를 한 쌍씩 연결한다.","specificity":"question_specific_ai"}
+{"id":"hint:B092:01","questionId":"B092","text":"DNA의 전하와 끌려가는 전극의 부호를 구분한다.","specificity":"question_specific_ai"}
+{"id":"hint:B093:01","questionId":"B093","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B094:01","questionId":"B094","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B095:01","questionId":"B095","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B096:01","questionId":"B096","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B097:01","questionId":"B097","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B098:01","questionId":"B098","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B099:01","questionId":"B099","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B100:01","questionId":"B100","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B101:01","questionId":"B101","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B102:01","questionId":"B102","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B103:01","questionId":"B103","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B104:01","questionId":"B104","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B105:01","questionId":"B105","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B106:01","questionId":"B106","text":"먼저 「생명 공학과 실험 기법」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B107:01","questionId":"B107","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B108:01","questionId":"B108","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B109:01","questionId":"B109","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B110:01","questionId":"B110","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B111:01","questionId":"B111","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B112:01","questionId":"B112","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B113:01","questionId":"B113","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B114:01","questionId":"B114","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B115:01","questionId":"B115","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B116:01","questionId":"B116","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B117:01","questionId":"B117","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B118:01","questionId":"B118","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B119:01","questionId":"B119","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B120:01","questionId":"B120","text":"먼저 「신경·감각과 근육」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B121:01","questionId":"B121","text":"먼저 「신경·감각과 근육」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B122:01","questionId":"B122","text":"먼저 「신경·감각과 근육」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B123:01","questionId":"B123","text":"먼저 「호르몬과 항상성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B124:01","questionId":"B124","text":"먼저 「호르몬과 항상성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B125:01","questionId":"B125","text":"먼저 「호르몬과 항상성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B126:01","questionId":"B126","text":"먼저 「호르몬과 항상성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B127:01","questionId":"B127","text":"먼저 「호르몬과 항상성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B128:01","questionId":"B128","text":"먼저 「호르몬과 항상성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B129:01","questionId":"B129","text":"먼저 「호르몬과 항상성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B130:01","questionId":"B130","text":"먼저 「동물의 조직·영양·순환과 배설」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B131:01","questionId":"B131","text":"먼저 「세포 주기와 세포 분열」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B132:01","questionId":"B132","text":"먼저 「방어 작용과 면역」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B133:01","questionId":"B133","text":"먼저 「방어 작용과 면역」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B134:01","questionId":"B134","text":"먼저 「방어 작용과 면역」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B135:01","questionId":"B135","text":"먼저 「방어 작용과 면역」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B136:01","questionId":"B136","text":"먼저 「방어 작용과 면역」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B137:01","questionId":"B137","text":"먼저 「생식과 발생」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B138:01","questionId":"B138","text":"먼저 「생식과 발생」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B139:01","questionId":"B139","text":"먼저 「생식과 발생」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B140:01","questionId":"B140","text":"먼저 「생식과 발생」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B141:01","questionId":"B141","text":"먼저 「생식과 발생」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B142:01","questionId":"B142","text":"먼저 「식물의 구조와 기능」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B143:01","questionId":"B143","text":"먼저 「식물의 구조와 기능」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B144:01","questionId":"B144","text":"집단이 작으면 표본 오차가 사라지는 것이 아니라 커진다.","specificity":"question_specific_ai"}
+{"id":"hint:B145:01","questionId":"B145","text":"우연히 바뀌는 것과 적응에 유리해서 바뀌는 것을 나눈다.","specificity":"question_specific_ai"}
+{"id":"hint:B146:01","questionId":"B146","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B147:01","questionId":"B147","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B148:01","questionId":"B148","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B149:01","questionId":"B149","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B150:01","questionId":"B150","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B151:01","questionId":"B151","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B152:01","questionId":"B152","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B153:01","questionId":"B153","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B154:01","questionId":"B154","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B155:01","questionId":"B155","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B156:01","questionId":"B156","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B157:01","questionId":"B157","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B158:01","questionId":"B158","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B159:01","questionId":"B159","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B160:01","questionId":"B160","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B161:01","questionId":"B161","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B162:01","questionId":"B162","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B163:01","questionId":"B163","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B164:01","questionId":"B164","text":"먼저 「진화·분류와 생물 다양성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B165:01","questionId":"B165","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B166:01","questionId":"B166","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B167:01","questionId":"B167","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B168:01","questionId":"B168","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B169:01","questionId":"B169","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B170:01","questionId":"B170","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B171:01","questionId":"B171","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B172:01","questionId":"B172","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B173:01","questionId":"B173","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B174:01","questionId":"B174","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B175:01","questionId":"B175","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B176:01","questionId":"B176","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B177:01","questionId":"B177","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B178:01","questionId":"B178","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B179:01","questionId":"B179","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:B180:01","questionId":"B180","text":"먼저 「생태계와 환경」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C001:01","questionId":"C001","text":"먼저 「물질의 양과 화학 반응식」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C002:01","questionId":"C002","text":"먼저 「물질의 양과 화학 반응식」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C003:01","questionId":"C003","text":"먼저 「물질의 양과 화학 반응식」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C004:01","questionId":"C004","text":"HBO는 HOBr로 읽고, HX의 산성 순서와 섞지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:C005:01","questionId":"C005","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C006:01","questionId":"C006","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C007:01","questionId":"C007","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C008:01","questionId":"C008","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C009:01","questionId":"C009","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C010:01","questionId":"C010","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C011:01","questionId":"C011","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C012:01","questionId":"C012","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C013:01","questionId":"C013","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C014:01","questionId":"C014","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C015:01","questionId":"C015","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C016:01","questionId":"C016","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C017:01","questionId":"C017","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C018:01","questionId":"C018","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C019:01","questionId":"C019","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C020:01","questionId":"C020","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C021:01","questionId":"C021","text":"먼저 「원자 구조와 주기율」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C022:01","questionId":"C022","text":"결합차수 1·2라는 숫자만으로 F₂·O₂라고 결정하지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:C023:01","questionId":"C023","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C024:01","questionId":"C024","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C025:01","questionId":"C025","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C026:01","questionId":"C026","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C027:01","questionId":"C027","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C028:01","questionId":"C028","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C029:01","questionId":"C029","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C030:01","questionId":"C030","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C031:01","questionId":"C031","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C032:01","questionId":"C032","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C033:01","questionId":"C033","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C034:01","questionId":"C034","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C035:01","questionId":"C035","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C036:01","questionId":"C036","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C037:01","questionId":"C037","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C038:01","questionId":"C038","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C039:01","questionId":"C039","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C040:01","questionId":"C040","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C041:01","questionId":"C041","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C042:01","questionId":"C042","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C043:01","questionId":"C043","text":"먼저 「물질의 상태와 상태 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C044:01","questionId":"C044","text":"먼저 「물질의 상태와 상태 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C045:01","questionId":"C045","text":"먼저 「물질의 상태와 상태 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C046:01","questionId":"C046","text":"먼저 「물질의 상태와 상태 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C047:01","questionId":"C047","text":"먼저 「물질의 상태와 상태 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C048:01","questionId":"C048","text":"먼저 「물질의 상태와 상태 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C049:01","questionId":"C049","text":"먼저 「물질의 상태와 상태 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C050:01","questionId":"C050","text":"먼저 「용액의 농도와 총괄성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C051:01","questionId":"C051","text":"먼저 「용액의 농도와 총괄성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C052:01","questionId":"C052","text":"먼저 「용액의 농도와 총괄성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C053:01","questionId":"C053","text":"먼저 「용액의 농도와 총괄성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C054:01","questionId":"C054","text":"먼저 「용액의 농도와 총괄성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C055:01","questionId":"C055","text":"먼저 「용액의 농도와 총괄성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C056:01","questionId":"C056","text":"먼저 「열화학과 화학 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C057:01","questionId":"C057","text":"먼저 「열화학과 화학 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C058:01","questionId":"C058","text":"먼저 「열화학과 화학 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C059:01","questionId":"C059","text":"먼저 「열화학과 화학 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C060:01","questionId":"C060","text":"먼저 「열화학과 화학 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C061:01","questionId":"C061","text":"먼저 「열화학과 화학 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C062:01","questionId":"C062","text":"먼저 「열화학과 화학 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C063:01","questionId":"C063","text":"먼저 「열화학과 화학 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C064:01","questionId":"C064","text":"먼저 「열화학과 화학 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C065:01","questionId":"C065","text":"먼저 「열화학과 화학 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C066:01","questionId":"C066","text":"먼저 「열화학과 화학 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C067:01","questionId":"C067","text":"B는 두 단계를 합하면 소거되는 촉매이다. C 농도를 초기 속도식에 무조건 곱하지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:C068:01","questionId":"C068","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C069:01","questionId":"C069","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C070:01","questionId":"C070","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C071:01","questionId":"C071","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C072:01","questionId":"C072","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C073:01","questionId":"C073","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C074:01","questionId":"C074","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C075:01","questionId":"C075","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C076:01","questionId":"C076","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C077:01","questionId":"C077","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C078:01","questionId":"C078","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C079:01","questionId":"C079","text":"먼저 「열화학과 화학 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C080:01","questionId":"C080","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C081:01","questionId":"C081","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C082:01","questionId":"C082","text":"먼저 「반응 속도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C083:01","questionId":"C083","text":"먼저 Vb가 무엇을 의미하는지 살펴본다. 농도×부피는 몰수이다.","specificity":"question_specific_ai"}
+{"id":"hint:C084:01","questionId":"C084","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C085:01","questionId":"C085","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C086:01","questionId":"C086","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C087:01","questionId":"C087","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C088:01","questionId":"C088","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C089:01","questionId":"C089","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C090:01","questionId":"C090","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C091:01","questionId":"C091","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C092:01","questionId":"C092","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C093:01","questionId":"C093","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C094:01","questionId":"C094","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C095:01","questionId":"C095","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C096:01","questionId":"C096","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C097:01","questionId":"C097","text":"먼저 「화학 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C098:01","questionId":"C098","text":"CN⁻의 초기농도 3 M를 평형식의 자유 CN⁻ 농도에 그대로 넣지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:C099:01","questionId":"C099","text":"평형 [HA]와 해리 전 분석농도 3 mM를 같은 값으로 놓지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:C100:01","questionId":"C100","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C101:01","questionId":"C101","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C102:01","questionId":"C102","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C103:01","questionId":"C103","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C104:01","questionId":"C104","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C105:01","questionId":"C105","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C106:01","questionId":"C106","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C107:01","questionId":"C107","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C108:01","questionId":"C108","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C109:01","questionId":"C109","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C110:01","questionId":"C110","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C111:01","questionId":"C111","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C112:01","questionId":"C112","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C113:01","questionId":"C113","text":"먼저 「산·염기와 용해 평형」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C114:01","questionId":"C114","text":"산성에서 O는 H₂O로, H는 H⁺로 맞추고 전하까지 확인한다.","specificity":"question_specific_ai"}
+{"id":"hint:C115:01","questionId":"C115","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C116:01","questionId":"C116","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C117:01","questionId":"C117","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C118:01","questionId":"C118","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C119:01","questionId":"C119","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C120:01","questionId":"C120","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C121:01","questionId":"C121","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C122:01","questionId":"C122","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C123:01","questionId":"C123","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C124:01","questionId":"C124","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C125:01","questionId":"C125","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C126:01","questionId":"C126","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C127:01","questionId":"C127","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C128:01","questionId":"C128","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C129:01","questionId":"C129","text":"먼저 「산화·환원과 전기화학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C130:01","questionId":"C130","text":"탄소 6개를 전부 알킬기에 나누면 카보닐 탄소를 이중으로 세게 된다.","specificity":"question_specific_ai"}
+{"id":"hint:C131:01","questionId":"C131","text":"CH₃Cl/AlCl₃는 고리에 CH₃를 도입한다.","specificity":"question_specific_ai"}
+{"id":"hint:C132:01","questionId":"C132","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C133:01","questionId":"C133","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C134:01","questionId":"C134","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C135:01","questionId":"C135","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C136:01","questionId":"C136","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C137:01","questionId":"C137","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C138:01","questionId":"C138","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C139:01","questionId":"C139","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C140:01","questionId":"C140","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C141:01","questionId":"C141","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C142:01","questionId":"C142","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C143:01","questionId":"C143","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C144:01","questionId":"C144","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C145:01","questionId":"C145","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C146:01","questionId":"C146","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C147:01","questionId":"C147","text":"먼저 「화학 결합과 분자 구조」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C148:01","questionId":"C148","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C149:01","questionId":"C149","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C150:01","questionId":"C150","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C151:01","questionId":"C151","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C152:01","questionId":"C152","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C153:01","questionId":"C153","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C154:01","questionId":"C154","text":"en을 리간드 분자 1개라고 해서 배위 자리도 1개로 세지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:C155:01","questionId":"C155","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C156:01","questionId":"C156","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C157:01","questionId":"C157","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C158:01","questionId":"C158","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C159:01","questionId":"C159","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C160:01","questionId":"C160","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C161:01","questionId":"C161","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C162:01","questionId":"C162","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C163:01","questionId":"C163","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C164:01","questionId":"C164","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C165:01","questionId":"C165","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C166:01","questionId":"C166","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C167:01","questionId":"C167","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C168:01","questionId":"C168","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C169:01","questionId":"C169","text":"먼저 「용액의 농도와 총괄성」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C170:01","questionId":"C170","text":"먼저 「배위 화합물」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C171:01","questionId":"C171","text":"먼저 「분광학과 구조 분석」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C172:01","questionId":"C172","text":"먼저 「탄소 화합물과 고분자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C173:01","questionId":"C173","text":"먼저 「분광학과 구조 분석」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C174:01","questionId":"C174","text":"먼저 「분광학과 구조 분석」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C175:01","questionId":"C175","text":"먼저 「분광학과 구조 분석」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C176:01","questionId":"C176","text":"먼저 「분광학과 구조 분석」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C177:01","questionId":"C177","text":"먼저 「분광학과 구조 분석」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C178:01","questionId":"C178","text":"먼저 「분광학과 구조 분석」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C179:01","questionId":"C179","text":"먼저 「분광학과 구조 분석」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:C180:01","questionId":"C180","text":"먼저 「분광학과 구조 분석」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E001:01","questionId":"E001","text":"먼저 「지구 내부·중력과 자기장」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E002:01","questionId":"E002","text":"먼저 「지구 내부·중력과 자기장」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E003:01","questionId":"E003","text":"먼저 「지구 내부·중력과 자기장」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E004:01","questionId":"E004","text":"먼저 「지구 내부·중력과 자기장」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E005:01","questionId":"E005","text":"먼저 「지구 내부·중력과 자기장」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E006:01","questionId":"E006","text":"먼저 「지구 내부·중력과 자기장」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E007:01","questionId":"E007","text":"먼저 「지구 내부·중력과 자기장」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E008:01","questionId":"E008","text":"먼저 「지구 내부·중력과 자기장」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E009:01","questionId":"E009","text":"수렴이라는 말 다음에 해양–해양인지 해양–대륙인지도 확인한다.","specificity":"question_specific_ai"}
+{"id":"hint:E010:01","questionId":"E010","text":"두 파가 멀리 갈수록 도착 시간차가 누적된다.","specificity":"question_specific_ai"}
+{"id":"hint:E011:01","questionId":"E011","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E012:01","questionId":"E012","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E013:01","questionId":"E013","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E014:01","questionId":"E014","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E015:01","questionId":"E015","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E016:01","questionId":"E016","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E017:01","questionId":"E017","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E018:01","questionId":"E018","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E019:01","questionId":"E019","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E020:01","questionId":"E020","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E021:01","questionId":"E021","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E022:01","questionId":"E022","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E023:01","questionId":"E023","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E024:01","questionId":"E024","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E025:01","questionId":"E025","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E026:01","questionId":"E026","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E027:01","questionId":"E027","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E028:01","questionId":"E028","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E029:01","questionId":"E029","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E030:01","questionId":"E030","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E031:01","questionId":"E031","text":"먼저 「판 구조론·지진과 화산」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E032:01","questionId":"E032","text":"유동성과 점성은 같은 방향이 아니라 반대 방향으로 읽는다.","specificity":"question_specific_ai"}
+{"id":"hint:E033:01","questionId":"E033","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E034:01","questionId":"E034","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E035:01","questionId":"E035","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E036:01","questionId":"E036","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E037:01","questionId":"E037","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E038:01","questionId":"E038","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E039:01","questionId":"E039","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E040:01","questionId":"E040","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E041:01","questionId":"E041","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E042:01","questionId":"E042","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E043:01","questionId":"E043","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E044:01","questionId":"E044","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E045:01","questionId":"E045","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E046:01","questionId":"E046","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E047:01","questionId":"E047","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E048:01","questionId":"E048","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E049:01","questionId":"E049","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E050:01","questionId":"E050","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E051:01","questionId":"E051","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E052:01","questionId":"E052","text":"1/8을 반감기 8회라고 읽지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:E053:01","questionId":"E053","text":"삼엽충의 시대만 바꾸고 ‘육상’이라는 표현을 놓치지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:E054:01","questionId":"E054","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E055:01","questionId":"E055","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E056:01","questionId":"E056","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E057:01","questionId":"E057","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E058:01","questionId":"E058","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E059:01","questionId":"E059","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E060:01","questionId":"E060","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E061:01","questionId":"E061","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E062:01","questionId":"E062","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E063:01","questionId":"E063","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E064:01","questionId":"E064","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E065:01","questionId":"E065","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E066:01","questionId":"E066","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E067:01","questionId":"E067","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E068:01","questionId":"E068","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E069:01","questionId":"E069","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E070:01","questionId":"E070","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E071:01","questionId":"E071","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E072:01","questionId":"E072","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E073:01","questionId":"E073","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E074:01","questionId":"E074","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E075:01","questionId":"E075","text":"먼저 「광물·암석과 지표 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E076:01","questionId":"E076","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E077:01","questionId":"E077","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E078:01","questionId":"E078","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E079:01","questionId":"E079","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E080:01","questionId":"E080","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E081:01","questionId":"E081","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E082:01","questionId":"E082","text":"먼저 「지층·지질 구조와 지구의 역사」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E083:01","questionId":"E083","text":"확대 그림의 위쪽 곡선이 과냉각수인지 얼음인지 라벨부터 확인한다.","specificity":"question_specific_ai"}
+{"id":"hint:E084:01","questionId":"E084","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E085:01","questionId":"E085","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E086:01","questionId":"E086","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E087:01","questionId":"E087","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E088:01","questionId":"E088","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E089:01","questionId":"E089","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E090:01","questionId":"E090","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E091:01","questionId":"E091","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E092:01","questionId":"E092","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E093:01","questionId":"E093","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E094:01","questionId":"E094","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E095:01","questionId":"E095","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E096:01","questionId":"E096","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E097:01","questionId":"E097","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E098:01","questionId":"E098","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E099:01","questionId":"E099","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E100:01","questionId":"E100","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E101:01","questionId":"E101","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E102:01","questionId":"E102","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E103:01","questionId":"E103","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E104:01","questionId":"E104","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E105:01","questionId":"E105","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E106:01","questionId":"E106","text":"먼저 「대기의 성질과 구름」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E107:01","questionId":"E107","text":"먼저 「대기 운동과 날씨」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E108:01","questionId":"E108","text":"먼저 「대기 운동과 날씨」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E109:01","questionId":"E109","text":"먼저 「대기 운동과 날씨」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E110:01","questionId":"E110","text":"먼저 「대기 운동과 날씨」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E111:01","questionId":"E111","text":"먼저 「대기 운동과 날씨」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E112:01","questionId":"E112","text":"먼저 「대기 운동과 날씨」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E113:01","questionId":"E113","text":"먼저 「대기 운동과 날씨」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E114:01","questionId":"E114","text":"먼저 「대기 운동과 날씨」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E115:01","questionId":"E115","text":"먼저 「대기 운동과 날씨」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E116:01","questionId":"E116","text":"먼저 「대기 운동과 날씨」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E117:01","questionId":"E117","text":"천해파의 ‘얕다’는 수심만이 아니라 파장과 비교한 상대 조건이다.","specificity":"question_specific_ai"}
+{"id":"hint:E118:01","questionId":"E118","text":"먼저 「해수의 성질과 해양 순환」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E119:01","questionId":"E119","text":"먼저 「해수의 성질과 해양 순환」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E120:01","questionId":"E120","text":"먼저 「해수의 성질과 해양 순환」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E121:01","questionId":"E121","text":"먼저 「해수의 성질과 해양 순환」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E122:01","questionId":"E122","text":"먼저 「해수의 성질과 해양 순환」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E123:01","questionId":"E123","text":"먼저 「해수의 성질과 해양 순환」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E124:01","questionId":"E124","text":"먼저 「해수의 성질과 해양 순환」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E125:01","questionId":"E125","text":"먼저 「해수의 성질과 해양 순환」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E126:01","questionId":"E126","text":"먼저 「해수의 성질과 해양 순환」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E127:01","questionId":"E127","text":"먼저 「해수의 성질과 해양 순환」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E128:01","questionId":"E128","text":"먼저 「해수의 성질과 해양 순환」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E129:01","questionId":"E129","text":"기후에 영향을 준다는 사실과 지구 내부 요인이라는 분류는 다르다.","specificity":"question_specific_ai"}
+{"id":"hint:E130:01","questionId":"E130","text":"먼저 「지구 환경과 기후 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E131:01","questionId":"E131","text":"먼저 「지구 환경과 기후 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E132:01","questionId":"E132","text":"삭·망은 필요 조건이지만 궤도 교점 부근이라는 조건도 필요하다.","specificity":"question_specific_ai"}
+{"id":"hint:E133:01","questionId":"E133","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E134:01","questionId":"E134","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E135:01","questionId":"E135","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E136:01","questionId":"E136","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E137:01","questionId":"E137","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E138:01","questionId":"E138","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E139:01","questionId":"E139","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E140:01","questionId":"E140","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E141:01","questionId":"E141","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E142:01","questionId":"E142","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E143:01","questionId":"E143","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E144:01","questionId":"E144","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E145:01","questionId":"E145","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E146:01","questionId":"E146","text":"먼저 「천체의 운동과 관측」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E147:01","questionId":"E147","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E148:01","questionId":"E148","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E149:01","questionId":"E149","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E150:01","questionId":"E150","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E151:01","questionId":"E151","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E152:01","questionId":"E152","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E153:01","questionId":"E153","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E154:01","questionId":"E154","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E155:01","questionId":"E155","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E156:01","questionId":"E156","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E157:01","questionId":"E157","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E158:01","questionId":"E158","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E159:01","questionId":"E159","text":"먼저 「태양계」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E160:01","questionId":"E160","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E161:01","questionId":"E161","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E162:01","questionId":"E162","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E163:01","questionId":"E163","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E164:01","questionId":"E164","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E165:01","questionId":"E165","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E166:01","questionId":"E166","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E167:01","questionId":"E167","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E168:01","questionId":"E168","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E169:01","questionId":"E169","text":"먼저 「지구 환경과 기후 변화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E170:01","questionId":"E170","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E171:01","questionId":"E171","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E172:01","questionId":"E172","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E173:01","questionId":"E173","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E174:01","questionId":"E174","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E175:01","questionId":"E175","text":"먼저 「별의 특성과 진화」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E176:01","questionId":"E176","text":"은하의 회전속도를 태양계의 케플러 속도 감소와 같은 것으로 가정하지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:E177:01","questionId":"E177","text":"먼저 「은하와 우주」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E178:01","questionId":"E178","text":"먼저 「은하와 우주」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E179:01","questionId":"E179","text":"먼저 「은하와 우주」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:E180:01","questionId":"E180","text":"먼저 「은하와 우주」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P001:01","questionId":"P001","text":"장력이 2배라고 속력도 2배가 되지는 않는다. 먼저 시간 T의 지수를 비교한다.","specificity":"question_specific_ai"}
+{"id":"hint:P002:01","questionId":"P002","text":"평행축 정리는 평행한 두 축에 적용한다. 구의 대칭성이 다른 방향의 중심축 값을 같게 해준다.","specificity":"question_specific_ai"}
+{"id":"hint:P003:01","questionId":"P003","text":"먼저 「운동의 기술과 뉴턴 법칙」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P004:01","questionId":"P004","text":"먼저 「운동의 기술과 뉴턴 법칙」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P005:01","questionId":"P005","text":"먼저 「운동의 기술과 뉴턴 법칙」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P006:01","questionId":"P006","text":"먼저 「운동의 기술과 뉴턴 법칙」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P007:01","questionId":"P007","text":"먼저 「운동의 기술과 뉴턴 법칙」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P008:01","questionId":"P008","text":"먼저 「운동의 기술과 뉴턴 법칙」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P009:01","questionId":"P009","text":"먼저 「운동의 기술과 뉴턴 법칙」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P010:01","questionId":"P010","text":"먼저 「운동의 기술과 뉴턴 법칙」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P011:01","questionId":"P011","text":"먼저 「운동의 기술과 뉴턴 법칙」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P012:01","questionId":"P012","text":"먼저 「운동의 기술과 뉴턴 법칙」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P013:01","questionId":"P013","text":"먼저 「운동의 기술과 뉴턴 법칙」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P014:01","questionId":"P014","text":"먼저 「일·에너지와 운동량」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P015:01","questionId":"P015","text":"먼저 「일·에너지와 운동량」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P016:01","questionId":"P016","text":"먼저 「일·에너지와 운동량」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P017:01","questionId":"P017","text":"먼저 「일·에너지와 운동량」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P018:01","questionId":"P018","text":"먼저 「일·에너지와 운동량」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P019:01","questionId":"P019","text":"먼저 「일·에너지와 운동량」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P020:01","questionId":"P020","text":"먼저 「일·에너지와 운동량」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P021:01","questionId":"P021","text":"먼저 「일·에너지와 운동량」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P022:01","questionId":"P022","text":"먼저 「일·에너지와 운동량」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P023:01","questionId":"P023","text":"먼저 「일·에너지와 운동량」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P024:01","questionId":"P024","text":"먼저 「원운동과 만유인력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P025:01","questionId":"P025","text":"먼저 「원운동과 만유인력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P026:01","questionId":"P026","text":"먼저 「원운동과 만유인력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P027:01","questionId":"P027","text":"먼저 「원운동과 만유인력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P028:01","questionId":"P028","text":"먼저 「원운동과 만유인력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P029:01","questionId":"P029","text":"먼저 「원운동과 만유인력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P030:01","questionId":"P030","text":"먼저 「원운동과 만유인력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P031:01","questionId":"P031","text":"먼저 「원운동과 만유인력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P032:01","questionId":"P032","text":"먼저 「원운동과 만유인력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P033:01","questionId":"P033","text":"전체 길이 3 m를 모든 힘의 팔 길이로 넣지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:P034:01","questionId":"P034","text":"고리와 꽉 찬 원판의 관성모멘트는 다르다.","specificity":"question_specific_ai"}
+{"id":"hint:P035:01","questionId":"P035","text":"먼저 「강체의 평형과 회전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P036:01","questionId":"P036","text":"먼저 「강체의 평형과 회전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P037:01","questionId":"P037","text":"먼저 「강체의 평형과 회전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P038:01","questionId":"P038","text":"먼저 「강체의 평형과 회전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P039:01","questionId":"P039","text":"먼저 「강체의 평형과 회전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P040:01","questionId":"P040","text":"먼저 「강체의 평형과 회전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P041:01","questionId":"P041","text":"먼저 「강체의 평형과 회전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P042:01","questionId":"P042","text":"먼저 「강체의 평형과 회전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P043:01","questionId":"P043","text":"먼저 「강체의 평형과 회전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P044:01","questionId":"P044","text":"먼저 「강체의 평형과 회전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P045:01","questionId":"P045","text":"먼저 「강체의 평형과 회전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P046:01","questionId":"P046","text":"먼저 「강체의 평형과 회전」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P047:01","questionId":"P047","text":"먼저 「유체의 압력과 부력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P048:01","questionId":"P048","text":"먼저 「유체의 압력과 부력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P049:01","questionId":"P049","text":"먼저 「유체의 압력과 부력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P050:01","questionId":"P050","text":"먼저 「유체의 압력과 부력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P051:01","questionId":"P051","text":"먼저 「유체의 압력과 부력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P052:01","questionId":"P052","text":"먼저 「유체의 압력과 부력」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P053:01","questionId":"P053","text":"B가 카르노 기관이라고 바꾸어 읽지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:P054:01","questionId":"P054","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P055:01","questionId":"P055","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P056:01","questionId":"P056","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P057:01","questionId":"P057","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P058:01","questionId":"P058","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P059:01","questionId":"P059","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P060:01","questionId":"P060","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P061:01","questionId":"P061","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P062:01","questionId":"P062","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P063:01","questionId":"P063","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P064:01","questionId":"P064","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P065:01","questionId":"P065","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P066:01","questionId":"P066","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P067:01","questionId":"P067","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P068:01","questionId":"P068","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P069:01","questionId":"P069","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P070:01","questionId":"P070","text":"먼저 「열과 열역학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P071:01","questionId":"P071","text":"축전기에 전원 전압 10 V가 그대로 걸린다고 가정하지 않는다.","specificity":"question_specific_ai"}
+{"id":"hint:P072:01","questionId":"P072","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P073:01","questionId":"P073","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P074:01","questionId":"P074","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P075:01","questionId":"P075","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P076:01","questionId":"P076","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P077:01","questionId":"P077","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P078:01","questionId":"P078","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P079:01","questionId":"P079","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P080:01","questionId":"P080","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P081:01","questionId":"P081","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P082:01","questionId":"P082","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P083:01","questionId":"P083","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P084:01","questionId":"P084","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P085:01","questionId":"P085","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P086:01","questionId":"P086","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P087:01","questionId":"P087","text":"먼저 「전기장·전위와 축전기」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P088:01","questionId":"P088","text":"먼저 「전류와 직류 회로」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P089:01","questionId":"P089","text":"먼저 「전류와 직류 회로」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P090:01","questionId":"P090","text":"먼저 「전류와 직류 회로」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P091:01","questionId":"P091","text":"먼저 「전류와 직류 회로」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P092:01","questionId":"P092","text":"먼저 「전류와 직류 회로」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P093:01","questionId":"P093","text":"먼저 「전류와 직류 회로」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P094:01","questionId":"P094","text":"먼저 「전류와 직류 회로」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P095:01","questionId":"P095","text":"먼저 「전류와 직류 회로」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P096:01","questionId":"P096","text":"먼저 「전류와 직류 회로」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P097:01","questionId":"P097","text":"먼저 「전류와 직류 회로」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P098:01","questionId":"P098","text":"먼저 「전류와 직류 회로」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P099:01","questionId":"P099","text":"먼저 「전류와 직류 회로」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P100:01","questionId":"P100","text":"힘 qvB가 아니라 가속도를 물으므로 m으로 한 번 더 나눈다.","specificity":"question_specific_ai"}
+{"id":"hint:P101:01","questionId":"P101","text":"그래프 높이가 아니라 해당 시각의 기울기를 본다.","specificity":"question_specific_ai"}
+{"id":"hint:P102:01","questionId":"P102","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P103:01","questionId":"P103","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P104:01","questionId":"P104","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P105:01","questionId":"P105","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P106:01","questionId":"P106","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P107:01","questionId":"P107","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 옳은 것과 옳지 않은 것 중 무엇을 고르는지 먼저 확인하세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P108:01","questionId":"P108","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P109:01","questionId":"P109","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P110:01","questionId":"P110","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P111:01","questionId":"P111","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P112:01","questionId":"P112","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P113:01","questionId":"P113","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P114:01","questionId":"P114","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P115:01","questionId":"P115","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P116:01","questionId":"P116","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P117:01","questionId":"P117","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P118:01","questionId":"P118","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P119:01","questionId":"P119","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P120:01","questionId":"P120","text":"먼저 「자기장과 전자기 유도」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P121:01","questionId":"P121","text":"먼저 「교류 회로와 전자기파」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P122:01","questionId":"P122","text":"먼저 「교류 회로와 전자기파」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P123:01","questionId":"P123","text":"먼저 「교류 회로와 전자기파」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P124:01","questionId":"P124","text":"먼저 「교류 회로와 전자기파」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P125:01","questionId":"P125","text":"먼저 「교류 회로와 전자기파」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P126:01","questionId":"P126","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P127:01","questionId":"P127","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P128:01","questionId":"P128","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P129:01","questionId":"P129","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P130:01","questionId":"P130","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P131:01","questionId":"P131","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P132:01","questionId":"P132","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P133:01","questionId":"P133","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P134:01","questionId":"P134","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P135:01","questionId":"P135","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P136:01","questionId":"P136","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P137:01","questionId":"P137","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P138:01","questionId":"P138","text":"먼저 「진동과 파동·소리」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P139:01","questionId":"P139","text":"프리즘 면에 수직인 법선부터 표시한다.","specificity":"question_specific_ai"}
+{"id":"hint:P140:01","questionId":"P140","text":"먼저 「빛과 광학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P141:01","questionId":"P141","text":"먼저 「빛과 광학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P142:01","questionId":"P142","text":"먼저 「빛과 광학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P143:01","questionId":"P143","text":"먼저 「빛과 광학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P144:01","questionId":"P144","text":"먼저 「빛과 광학」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P145:01","questionId":"P145","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P146:01","questionId":"P146","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P147:01","questionId":"P147","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P148:01","questionId":"P148","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P149:01","questionId":"P149","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P150:01","questionId":"P150","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P151:01","questionId":"P151","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P152:01","questionId":"P152","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P153:01","questionId":"P153","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P154:01","questionId":"P154","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P155:01","questionId":"P155","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P156:01","questionId":"P156","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. ㄱ·ㄴ·ㄷ의 판단을 끝낸 뒤 조합 번호를 고릅니다.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P157:01","questionId":"P157","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P158:01","questionId":"P158","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P159:01","questionId":"P159","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P160:01","questionId":"P160","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P161:01","questionId":"P161","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P162:01","questionId":"P162","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P163:01","questionId":"P163","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P164:01","questionId":"P164","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P165:01","questionId":"P165","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P166:01","questionId":"P166","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P167:01","questionId":"P167","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P168:01","questionId":"P168","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P169:01","questionId":"P169","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P170:01","questionId":"P170","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P171:01","questionId":"P171","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P172:01","questionId":"P172","text":"먼저 「빛·물질의 이중성과 양자」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P173:01","questionId":"P173","text":"문제에 주어진 5초가 누구의 시계인지 먼저 밑줄 친다.","specificity":"question_specific_ai"}
+{"id":"hint:P174:01","questionId":"P174","text":"보존되는 전체 전하와 딸핵 자체의 전하를 구별한다.","specificity":"question_specific_ai"}
+{"id":"hint:P175:01","questionId":"P175","text":"먼저 「상대성 이론과 원자핵」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P176:01","questionId":"P176","text":"먼저 「상대성 이론과 원자핵」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P177:01","questionId":"P177","text":"먼저 「상대성 이론과 원자핵」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P178:01","questionId":"P178","text":"먼저 「상대성 이론과 원자핵」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P179:01","questionId":"P179","text":"먼저 「상대성 이론과 원자핵」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}
+{"id":"hint:P180:01","questionId":"P180","text":"먼저 「상대성 이론과 원자핵」의 문제로 분류한 이유를 원문 조건에서 찾아보세요. 답의 수치·용어만 떼어 OX로 판단하지 말고 지문과 함께 읽으세요.","specificity":"source_unit_based_template_candidate"}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0.0",
+  "packId": "hoedoksil-natural-science-full-v1",
+  "namespace": "astra-natural-science",
+  "contentVersion": "1.0.0",
+  "isSynthetic": false,
+  "subjectIds": [
+    "biology",
+    "chemistry",
+    "earth_science",
+    "physics"
+  ],
+  "generatedAt": "1970-01-01T00:00:00Z",
+  "generatedBy": "astra-import/tools/convert_astra_samples.py (720문항 전체)",
+  "licenseScope": "personal-exam-prep-restricted",
+  "files": [
+    {
+      "path": "data/learning-items.jsonl",
+      "sha256": "d7fb2a5bdde8545b000bcb5f3ec4ce4623b342d5a5cc26d2c24aa9f0afc081d1",
+      "byteSize": 780898,
+      "recordCount": 1370
+    },
+    {
+      "path": "data/grading-specs.jsonl",
+      "sha256": "b219f5c5d00123a2ea832b82d7f3444244891a41502bbf4b78b14e837100d0ee",
+      "byteSize": 139740,
+      "recordCount": 1370
+    },
+    {
+      "path": "data/textbook-paragraphs.jsonl",
+      "sha256": "f9ae184f1d73af6b7017266cec37b6770c6b8aa4507f80d7b72dc9e8a13896c7",
+      "byteSize": 433987,
+      "recordCount": 989
+    },
+    {
+      "path": "data/content-links.jsonl",
+      "sha256": "7e8936208f46cb11f54ff407fa61a14fc9863018c750e4e8f7e086cec8aff733",
+      "byteSize": 103619,
+      "recordCount": 273
+    },
+    {
+      "path": "data/source-assets.jsonl",
+      "sha256": "fcffc99c6acc83e914a5c65c0c64e8a68aadbc2e5a957fb92acbb4c994593ad7",
+      "byteSize": 280935,
+      "recordCount": 821
+    },
+    {
+      "path": "data/exam-questions.jsonl",
+      "sha256": "0a663764630795d6f659de54fd09cb24772c46d222e6657fc41abc43658cc370",
+      "byteSize": 789083,
+      "recordCount": 720
+    },
+    {
+      "path": "data/analysis-units.jsonl",
+      "sha256": "9516a2da82cfbcdaacea435517786e2d623f45a442fc8000387dffb6dd83136b",
+      "byteSize": 681997,
+      "recordCount": 1370
+    },
+    {
+      "path": "data/evidence-links.jsonl",
+      "sha256": "a5ae66dbcf00c44df063665dbe42a9de375175b0f10b1f28d46df3c3349737d8",
+      "byteSize": 206159,
+      "recordCount": 273
+    },
+    {
+      "path": "data/explanation-segments.jsonl",
+      "sha256": "fe3070a17007e0ff60e86822c1e6c7d4cbc92eb51118ee8658a6129383b7e205",
+      "byteSize": 91482,
+      "recordCount": 242
+    },
+    {
+      "path": "data/formulas.jsonl",
+      "sha256": "c3e76747c5e4310cccc7815008133893c1f90bb810ab35153a3a2740a04a4b90",
+      "byteSize": 14553,
+      "recordCount": 68
+    },
+    {
+      "path": "data/hints.jsonl",
+      "sha256": "ada12c28685da734f7ddae923039fe484e4875f01e6ac31da4453db16fea2c8b",
+      "byteSize": 210267,
+      "recordCount": 720
+    },
+    {
+      "path": "data/review-questions.jsonl",
+      "sha256": "4019d5dd5728c371924beeaf8b00735af1c3e3f6dc2508c20a82e3e8c7f464f4",
+      "byteSize": 172895,
+      "recordCount": 720
+    }
+  ],
+  "legacyIdMap": {},
+  "verificationSummary": {
+    "verified": 0,
+    "needsReview": 0,
+    "unverified": 1370,
+    "disputed": 0
+  }
+}
