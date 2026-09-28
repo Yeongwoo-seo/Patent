@@ -1,15 +1,18 @@
 import type { DBSchema } from 'idb';
 import type {
   AttemptEvent,
+  ContentPackImportRecord,
   DurationRule,
   ExposureEvent,
   GradingSpec,
   LearningItem,
   ReviewState,
+  SourceAsset,
 } from '../../domain/types';
 import type { DailyPlan } from '../../domain/quest/types';
 import type { PlannerBlock, TimeSegment } from '../../domain/timeTracking/types';
 import type { Annotation, ContentLink, TextbookParagraph } from '../../domain/reader/types';
+import type { ChoiceOptionSet } from '../../domain/import/types';
 
 /** ReviewState 저장 키: learnerId+itemId+learningEpoch (11.2) */
 export type ReviewStateKey = [string, string, number];
@@ -89,15 +92,28 @@ export interface HoedokshilDB extends DBSchema {
     value: Annotation;
     indexes: { byParagraph: string };
   };
+  sourceAssets: {
+    key: string; // id
+    value: SourceAsset;
+  };
+  choiceOptions: {
+    key: string; // itemId
+    value: ChoiceOptionSet;
+  };
+  contentPackImports: {
+    key: string; // id
+    value: ContentPackImportRecord;
+  };
 }
 
 export const DB_NAME = 'hoedokshil';
 /**
  * v1: 핵심 학습 엔진 저장소.
  * v2: 9장 리더용 저장소(textbookParagraphs/contentLinks/annotations) 추가.
+ * v3: 20장 수입기용 저장소(sourceAssets/choiceOptions/contentPackImports) 추가.
  * 21.2: 스키마 업데이트는 기존 이력을 지우지 않고 새 store만 추가하는 마이그레이션으로 처리한다.
  */
-export const DB_VERSION = 2;
+export const DB_VERSION = 3;
 
 export function reviewStateKey(learnerId: string, itemId: string, learningEpoch: number): ReviewStateKey {
   return [learnerId, itemId, learningEpoch];

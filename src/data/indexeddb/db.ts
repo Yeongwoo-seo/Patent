@@ -58,6 +58,12 @@ export function getDb(): Promise<IDBPDatabase<HoedokshilDB>> {
           const annotations = db.createObjectStore('annotations', { keyPath: 'id' });
           annotations.createIndex('byParagraph', 'paragraphId');
         }
+
+        if (oldVersion < 3) {
+          db.createObjectStore('sourceAssets', { keyPath: 'id' });
+          db.createObjectStore('choiceOptions', { keyPath: 'itemId' });
+          db.createObjectStore('contentPackImports', { keyPath: 'id' });
+        }
       },
     });
   }

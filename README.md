@@ -55,6 +55,10 @@ npm run typecheck
   연결되어 있다. 문단에서 연결된 문제로, 문제 결과 화면에서 "근거 문단
   보기"로 서로 이동할 수 있고, 문단별 오답/미확인 항목 수를 실제 학습
   이력에서 계산해 보여준다(정확한 스크롤/입력 상태 복원까지는 안 됨).
+- **콘텐츠 수입기(설정 탭)**: `content-package/` 형식의 파일을 선택하면 기존
+  콘텐츠와의 차이(신규/변경없음/새 학습버전/충돌)를 미리 보여주고, 승인해야만
+  반영한다. 학습 이력(`attemptEvents`/`reviewStates`)은 트랜잭션에 store
+  자체가 포함되지 않아 구조적으로 건드릴 수 없다.
 - 모든 학습 콘텐츠는 **테스트용 가상 자료**다. 실제 기출/조문/판례가 아니다.
 
 ## 프로젝트 구조
@@ -87,7 +91,10 @@ node content-package/tools/validate-package.mjs                         # 기계
 node content-package/tools/generate-review-queue.mjs                    # 미검증 항목 목록 갱신
 ```
 
-앱이 이 패키지를 실제로 읽어들이는 수입기는 아직 없다(`docs/KNOWN_LIMITATIONS.md`).
+앱의 설정 탭 → "콘텐츠 패키지 가져오기"에서 이 패키지의 `manifest.json` +
+`data/*.jsonl` + `assets/*` 파일을 한 번에 선택하면, 기존 콘텐츠와 무엇이
+다른지 미리 보여준 뒤 승인 시에만 반영한다(학습 기록은 절대 건드리지 않음 —
+`content-package/IMPORT_RULES.md`).
 
 ## 문서 목차
 

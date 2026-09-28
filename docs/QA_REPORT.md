@@ -8,8 +8,8 @@
 | 검사 | 명령 | 결과 |
 |---|---|---|
 | 타입체크 | `npm run typecheck` (`tsc --noEmit`) | 통과, 오류 0 |
-| 단위 테스트 | `npm test` (`vitest run`) | **50/50 통과**, 7개 파일 |
-| 프로덕션 빌드 | `npm run build` | 통과. JS 번들 gzip 약 15KB (초기 목표 250KB 이내, 23.1) |
+| 단위 테스트 | `npm test` (`vitest run`) | **70/70 통과**, 9개 파일 |
+| 프로덕션 빌드 | `npm run build` | 통과. JS 번들 gzip 약 20.5KB (초기 목표 250KB 이내, 23.1) |
 
 ### 단위 테스트 범위
 
@@ -28,6 +28,15 @@
   상태를 미확인으로 정확히 분류하는지, 관계없는 항목의 통계를 끌어오지 않는지 4개
 - `tests/unit/data/attemptRepository.test.ts` — IndexedDB 트랜잭션 원자성(19.1),
   미검증 스펙의 무변화, 노출 이벤트의 최소 간격 반영 4개 (fake-indexeddb 사용)
+- `tests/unit/domain/import.test.ts` — 실제 `content-package/`를 파싱해 파싱
+  오류 0건/참조 무결성 오류 0건임을 확인(수입기와 패키지 빌더가 서로 다른
+  구현인데도 일치), 잘못된 JSONL 줄 격리, 중복ID/끊긴참조/자산누락 주입 검사,
+  learningEpoch 5분류(new/unchanged/updated_same_epoch/new_epoch/epoch_conflict)
+  14개
+- `tests/unit/data/importRepository.test.ts` — 빈 DB에 실제 패키지 적용, 같은
+  패키지 재적용 시 멱등성, **재수입 후에도 attemptEvents/reviewStates가 정확히
+  그대로 남는지**, epoch_conflict 항목이 로컬의 더 높은 버전을 덮어쓰지 않는지,
+  검증 실패 시 적용 거부 6개 (fake-indexeddb 사용)
 
 ## 2. 수동/자동화 브라우저 스모크 테스트 (Chromium, 이 세션에서 실행함)
 
@@ -51,6 +60,12 @@
 - [x] **리더 왕복(9.2)**: 서재 탭 → 문단 카드(연결/오답/미확인 수 표시) → 문단
       상세 → 형광펜 토글(on 확인) → 연결된 학습 항목 열기 → OX 풀이 제출 →
       결과 화면의 "근거 문단 보기" 버튼 → 원래 문단으로 복귀까지 오류 없이 확인
+- [x] **콘텐츠 수입기 왕복(20장)**: 설정 탭에서 실제 `content-package/`의
+      파일 11개를 한 번에 선택 → dry-run 리포트(학습 항목/채점기준/기간카드/
+      문단/링크는 앱이 부팅 시 이미 시딩한 것과 동일해 "변경 없음", 자산·선택지는
+      "신규") → 적용 → IndexedDB에서 `learningItems=14, gradingSpecs=14,
+      sourceAssets=3, choiceOptions=4` 직접 확인 → 같은 파일 재선택 시 전부
+      "변경 없음"으로 뜨는 멱등성까지 확인
 
 이 목록은 **자동화 스모크 테스트**이며 다음을 검증하지 않는다: 실제 iPhone
 Safari/홈 화면 설치 동작, 안전 영역 inset의 실기기 렌더링, 소프트 키보드 겹침,

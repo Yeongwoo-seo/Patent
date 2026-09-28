@@ -8,7 +8,7 @@
 | 단계 | 상태 | 비고 |
 |---|---|---|
 | A. 공통 엔진 | 구현·테스트 완료 | 날짜/채점/복습 엔진 46개 단위 테스트 통과 |
-| B. 과목별 학습 경험 | **부분 구현** | 9개 과목 각 1~2개 데모 항목의 흐름만 구현. 실 데이터 없음. 3개 과목엔 리더 문단 연결까지 추가 |
+| B. 과목별 학습 경험 | **부분 구현** | 9개 과목 각 1~2개 데모 항목의 흐름만 구현. 실 데이터 없음. 3개 과목엔 리더 문단 연결까지 추가. 콘텐츠 수입기(20장) 최소 구현 완료 |
 | C. 오늘의 퀘스트/10분 블록 | **최소 구현** | 핵심 배분 로직은 있으나 기아 방지·정확한 시간 예측 등은 없음 |
 | D. 서버 동기화·실제 알림 | **미구현** | 자격 증명(Supabase, VAPID) 없음. "설정 대기" |
 | E. 백업/오프라인 팩/실기기 검수 | **미구현** | 다음 세션 과제 |
@@ -25,12 +25,20 @@
   `content-package/schema/source-asset.schema.json`,
   `schema/choice-option.schema.json`은 패키지 쪽 스키마만 먼저 정의해 둔
   것이고, **앱 IndexedDB에는 대응 store가 아직 없다.**
-- **콘텐츠 패키지 자체(`content-package/`)는 이번에 만들었다**: build/validate
-  스크립트, JSON Schema, 해시·레코드수가 기록된 manifest, REVIEW_QUEUE.md,
-  IMPORT_RULES.md까지 있다. 다만 **앱이 이 패키지를 실제로 읽어 IndexedDB에
-  반영하는 수입기(importer)는 아직 없다** — 패키지를 "만드는" 도구만 있고
-  "먹는" 도구는 없다. 20장의 dry-run UI, 사용자 승인 흐름, 실패 시 롤백도
-  구현하지 않았다.
+- **콘텐츠 패키지(`content-package/`)와 그것을 읽어들이는 수입기 둘 다 이제 있다.**
+  `src/domain/import/`(파싱·기계 검증·diff)와 `src/data/repositories/importRepository.ts`
+  (dry-run + 원자적 적용), 설정 탭의 "콘텐츠 패키지 가져오기" UI까지 구현했고,
+  실제 `content-package/`의 11개 파일을 Chromium으로 실제 가져와 적용까지
+  확인했다. IndexedDB에 `sourceAssets`/`choiceOptions`/`contentPackImports`
+  store를 추가했다(v3 마이그레이션).
+  - **여전히 없는 것**: manifest의 sha256 해시 검증(패키지 무결성 확인 —
+    content-package 쪽 validate-package.mjs에는 있지만 앱 쪽 수입기에는 아직
+    포팅하지 않음), 바이너리 자산(jpg/png/mp3) 지원(텍스트 자산만 가능),
+    ZIP 압축 해제(사용자가 파일을 직접 여러 개 선택해야 함 - `<input
+    webkitdirectory>` 폴더 선택은 시도하지 않음), "패키지에서 빠진 기존 항목"을
+    실제로 `removed_upstream` 같은 상태로 표시하는 기능(지금은 목록만 보여줌).
+  - 파일명이 패키지 안에서 전부 고유하다는 전제로 basename 매칭을 한다 — 같은
+    이름의 파일이 여러 서로 다른 패키지에서 섞여 업로드되면 오동작한다.
 
 ### 리더(9장)
 - **최소 구현 완료(이번 세션 두 번째 증분)**: 3개 과목(민법·특허·물리)에 대표
@@ -90,6 +98,8 @@
 
 ## 다음 세션에서 우선순위로 제안하는 것
 
-1. 실제 기출/조문/판례 원문 파일을 받아 20장의 수입 파이프라인을 실제로 구현.
-2. `Question`/`Option`/`ContentLink` 등 나머지 엔터티와 리더(9장) 최소 구현.
-3. Supabase 프로젝트가 준비되면 단계 D(동기화/알림) 착수.
+1. 실제 기출/조문/판례 원문 파일을 받아 지금 만든 수입기로 실제 데이터를 반영.
+2. `Question`/`Option`/`Topic`/`Concept`/`StatuteVersion`/`CaseRecord` 등
+   나머지 18.2 엔터티 구현, 리더(9장)를 나머지 6개 과목으로 확장.
+3. 수입기에 manifest sha256 검증과 바이너리 자산 지원 추가.
+4. Supabase 프로젝트가 준비되면 단계 D(동기화/알림) 착수.

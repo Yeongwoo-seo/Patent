@@ -202,6 +202,45 @@ export type DurationRule = {
   whyEvidenceType: WhyEvidenceType;
 };
 
+/**
+ * 18.2 SourceAsset — 파일 hash, 이름, 유형, 권한·비공개 여부, 원문 위치.
+ * 20장 수입기(content-package/ 참고)가 다루는 자산 메타데이터.
+ * 이번 세션은 텍스트 기반 자산(svg/json)만 지원한다 — 바이너리(jpg/png/mp3)는
+ * textContent가 아닌 별도 저장(Blob/Cache Storage)이 필요해 미구현이다(KNOWN_LIMITATIONS).
+ */
+export type SourceAssetKind = 'image' | 'formula' | 'audio' | 'document';
+
+export type SourceAsset = {
+  id: string;
+  kind: SourceAssetKind;
+  path: string;
+  mimeType: string;
+  sha256: string;
+  byteSize: number;
+  isSynthetic: boolean;
+  licenseScope: string;
+  sourceLocation: string | null;
+  /** 텍스트 기반 자산의 원본 내용(svg/json 등). 바이너리 자산은 이번 세션에 지원하지 않는다. */
+  textContent: string | null;
+};
+
+/** 18.2 ContentPack — 어떤 패키지가 언제 반영되었는지의 이력(수입기 감사 로그). */
+export type ContentPackImportRecord = {
+  id: string;
+  packId: string;
+  namespace: string;
+  contentVersion: string;
+  schemaVersion: string;
+  importedAtUtc: string;
+  counts: {
+    added: number;
+    updatedSameEpoch: number;
+    newEpoch: number;
+    unchanged: number;
+    skippedConflicts: number;
+  };
+};
+
 export type GradingKind = 'choice' | 'ox' | 'numeric' | 'cloze' | 'sequence' | 'self_report_only';
 
 export type GradingSpec = {

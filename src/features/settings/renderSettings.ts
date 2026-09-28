@@ -4,10 +4,11 @@ import type { HoedokshilDB } from '../../data/indexeddb/schema';
 import { DB_NAME } from '../../data/indexeddb/schema';
 import { closeDb } from '../../data/indexeddb/db';
 import { el } from '../../app/dom';
+import { renderImporter } from '../importer/renderImporter';
 
 const TIMEZONES = ['Australia/Sydney', 'Asia/Seoul', 'UTC'];
 
-export function renderSettings(main: HTMLElement, _db: IDBPDatabase<HoedokshilDB>, onChanged: () => void): void {
+export function renderSettings(main: HTMLElement, db: IDBPDatabase<HoedokshilDB>, onChanged: () => void): void {
   main.replaceChildren();
   main.append(Object.assign(document.createElement('h1'), { textContent: '설정' }));
   const settings = loadSettings();
@@ -86,6 +87,8 @@ export function renderSettings(main: HTMLElement, _db: IDBPDatabase<HoedokshilDB
       Object.assign(document.createElement('span'), { className: 'pill', textContent: '설정 대기' }),
     ]),
   );
+
+  renderImporter(main, db);
 
   main.append(Object.assign(document.createElement('h2'), { textContent: '데이터' }));
   const dangerCard = document.createElement('div');

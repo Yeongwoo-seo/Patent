@@ -127,6 +127,36 @@
   먼저 정의한 것이며, 앱의 IndexedDB에는 대응 store가 아직 없다 —
   `docs/KNOWN_LIMITATIONS.md`에 명시했다.
 
+## 수입기(20장) 관련 결정
+
+- **learningEpoch 인지 diff는 LearningItem에만 적용한다.** `GradingSpec`,
+  `DurationRule`, `TextbookParagraph`, `ContentLink`, `SourceAsset`,
+  `ChoiceOptionSet`은 `learningEpoch` 개념이 없고 `ReviewState`와 직접
+  키로 엮여 있지도 않다(LearningItem을 통해서만 간접 영향) — 그래서 이들은
+  단순 "새 id/내용 동일/내용 다름" 3분류(`diffById`)만 쓰고, 학습 이력
+  보호가 실제로 걸려 있는 LearningItem만 5분류(`diffLearningItems`)를 쓴다.
+- **파일 선택은 `<input type=file multiple>` + 파일명 매칭**으로 구현했다.
+  `webkitdirectory`로 폴더 전체를 선택하는 방식은 브라우저별 동작 차이와
+  자동화 테스트(Playwright) 안정성 문제가 있어 피했다. 대신 패키지 안의
+  모든 파일명이 서로 겹치지 않는다는 전제(README_FOR_CLAUDE.md의 고정
+  레이아웃)로 basename만 보고 역할을 매칭한다 — 여러 패키지를 동시에
+  선택하면 오동작할 수 있다는 뜻이고, KNOWN_LIMITATIONS.md에 적어뒀다.
+- **ZIP 압축 해제는 구현하지 않았다.** 브라우저에서 zip을 풀려면 라이브러리가
+  필요한데(예: fflate), 이번 세션은 "의존 패키지 최소화"를 우선했다. 사용자가
+  압축을 풀어 파일들을 직접 선택해야 한다.
+- **manifest.json의 sha256 해시는 검증하지 않는다(앱 쪽에서는).**
+  `content-package/tools/validate-package.mjs`는 만드는 쪽에서 해시를
+  검증하고, 앱 쪽 수입기는 "지금 가진 파일들이 서로 참조 무결적인지"만
+  본다. 패키지 전송 중 변조 여부까지 잡으려면 WebCrypto `SubtleCrypto.digest`로
+  재해싱하는 코드를 추가해야 한다(다음 세션 과제로 KNOWN_LIMITATIONS.md에
+  기재).
+- **epoch_conflict는 조용히 건너뛴다(에러로 막지 않음).** 전체 dry-run을
+  막을 정도로 심각하진 않지만(다른 항목은 정상 반영돼야 하므로), 해당
+  항목만 "적용 안 함"으로 남기고 UI에 개수를 보여준다. `canApply`는
+  파싱/참조무결성 오류에만 반응하고 epoch_conflict 자체로는 false가 되지
+  않는다 — 이 충돌은 "일부 항목만 보류"이지 "패키지 전체가 깨짐"이 아니기
+  때문이다.
+
 ## 로컬 전용 모드
 
 - 19.6절대로 로그인 없이 로컬 모드로 동작하며, `learnerId`는 고정 문자열
