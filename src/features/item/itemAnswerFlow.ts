@@ -5,9 +5,8 @@ import { getDeviceId, nextDeviceSequence, newCorrelationId, sessionId, LOCAL_LEA
 import { getLinkedParagraphIdsForItem, getTextbookParagraph } from '../../data/repositories/contentRepository';
 import {
   getAnalysisUnit,
-  getEvidenceLinksForAnalysisUnit,
   getExamQuestion,
-  getExplanationSegment,
+  getExplanationSegmentsForQuestion,
 } from '../../data/repositories/examRepository';
 import { renderAssetImage } from '../asset/renderAssetImage';
 import type { AnswerPayload, Assistance, Confidence, GradingSpec, LearningItem } from '../../domain/types';
@@ -107,17 +106,20 @@ async function renderResult(
         el('div', { className: 'card' }, [
           el('div', { className: 'reason', text: `${question.examName} ${question.examYear} 제${question.examNumber}번 (공식 정답 미확인)` }),
           el('div', { className: 'muted', text: `제공 해설 답: ${question.providedAnswer.value?.join(', ') ?? '없음'} · AI 추정 답: ${question.aiInferredAnswer.value?.join(', ') ?? '없음'} (둘 다 공식 정답 아님)` }),
+          question.currentLawAnswer.value || question.currentLawAnswer.status !== 'not_reviewed'
+            ? el('div', { className: 'muted', text: `현행법 재검토 답: ${question.currentLawAnswer.value?.join(', ') ?? '미검토'}` })
+            : '',
         ]),
       );
     }
 
-    const evidenceLinks = await getEvidenceLinksForAnalysisUnit(analysisUnit.id, deps.db);
-    const segmentIds = [...new Set(evidenceLinks.map((l) => l.explanationSegmentId).filter((id): id is string => id !== null))];
-    if (segmentIds.length > 0) {
+    // ExplanationSegment.analysisUnitId로 직접 조회한다 - EvidenceLink 하나당 근거 문단 하나에
+    // 연결된 해설(제공 해설)만 가리키므로, 그 경로로는 같은 판단 단위의 AI 해설 구간이 누락된다.
+    const allSegmentsForQuestion = await getExplanationSegmentsForQuestion(analysisUnit.questionId, deps.db);
+    const segments = allSegmentsForQuestion.filter((s) => s.analysisUnitId === analysisUnit.id);
+    if (segments.length > 0) {
       container.append(el('h2', { text: '해설 (출처 구분)' }));
-      for (const segId of segmentIds) {
-        const seg = await getExplanationSegment(segId, deps.db);
-        if (!seg) continue;
+      for (const seg of segments) {
         container.append(
           el('div', { className: 'card' }, [
             el('span', { className: 'pill', text: EXPLANATION_ORIGIN_LABEL[seg.origin] }),

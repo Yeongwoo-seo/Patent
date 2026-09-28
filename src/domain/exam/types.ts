@@ -33,6 +33,8 @@ export type ExamQuestion = {
   officialAnswer: ExamAnswerClaim;
   providedAnswer: ExamAnswerClaim;
   aiInferredAnswer: ExamAnswerClaim;
+  /** 현행법 기준 재검토 답(민법 패키지에서 처음 등장 — 4번째 답 축). 공식/제공/AI 답과 서로 대체 불가. */
+  currentLawAnswer: ExamAnswerClaim;
   standaloneOxEnabled: boolean;
   isSynthetic: boolean;
 };

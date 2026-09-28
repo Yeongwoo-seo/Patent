@@ -17,7 +17,9 @@ export type ParagraphRole =
   /** 개념 정의 문단 (실제 기출 콘텐츠 base.blocks.block_type='definition' 등에서 옴). */
   | 'definition'
   /** 풀이/유도 과정의 한 단계 (block_type='derivation_step'). */
-  | 'derivation_step';
+  | 'derivation_step'
+  /** 판례 원문 발췌 (content_role='case_original_excerpt', 민법 패키지에서 처음 등장). */
+  | 'case_excerpt';
 
 export type TextbookParagraph = {
   id: string;

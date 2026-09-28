@@ -75,6 +75,47 @@
   구조(조문 번호, 판례 인용 등)를 위한 추가 필드가 필요한지는 실제로
   받아보기 전까지는 확인할 수 없다.
 
+### 민법 콘텐츠 통합(hoedoksil_civil_final_v1 패키지)
+- 사용자가 실제 변리사 1차시험 민법(2010~2026, 680문항) + 58개 장 기본서
+  완결본 패키지를 zip 2파트로 업로드했다. **이번 세션에는 패키지에 포함된
+  공식 완결 샘플 2문항(2011-08, 2011-14)만 변환·가져오기·화면 렌더링까지
+  실제로 검증**했다(패키지 자체 검증기 68,618레코드 0오류 확인 후,
+  Chromium으로 파싱 0오류·검증 0이슈, dry-run/적용/문단 열람/O·X 흐름/
+  "채점 보류"/제공·AI 답 병기/해설 출처 배지(제공+AI 둘 다) 확인).
+- **680문항 전체를 우리 포맷으로 배치 변환하는 작업은 하지 않았다.**
+  `civil-import/tools/convert_civil_samples.py`는 패키지의
+  `samples/*.complete.json`(완결 렌더링 샘플)을 소비하도록 만들어졌다.
+  전체 확장은 패키지의 `tools/read_question.py`로 680문항 각각의 완결 뷰를
+  미리 뽑아야 하고, 그 결과물을 어디에 보관할지(대용량 이미지 자산 포함)도
+  정해야 한다.
+- **160개 이미지 전용 문항, 조문(base.statutes 647건)·판례(base.case_excerpts
+  48건)를 별도 엔터티로 다루는 것, `exam.study_items`/`exam.solution_steps`/
+  `base.review_questions` 같은 부가 컬렉션은 다루지 않았다.** 2개 샘플
+  모두 텍스트 문항이라 이미지 전용 문항 처리(질문 자체가 텍스트 없이
+  스캔 이미지+원문 PDF만 있는 경우)는 검증되지 않았다. `solution_steps`
+  4건은 전용 엔터티를 새로 만들지 않고 AI 해설 텍스트에 이어붙이는 방식으로
+  흡수했다(680문항 규모에서 이 패턴이 계속 맞는지는 다음 세션에 확인).
+- **`ExamQuestion.currentLawAnswer`(현행법 재검토 답, 4번째 답 축)를
+  스키마에 추가했지만 화면에 실제로 값이 나온 적은 없다** — 두 샘플 모두
+  `status: 'not_reviewed'`라 미검토 상태라서다. 필드/렌더링 코드는 있으니
+  값이 채워진 문항이 오면 추가 작업 없이 표시될 것으로 기대하지만, 실제
+  검증은 하지 못했다.
+- **`base/blocks.jsonl`의 문단이 소속된 장(chapter)/절(section)을 문단 id
+  문자열 패턴(`{장}-{절}-B{번호}`)으로 역추정한다** — 패키지가 렌더링된
+  문단 객체 자체에는 chapter_id/section_id를 별도로 내려주지 않아서다.
+  두 샘플에서는 이 패턴이 100% 맞았지만, 예외적인 블록(표·부록 등)이
+  섞이면 어긋날 수 있다.
+- **민법 패키지의 참조 구현(`tools/import_content.py`)은 SQLite 대상이라
+  우리 IndexedDB 수입기와 저장소가 다르다.** 같은 키(namespace/collection/
+  entityId)·해시·원자성 원칙은 이미 우리 importRepository가 만족하지만,
+  이 패키지 고유의 "이전 payload 해시+리비전까지 정확히 일치해야 갱신
+  허용"(`registry/allowed_predecessors.jsonl`) 같은 더 엄격한 체인 검증은
+  우리 쪽에 이식하지 않았다 — 지금은 민법 콘텐츠도 자연과학과 같은
+  learningEpoch 기반 5분류 diff만 적용된다.
+- **실제 콘텐츠(변환된 2문항 결과물, 원본 패키지)는 이 저장소에 커밋하지
+  않았다.** 자연과학 패키지와 같은 이유 — `civil-import/tools/
+  convert_civil_samples.py`(변환기 코드)만 커밋했다.
+
 ### 리더(9장)
 - **최소 구현 완료(이번 세션 두 번째 증분)**: 3개 과목(민법·특허·물리)에 대표
   문단 1개씩, `ContentLink`로 학습 항목과 양방향 연결, '서재' 탭에서 문단 목록
@@ -133,11 +174,12 @@
 
 ## 다음 세션에서 우선순위로 제안하는 것
 
-1. 자연과학 720문항 전체를 `convert_astra_samples.py` 확장으로 배치
-   변환하고, 실제 콘텐츠(및 대용량 이미지 자산)를 어디에 보관할지
-   결정한다(이 저장소는 public — `docs/DECISIONS.md` 참고).
-2. 예고된 민법 패키지(2개 파일)를 받으면 지금의 exam 도메인 계층이 그대로
-   맞는지 확인하고, 민법 특유 구조(조문/판례 인용 등)가 필요하면 확장한다.
+1. 자연과학 720문항·민법 680문항 전체를 각 변환기(`convert_astra_samples.py`/
+   `convert_civil_samples.py`) 확장으로 배치 변환하고, 실제 콘텐츠(및
+   대용량 이미지 자산)를 어디에 보관할지 결정한다(이 저장소는 public —
+   `docs/DECISIONS.md` 참고).
+2. 민법의 160개 이미지 전용 문항, 조문(statutes)·판례(case_excerpts) 전용
+   엔터티화, `solution_steps`가 많아질 때 전용 타입 도입 여부를 확인한다.
 3. `Question`/`Option`/`Topic`/`Concept`/`StatuteVersion`/`CaseRecord` 등
    나머지 18.2 엔터티 구현, 리더(9장)를 나머지 과목으로 확장.
 4. 수입기에 manifest sha256 검증, ZIP 압축 해제, object URL revoke 추가.

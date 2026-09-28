@@ -23,6 +23,7 @@ const ROLE_LABEL: Record<string, string> = {
   narrative: '설명',
   definition: '정의',
   derivation_step: '풀이 단계',
+  case_excerpt: '판례 발췌',
 };
 
 export type ParagraphViewDeps = {

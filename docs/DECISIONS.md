@@ -216,6 +216,69 @@
   커밋한다면 private 저장소로 옮길지는 다음 세션에 사용자와 확인이
   필요하다.
 
+## 민법 콘텐츠 통합(hoedoksil_civil_final_v1 패키지) 관련 결정
+
+- **민법 패키지(680문항, 2010~2026, 58개 장 기본서 완결본)를 2개 zip 파트로 받아
+  병합 후 사용자에게 통합 범위를 다시 물었다.** 자연과학 패키지보다 구조가 더
+  복잡하고(5지선다, 이미지 전용 문항 160개, 조문/판례 발췌가 별도 content_role,
+  공식/제공/AI/현행법 4갈래 정답 구분) 이미 680문항 전체가 완결·검증된 상태라
+  전량을 한 번에 변환할지 공식 샘플부터 검증할지가 새로운 갈림길이었다.
+  **사용자가 "공식 샘플 2문항 먼저"를 선택**해 이번 세션은 패키지에 포함된
+  공식 완결 샘플 2개(2011-08, 2011-14)만 변환·검증했다.
+- **패키지 자체의 무결성 검증기(`tools/validate_package.py`)를 먼저 실행해
+  0오류를 확인했다**(68,618 레코드, 33개 컬렉션, 이미지 81장 디코딩, PDF
+  1,842페이지 구조 확인, 2개 공식 샘플의 렌더링 결과가 원본 컬렉션 재조합과
+  바이트까지 일치함을 자체 검증 — jsonschema 4.26.0/Pillow 12.3.0(자연과학
+  때 이미 설치)/PyMuPDF 1.26.7을 추가 설치). 실행 전 5개 파이썬 도구
+  (`package_io.py`/`validate_package.py`/`import_content.py`/
+  `test_importer.py`/`audit/evidence_delta/tools/apply_delta.py`) 전문을
+  읽어 네트워크 호출·파괴적 동작이 없고 경로 이스케이프 가드가 있음을
+  확인했다 — SQLite 트랜잭션 기반 참조 구현이지만 "실제 앱이 IndexedDB를
+  쓰면 같은 키·해시 사전조건·원자성 규칙을 이식하라"고 README가 명시해,
+  우리 importRepository의 기존 원자적 적용 방식이 이 요구를 이미 충족한다고
+  판단했다(새로 이식할 것 없음).
+- **33개 원본 컬렉션을 직접 순회하는 대신 패키지가 이미 제공하는 완결
+  렌더링 샘플(`samples/*.complete.json`)을 그대로 소비했다.** 이 샘플은
+  질문·지문·선지·진술·제공 해설·AI 학습자료·근거 연결·참조 문단까지 전부
+  포함하고, 패키지 자체 검증기가 "33개 컬렉션에서 재조합한 값과 바이트까지
+  동일"함을 이미 보증한다. 680문항 전체로 확장할 때는 패키지의
+  `tools/read_question.py`로 각 문항의 완결 뷰를 미리 뽑아 같은 변환기를
+  재사용하면 된다(`civil-import/tools/convert_civil_samples.py`의 독스트링에
+  기재).
+- **`ExamQuestion`에 `currentLawAnswer`(현행법 재검토 답) 필드를 추가했다.**
+  이 패키지에서 처음 등장하는 4번째 답 축이며(공식/제공/AI와 서로 대체
+  불가), 두 샘플 모두 `status: 'not_reviewed'`라 화면에는 아직 아무것도
+  표시되지 않지만 필드 자체는 스키마에 반영해 다음 배치에서 값이 채워져도
+  구조 변경 없이 표시할 수 있게 했다.
+- **`ParagraphRole`에 `case_excerpt`(판례 원문 발췌)를 추가했다.** 두 샘플이
+  참조하는 기본서 문단의 `content_role` 중 `case_original_excerpt`에 대응한다.
+  그 외 관찰된 값(`author_exposition`, `author_explanation_of_excerpt`)은
+  기존 `narrative`로 충분해 새 역할을 만들지 않았다.
+- **`EvidenceRole`/`EvidenceRelation`은 새 값을 추가하지 않고 변환기에서
+  이름만 매핑했다.** 패키지의 `relationRole`(core_evidence/exception/
+  prerequisite/example)과 `stanceToProvidedClaim`(supports/refutes/...)이
+  자연과학 패키지 때 이미 정의해 둔 우리 enum과 의미상 그대로 겹쳐서다
+  (`exception`→`exception_or_limitation`, `example`→`source_example`만
+  이름 변환).
+- **`SolutionStep`이라는 새 엔터티를 만들지 않았다.** 2011-14 샘플의
+  계산 단계 4건은 전용 엔터티를 새로 설계하기엔 이번 2문항 증분 범위에서
+  너무 작아(YAGNI), 대응하는 AI 해설(ExplanationSegment, origin=
+  'ai_reasoning') 텍스트에 이어붙이는 방식으로 흡수했다. 680문항 전체
+  변환에서 SolutionStep이 많이 나오면 그때 별도 타입을 만드는 편이 낫다.
+- **버그 수정(민법 통합 중 발견, 자연과학에도 동일하게 있던 문제)**:
+  `itemAnswerFlow.ts`가 해설 구간을 `EvidenceLink.explanationSegmentId`
+  경로로만 찾고 있었는데, 이 필드는 "제공 해설" 하나만 가리키므로 같은
+  판단 단위의 "AI 추론" 해설 구간이 화면에 전혀 나타나지 않고 있었다(민법
+  샘플에서 둘 다 실제로 존재해서 발견 — 자연과학 샘플도 같은 구조라 동일하게
+  누락되고 있었을 것). `ExplanationSegment.analysisUnitId`로 직접 조회하도록
+  고쳐 같은 판단 단위의 모든 해설 구간(출처 무관)이 보이게 했다. 새 IndexedDB
+  인덱스 없이 질문 단위로 이미 가져온 목록을 클라이언트에서 필터링하는
+  방식이라 마이그레이션이 필요 없다.
+- **실제 콘텐츠(변환된 2문항 결과물, 원본 패키지)는 이 저장소에 커밋하지
+  않는다.** 자연과학 패키지와 같은 이유(라이선스 제한 콘텐츠 + public
+  저장소) — `civil-import/tools/convert_civil_samples.py`(변환기 코드)만
+  커밋한다.
+
 ## 로컬 전용 모드
 
 - 19.6절대로 로그인 없이 로컬 모드로 동작하며, `learnerId`는 고정 문자열
