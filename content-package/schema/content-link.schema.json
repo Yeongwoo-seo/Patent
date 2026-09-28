@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://hoedokshil.local/schema/content-link.schema.json",
+  "title": "ContentLink (data/content-links.jsonl, 1 record per line)",
+  "description": "src/domain/reader/types.ts의 ContentLink와 1:1로 대응한다(4.1 다대다 관계).",
+  "type": "object",
+  "required": ["id", "fromId", "toId", "relation", "sourceLocation"],
+  "properties": {
+    "id": { "type": "string" },
+    "fromId": { "type": "string", "description": "learning-items.jsonl 또는 textbook-paragraphs.jsonl의 id" },
+    "toId": { "type": "string", "description": "learning-items.jsonl 또는 textbook-paragraphs.jsonl의 id" },
+    "relation": { "enum": ["supports", "derived_from", "related", "contradicts"] },
+    "sourceLocation": { "type": ["string", "null"] }
+  }
+}

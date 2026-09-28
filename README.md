@@ -73,6 +73,22 @@ docs/             감사·의사결정·배포·QA·한계 문서
 scripts/          플레이스홀더 아이콘 생성 스크립트
 ```
 
+## 콘텐츠 패키지
+
+`content-package/`에는 앱의 데모 콘텐츠(민법·산재·자연과학 14개 학습 항목,
+문단, 기간 카드, 그림·수식 자산)를 앱 도메인 타입과 1:1로 맞춘 JSON/JSONL
+패키지가 있다. 재분석 없이 그대로 가져올 수 있게 만든 것이며, 자세한 내용은
+[`content-package/README_FOR_CLAUDE.md`](content-package/README_FOR_CLAUDE.md)를
+본다. 요약:
+
+```bash
+node --experimental-strip-types content-package/tools/build-package.mjs  # fixtures -> JSONL + manifest
+node content-package/tools/validate-package.mjs                         # 기계 검증 (현재 오류 0건)
+node content-package/tools/generate-review-queue.mjs                    # 미검증 항목 목록 갱신
+```
+
+앱이 이 패키지를 실제로 읽어들이는 수입기는 아직 없다(`docs/KNOWN_LIMITATIONS.md`).
+
 ## 문서 목차
 
 - [`docs/IMPLEMENTATION_AUDIT.md`](docs/IMPLEMENTATION_AUDIT.md) — 시작 시점 저장소 상태(빈 저장소였음)

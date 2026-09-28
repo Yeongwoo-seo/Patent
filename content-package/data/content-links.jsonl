@@ -1,0 +1,6 @@
+{"id":"link-civil-1","fromId":"demo-civil-statement-1","toId":"demo-para-civil-1","relation":"derived_from","sourceLocation":"문단 1문장"}
+{"id":"link-civil-2","fromId":"demo-civil-statement-2","toId":"demo-para-civil-1","relation":"derived_from","sourceLocation":"문단 2문장"}
+{"id":"link-patent-1","fromId":"demo-patent-duration-1","toId":"demo-para-patent-1","relation":"derived_from","sourceLocation":"문단 1문장"}
+{"id":"link-patent-2","fromId":"demo-patent-procedure-1","toId":"demo-para-patent-1","relation":"derived_from","sourceLocation":"문단 1문장"}
+{"id":"link-physics-1","fromId":"demo-physics-formula-recall-1","toId":"demo-para-physics-1","relation":"derived_from","sourceLocation":"문단 1문장"}
+{"id":"link-physics-2","fromId":"demo-physics-independent-1","toId":"demo-para-physics-1","relation":"derived_from","sourceLocation":"문단 1문장"}

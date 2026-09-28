@@ -1,0 +1,4 @@
+{"itemId":"demo-patent-duration-1","options":[{"id":"opt-3yr-from-filing","label":"출원일로부터 3년"},{"id":"opt-5yr-from-filing","label":"출원일로부터 5년"},{"id":"opt-1yr-from-registration","label":"등록일로부터 1년"}]}
+{"itemId":"demo-utility-duration-1","options":[{"id":"opt-different-from-patent","label":"특허와 다른 기간이 별도로 정해진다(가상)"},{"id":"opt-same-as-patent","label":"특허와 완전히 동일한 기간이 그대로 적용된다"}]}
+{"itemId":"demo-design-procedure-1","options":[{"id":"opt-6m","label":"공개일로부터 6개월"},{"id":"opt-12m","label":"공개일로부터 12개월"}]}
+{"itemId":"demo-earth-diagram-1","options":[{"id":"opt-divergent","label":"발산 경계"},{"id":"opt-convergent","label":"수렴 경계"},{"id":"opt-transform","label":"보존 경계"}]}

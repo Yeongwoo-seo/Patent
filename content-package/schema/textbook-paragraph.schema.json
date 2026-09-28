@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://hoedokshil.local/schema/textbook-paragraph.schema.json",
+  "title": "TextbookParagraph (data/textbook-paragraphs.jsonl, 1 record per line)",
+  "description": "src/domain/reader/types.ts의 TextbookParagraph와 1:1로 대응한다(브리핑 9장, 18.2).",
+  "type": "object",
+  "required": ["id", "subjectId", "bookId", "chapter", "section", "paragraphIndex", "role", "text", "assetIds", "isSynthetic"],
+  "properties": {
+    "id": { "type": "string" },
+    "subjectId": {
+      "enum": ["civil", "patent", "utility", "trademark", "design", "physics", "chemistry", "biology", "earth_science"]
+    },
+    "bookId": { "type": "string" },
+    "chapter": { "type": "string" },
+    "section": { "type": "string" },
+    "paragraphIndex": { "type": "integer", "minimum": 0 },
+    "role": {
+      "enum": ["principle", "exception", "requirement", "effect", "example", "formula", "figure", "narrative"]
+    },
+    "text": { "type": "string", "minLength": 1 },
+    "assetIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "data/source-assets.jsonl의 id를 가리켜야 한다."
+    },
+    "isSynthetic": { "const": true }
+  }
+}

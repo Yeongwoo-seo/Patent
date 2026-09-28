@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://hoedokshil.local/schema/grading-spec.schema.json",
+  "title": "GradingSpec (data/grading-specs.jsonl, 1 record per line)",
+  "description": "src/domain/types.ts의 GradingSpec과 1:1로 대응한다. kind에 따라 다른 선택적 필드를 쓴다.",
+  "type": "object",
+  "required": ["id", "kind", "verification", "contentRevisionId"],
+  "properties": {
+    "id": { "type": "string" },
+    "kind": { "enum": ["choice", "ox", "numeric", "cloze", "sequence", "self_report_only"] },
+    "correctOptionIds": { "type": "array", "items": { "type": "string" } },
+    "correctOxValue": { "enum": ["O", "X"] },
+    "numericExpected": { "type": "number" },
+    "numericAbsoluteTolerance": { "type": "number", "minimum": 0 },
+    "numericRelativeTolerance": { "type": "number", "minimum": 0 },
+    "expectedUnit": { "type": ["string", "null"] },
+    "correctClozeValues": { "type": "object" },
+    "correctSequence": { "type": "array", "items": { "type": "string" } },
+    "verification": { "enum": ["verified", "needs_review", "unverified", "disputed"] },
+    "contentRevisionId": { "type": "string" }
+  },
+  "allOf": [
+    { "if": { "properties": { "kind": { "const": "choice" } } }, "then": { "required": ["correctOptionIds"] } },
+    { "if": { "properties": { "kind": { "const": "ox" } } }, "then": {} },
+    { "if": { "properties": { "kind": { "const": "numeric" } } }, "then": { "required": ["numericExpected"] } },
+    { "if": { "properties": { "kind": { "const": "sequence" } } }, "then": { "required": ["correctSequence"] } }
+  ]
+}

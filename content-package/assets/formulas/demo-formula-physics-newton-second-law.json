@@ -1,0 +1,13 @@
+{
+  "id": "demo-formula-physics-newton-second-law",
+  "kind": "formula",
+  "isSynthetic": true,
+  "latex": "F = ma",
+  "variables": [
+    { "symbol": "F", "meaning": "알짜힘", "unit": "N" },
+    { "symbol": "m", "meaning": "질량", "unit": "kg" },
+    { "symbol": "a", "meaning": "가속도", "unit": "m/s^2" }
+  ],
+  "ttsText": "에프는 엠 곱하기 에이, 즉 알짜힘은 질량과 가속도의 곱과 같습니다.",
+  "sourceLocation": "demo-para-physics-1"
+}

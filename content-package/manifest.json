@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "1.0.0",
+  "packId": "hoedokshil-demo-civil-ip-science-v1",
+  "namespace": "demo",
+  "contentVersion": "1.0.0",
+  "isSynthetic": true,
+  "subjectIds": [
+    "biology",
+    "chemistry",
+    "civil",
+    "design",
+    "earth_science",
+    "patent",
+    "physics",
+    "trademark",
+    "utility"
+  ],
+  "generatedAt": "2026-09-28T00:05:48.841Z",
+  "generatedBy": "content-package/tools/build-package.mjs (Node.js, src/data/fixtures/demoContent.ts를 단일 소스로 export)",
+  "licenseScope": "test-only",
+  "files": [
+    {
+      "path": "data/learning-items.jsonl",
+      "sha256": "07ab79aec91f1fd99d5a151adaca70e0252fffebdff102e9c263d938a7d15c8a",
+      "byteSize": 8317,
+      "recordCount": 14
+    },
+    {
+      "path": "data/grading-specs.jsonl",
+      "sha256": "b59c2bbd4de446b0243e2cc78679ff9a292190639a2ada80535c99f000f07834",
+      "byteSize": 2025,
+      "recordCount": 14
+    },
+    {
+      "path": "data/duration-rules.jsonl",
+      "sha256": "b4c78a793f59ad0ef7e1628a821431fc32dbc08d84bad62e9764c11daddd33fc",
+      "byteSize": 1733,
+      "recordCount": 2
+    },
+    {
+      "path": "data/textbook-paragraphs.jsonl",
+      "sha256": "6f0a80a7e6918ba66ac5451d5eb1b43c4546109cd64a6877f47c144d4a8870a5",
+      "byteSize": 1573,
+      "recordCount": 3
+    },
+    {
+      "path": "data/content-links.jsonl",
+      "sha256": "24f23c0d51d371b0d542a50aa9b87a68949a8c54984a3b0e48ddf1ec988d768a",
+      "byteSize": 882,
+      "recordCount": 6
+    },
+    {
+      "path": "data/choice-options.jsonl",
+      "sha256": "92249f7e27d9b06661bdfa5984d4c9e584de1f2a70614e8c04cb1af3291317b2",
+      "byteSize": 841,
+      "recordCount": 4
+    },
+    {
+      "path": "data/source-assets.jsonl",
+      "sha256": "6b97b25e4df3f7607abf0be3a00f111196e4c9b8b46d896f541b88d89fcbf8a6",
+      "byteSize": 912,
+      "recordCount": 3
+    },
+    {
+      "path": "assets/formulas/demo-formula-physics-newton-second-law.json",
+      "sha256": "b91287b9b34ac6d062a01e0690c6b3e2942ac57de60b46d609e2b4f1d5651fe1",
+      "byteSize": 473,
+      "recordCount": null
+    },
+    {
+      "path": "assets/images/demo-asset-earth-plate-map-1.svg",
+      "sha256": "a4246238d954a682f44a9ddf774f74e23a373ab8b70ccd54ef2a3fb4ac91ed55",
+      "byteSize": 1307,
+      "recordCount": null
+    },
+    {
+      "path": "assets/images/demo-asset-trademark-mark-1.svg",
+      "sha256": "5b0a873ab3c66fff6b456c22f30ee0bff56a3abb3fd45cd923e3239cf6258c57",
+      "byteSize": 627,
+      "recordCount": null
+    }
+  ],
+  "legacyIdMap": {},
+  "verificationSummary": {
+    "verified": 12,
+    "needsReview": 2,
+    "unverified": 16,
+    "disputed": 0
+  }
+}

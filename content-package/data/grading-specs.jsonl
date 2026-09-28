@@ -1,0 +1,14 @@
+{"id":"demo-civil-statement-1-spec","kind":"ox","correctOxValue":"X","verification":"unverified","contentRevisionId":"rev-1"}
+{"id":"demo-civil-statement-2-spec","kind":"ox","correctOxValue":"O","verification":"unverified","contentRevisionId":"rev-1"}
+{"id":"demo-patent-procedure-1-spec","kind":"ox","correctOxValue":"O","verification":"unverified","contentRevisionId":"rev-1"}
+{"id":"demo-patent-duration-1-spec","kind":"choice","correctOptionIds":["opt-3yr-from-filing"],"verification":"unverified","contentRevisionId":"rev-1"}
+{"id":"demo-utility-duration-1-spec","kind":"choice","correctOptionIds":["opt-different-from-patent"],"verification":"unverified","contentRevisionId":"rev-1"}
+{"id":"demo-trademark-case-1-spec","kind":"ox","verification":"needs_review","contentRevisionId":"rev-1"}
+{"id":"demo-design-procedure-1-spec","kind":"choice","correctOptionIds":["opt-6m"],"verification":"unverified","contentRevisionId":"rev-1"}
+{"id":"demo-physics-formula-recall-1-spec","kind":"ox","correctOxValue":"O","verification":"verified","contentRevisionId":"rev-1"}
+{"id":"demo-physics-independent-1-spec","kind":"numeric","numericExpected":5,"numericAbsoluteTolerance":0.01,"expectedUnit":"m/s^2","verification":"verified","contentRevisionId":"rev-1"}
+{"id":"demo-chemistry-concept-1-spec","kind":"ox","correctOxValue":"O","verification":"verified","contentRevisionId":"rev-1"}
+{"id":"demo-chemistry-independent-1-spec","kind":"numeric","numericExpected":0.25,"numericAbsoluteTolerance":0.005,"expectedUnit":"mol/L","verification":"verified","contentRevisionId":"rev-1"}
+{"id":"demo-biology-concept-1-spec","kind":"ox","correctOxValue":"O","verification":"verified","contentRevisionId":"rev-1"}
+{"id":"demo-biology-sequence-1-spec","kind":"sequence","correctSequence":["glycolysis","pyruvate_oxidation","tca_cycle","etc"],"verification":"verified","contentRevisionId":"rev-1"}
+{"id":"demo-earth-diagram-1-spec","kind":"choice","correctOptionIds":["opt-divergent"],"verification":"needs_review","contentRevisionId":"rev-1"}

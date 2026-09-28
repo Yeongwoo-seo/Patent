@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://hoedokshil.local/schema/source-asset.schema.json",
+  "title": "SourceAsset (data/source-assets.jsonl, 1 record per line)",
+  "description": "브리핑 18.2 SourceAsset(파일 hash, 이름, 유형, 권한, 원문 위치)에 대응한다. 앱 도메인 타입(src/domain/types.ts)에는 아직 이 엔터티가 없다 - 수입기 구현 시 IndexedDB store로 추가해야 한다(README_FOR_CLAUDE.md 참고).",
+  "type": "object",
+  "required": ["id", "kind", "path", "mimeType", "sha256", "byteSize", "isSynthetic", "licenseScope"],
+  "properties": {
+    "id": { "type": "string" },
+    "kind": { "enum": ["image", "formula", "audio", "document"] },
+    "path": { "type": "string", "description": "패키지 루트 기준 상대 경로" },
+    "mimeType": { "type": "string" },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "byteSize": { "type": "integer", "minimum": 0 },
+    "isSynthetic": { "const": true },
+    "licenseScope": { "type": "string" },
+    "sourceLocation": { "type": ["string", "null"] }
+  }
+}

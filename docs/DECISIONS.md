@@ -91,6 +91,42 @@
   부풀리는 것이라 판단해, 리더 UI/도메인 로직이 실제로 동작함을 보여주는
   최소 표본만 두었다.
 
+## 콘텐츠 패키지(`content-package/`) 관련 결정
+
+- **앱 소스(`src/data/fixtures/demoContent.ts`)를 단일 소스로 삼아 패키지를
+  생성한다.** `content-package/tools/build-package.mjs`가 그 파일을 직접
+  import해 `data/*.jsonl`과 `manifest.json`을 생성한다 — 패키지 안에 데이터를
+  손으로 다시 옮겨 적지 않는다. 앱과 패키지가 따로 노는(drift) 것을 막기
+  위함이다.
+- **런타임 의존 패키지를 0으로 유지**했다. JSON Schema 검증도 ajv 없이
+  `content-package/tools/mini-schema.mjs`라는 draft-07 부분집합 검증기를
+  직접 작성했다. 이 패키지를 "가져오는 쪽"이 무엇을 신뢰해야 하는지 감사하기
+  쉽게 하기 위해서다(README_FOR_CLAUDE.md에 명시).
+- **Node 22의 `--experimental-strip-types`로 `.ts` 소스를 직접 import**한다
+  (`build-package.mjs` 실행 시에만 필요). 새 의존성(`tsx`, `ts-node`)을 추가하지
+  않기 위한 선택이다. `validate-package.mjs`는 순수 JS라 이 플래그가 필요 없다.
+- **자산(그림·수식)을 실제로 만들어 넣었다.** 이전 세션까지 상표/지구과학
+  항목은 "자산 누락됨"으로 표시돼 있었다. 이번에 플레이스홀더 SVG 2개와 물리
+  공식 자산(JSON, latex+TTS 문장) 1개를 실제로 만들어 `requiredAssetIds`가
+  전부 해소되게 했다(`demoContent.ts`의 물리 두 항목에 자산 참조 추가).
+- **콘텐츠 의미 검수 중 실제 오류 1건을 발견해 수정**: 지구과학 판 경계
+  그림(`demo-asset-earth-plate-map-1.svg`)의 화살표를 처음에는 서로를 향하게
+  (수렴 경계) 그렸는데, 채점 기준(`demo-earth-diagram-1-spec`)의 정답은
+  `opt-divergent`(발산 경계)였다. 기계 검증으로는 잡을 수 없는 종류의 문제라
+  직접 확인하다 발견해 화살표 방향을 발산으로 고쳤다. `VALIDATION_REPORT.md`가
+  "콘텐츠 의미 검수는 기계가 못 한다"고 명시한 바로 그 사례다.
+- **선택형 문항의 정답 ID ↔ 실제 선택지 텍스트 일치 여부를 검증기에 추가**했다.
+  이전 세션에서 앱 UI를 만들 때 정답 집합과 화면에 보여줄 선택지 목록을 서로
+  다른 곳(`GradingSpec.correctOptionIds` vs `demoChoiceOptions`)에 저장한
+  구조적 위험이 있다는 것을 알게 되어, `validate-package.mjs`가
+  `invalid_correct_option`/`missing_choice_options`로 이를 기계적으로 잡게
+  했다.
+- **SourceAsset/Question·Option 같은 정식 엔터티는 앱 도메인 타입에 아직
+  없다.** 패키지의 스키마(`schema/source-asset.schema.json`,
+  `schema/choice-option.schema.json`)는 미래의 수입기 구현을 염두에 두고
+  먼저 정의한 것이며, 앱의 IndexedDB에는 대응 store가 아직 없다 —
+  `docs/KNOWN_LIMITATIONS.md`에 명시했다.
+
 ## 로컬 전용 모드
 
 - 19.6절대로 로그인 없이 로컬 모드로 동작하며, `learnerId`는 고정 문자열

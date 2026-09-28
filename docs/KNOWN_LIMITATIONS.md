@@ -17,12 +17,19 @@
 
 ### 콘텐츠/데이터
 - 실제 기출·조문·판례·기본서 데이터가 전혀 없다. 모든 콘텐츠는
-  `src/data/fixtures/demoContent.ts`의 **테스트용 가상 자료** 9~15개 항목뿐이다.
-- `Question`/`Option`/`Topic`/`Concept`/`ContentLink`/`TextbookParagraph`/
-  `StatuteVersion`/`CaseRecord`/`ContentPack` 등 18.2절의 나머지 엔터티는
-  타입/저장소 모두 구현하지 않았다. 지금은 `LearningItem`과 `GradingSpec`,
-  `DurationRule`만 있다.
-- 20장의 수입 파이프라인(dry-run, manifest 검증, ID 매핑, 검수 보고서)은
+  `src/data/fixtures/demoContent.ts`의 **테스트용 가상 자료** 14개 항목뿐이다
+  (`content-package/`는 이 fixtures를 그대로 내보낸 것이지 새 데이터가 아니다).
+- `ContentLink`/`TextbookParagraph`는 구현했다(9장 리더). `Question`/`Option`/
+  `Topic`/`Concept`/`StatuteVersion`/`CaseRecord`/`ContentPack`/`SourceAsset`
+  등 18.2절의 나머지 엔터티는 여전히 타입/저장소 모두 없다.
+  `content-package/schema/source-asset.schema.json`,
+  `schema/choice-option.schema.json`은 패키지 쪽 스키마만 먼저 정의해 둔
+  것이고, **앱 IndexedDB에는 대응 store가 아직 없다.**
+- **콘텐츠 패키지 자체(`content-package/`)는 이번에 만들었다**: build/validate
+  스크립트, JSON Schema, 해시·레코드수가 기록된 manifest, REVIEW_QUEUE.md,
+  IMPORT_RULES.md까지 있다. 다만 **앱이 이 패키지를 실제로 읽어 IndexedDB에
+  반영하는 수입기(importer)는 아직 없다** — 패키지를 "만드는" 도구만 있고
+  "먹는" 도구는 없다. 20장의 dry-run UI, 사용자 승인 흐름, 실패 시 롤백도
   구현하지 않았다.
 
 ### 리더(9장)

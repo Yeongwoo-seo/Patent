@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://hoedokshil.local/schema/manifest.schema.json",
+  "title": "ContentPack manifest",
+  "type": "object",
+  "required": [
+    "schemaVersion", "packId", "namespace", "contentVersion", "isSynthetic",
+    "subjectIds", "generatedAt", "generatedBy", "licenseScope", "files",
+    "legacyIdMap", "verificationSummary"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "string", "description": "이 manifest/레코드 스키마 자체의 버전 (semver)" },
+    "packId": { "type": "string" },
+    "namespace": { "type": "string", "description": "ID 충돌 방지용 네임스페이스 접두" },
+    "contentVersion": { "type": "string", "description": "이 패키지 콘텐츠의 버전 (semver)" },
+    "isSynthetic": { "const": true, "description": "이 패키지는 항상 테스트용 가상 자료다" },
+    "subjectIds": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "generatedBy": { "type": "string", "description": "생성에 사용한 도구/스크립트 (처리 도구 추적용)" },
+    "licenseScope": { "type": "string" },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256", "byteSize", "recordCount"],
+        "properties": {
+          "path": { "type": "string" },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "byteSize": { "type": "integer", "minimum": 0 },
+          "recordCount": { "type": ["integer", "null"], "minimum": 0 }
+        }
+      }
+    },
+    "legacyIdMap": {
+      "type": "object",
+      "description": "기존(이전 시스템) ID -> 이 패키지의 ID. 이 패키지는 신규 생성이라 비어 있음."
+    },
+    "verificationSummary": {
+      "type": "object",
+      "required": ["verified", "needsReview", "unverified", "disputed"],
+      "properties": {
+        "verified": { "type": "integer", "minimum": 0 },
+        "needsReview": { "type": "integer", "minimum": 0 },
+        "unverified": { "type": "integer", "minimum": 0 },
+        "disputed": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

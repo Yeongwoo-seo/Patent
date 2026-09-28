@@ -1,0 +1,20 @@
+{
+  "summary": {
+    "generatedAt": "2026-09-28T00:05:48.890Z",
+    "tool": "content-package/tools/validate-package.mjs",
+    "recordCounts": {
+      "learningItems": 14,
+      "gradingSpecs": 14,
+      "durationRules": 2,
+      "textbookParagraphs": 3,
+      "contentLinks": 6,
+      "choiceOptions": 4,
+      "sourceAssets": 3
+    },
+    "errorCount": 0,
+    "warningCount": 0,
+    "ok": true
+  },
+  "errors": [],
+  "warnings": []
+}

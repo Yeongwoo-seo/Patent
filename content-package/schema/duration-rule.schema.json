@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://hoedokshil.local/schema/duration-rule.schema.json",
+  "title": "DurationRule (data/duration-rules.jsonl, 1 record per line)",
+  "description": "src/domain/types.ts의 DurationRule과 1:1로 대응한다(브리핑 6.4).",
+  "type": "object",
+  "required": [
+    "id", "subjectId", "topicId", "actor", "action", "durationValue", "durationUnit",
+    "startTrigger", "clockType", "secondaryLimit", "exceptions", "extensionRule",
+    "legalEffect", "sourceRefs", "validity", "whyExplanation", "whyEvidenceType"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "subjectId": {
+      "enum": ["civil", "patent", "utility", "trademark", "design", "physics", "chemistry", "biology", "earth_science"]
+    },
+    "topicId": { "type": "string" },
+    "actor": { "type": "string" },
+    "action": { "type": "string" },
+    "durationValue": { "type": "number" },
+    "durationUnit": { "enum": ["day", "week", "month", "year"] },
+    "startTrigger": { "type": "string" },
+    "clockType": { "enum": ["relative", "absolute_limit", "multiple_clocks", "other"] },
+    "secondaryLimit": { "type": ["string", "null"] },
+    "exceptions": { "type": "array", "items": { "type": "string" } },
+    "extensionRule": { "type": ["string", "null"] },
+    "legalEffect": { "type": "string" },
+    "sourceRefs": { "type": "array", "items": { "type": "string" } },
+    "validity": {
+      "type": "object",
+      "required": [
+        "referenceDate", "effectiveFrom", "effectiveTo", "applicationConditions",
+        "transitionalProvisionRefs", "sourceRefs", "verification", "verifiedAt", "verifiedBy"
+      ],
+      "properties": {
+        "verification": { "enum": ["verified", "needs_review", "unverified", "disputed"] }
+      }
+    },
+    "whyExplanation": { "type": ["string", "null"] },
+    "whyEvidenceType": {
+      "enum": ["legislative_material", "case_law", "literature", "pedagogical_inference", "unavailable"]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://hoedokshil.local/schema/learning-item.schema.json",
+  "title": "LearningItem (data/learning-items.jsonl, 1 record per line)",
+  "description": "src/domain/types.ts의 LearningItem과 1:1로 대응한다.",
+  "type": "object",
+  "required": [
+    "id", "subjectId", "kind", "sourceContentId", "contentRevisionId", "learningEpoch",
+    "topicIds", "relatedItemIds", "requiredAssetIds", "availableContexts",
+    "canStandaloneOX", "requiresIndependentSolve", "gradingSpecId", "verification",
+    "isSynthetic", "prompt"
+  ],
+  "properties": {
+    "id": { "type": "string", "description": "영구 고정 ID. 배열 순번/파일명으로 생성하지 않는다(4.1)." },
+    "subjectId": {
+      "enum": ["civil", "patent", "utility", "trademark", "design", "physics", "chemistry", "biology", "earth_science"]
+    },
+    "kind": {
+      "enum": [
+        "original_mcq", "legal_statement", "statute_cloze", "case_application", "procedure",
+        "duration", "concept_ox", "formula_recall", "formula_conditions",
+        "diagram_interpretation", "approach_recall", "independent_problem"
+      ]
+    },
+    "sourceContentId": { "type": "string" },
+    "contentRevisionId": { "type": "string" },
+    "learningEpoch": { "type": "integer", "minimum": 0 },
+    "topicIds": { "type": "array", "items": { "type": "string" } },
+    "relatedItemIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "이 패키지 안의 다른 learning-item id를 가리켜야 한다(닫힌 세계 가정, tools/validate-package.mjs가 검사)."
+    },
+    "requiredAssetIds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "data/source-assets.jsonl의 id를 가리켜야 한다."
+    },
+    "availableContexts": {
+      "type": "array",
+      "items": { "enum": ["micro", "focused", "audio"] }
+    },
+    "canStandaloneOX": { "type": "boolean" },
+    "requiresIndependentSolve": { "type": "boolean" },
+    "gradingSpecId": {
+      "type": ["string", "null"],
+      "description": "null이 아니면 data/grading-specs.jsonl의 id를 가리켜야 한다."
+    },
+    "verification": { "enum": ["verified", "needs_review", "unverified", "disputed"] },
+    "isSynthetic": { "const": true },
+    "prompt": { "type": "string", "minLength": 1 }
+  }
+}

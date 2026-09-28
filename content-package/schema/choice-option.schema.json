@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://hoedokshil.local/schema/choice-option.schema.json",
+  "title": "ChoiceOptionSet (data/choice-options.jsonl, 1 record per line)",
+  "description": "kind='choice'인 GradingSpec을 쓰는 LearningItem에 실제로 보여줄 선택지 텍스트. 앱 도메인 타입에는 아직 정식 Question/Option 엔터티가 없어(DECISIONS.md 참고) 이 임시 형식을 쓴다.",
+  "type": "object",
+  "required": ["itemId", "options"],
+  "properties": {
+    "itemId": { "type": "string", "description": "learning-items.jsonl의 id" },
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["id", "label"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}
