@@ -3,9 +3,23 @@ import { submitAttempt, recordExposure, type UserSettings } from '../../data/rep
 import { demoChoiceOptions } from '../../data/fixtures/demoContent';
 import { getDeviceId, nextDeviceSequence, newCorrelationId, sessionId, LOCAL_LEARNER_ID } from '../../app/session';
 import { getLinkedParagraphIdsForItem, getTextbookParagraph } from '../../data/repositories/contentRepository';
+import {
+  getAnalysisUnit,
+  getEvidenceLinksForAnalysisUnit,
+  getExamQuestion,
+  getExplanationSegment,
+} from '../../data/repositories/examRepository';
+import { renderAssetImage } from '../asset/renderAssetImage';
 import type { AnswerPayload, Assistance, Confidence, GradingSpec, LearningItem } from '../../domain/types';
+import type { ExplanationOrigin } from '../../domain/exam/types';
 import type { HoedokshilDB } from '../../data/indexeddb/schema';
 import { el } from '../../app/dom';
+
+const EXPLANATION_ORIGIN_LABEL: Record<ExplanationOrigin, string> = {
+  ai_reasoning: 'AI 추론(미검증)',
+  provided_explanation: '제공 해설(공식 아님)',
+  recovered_textbook_body: '기본서에서 회수한 본문',
+};
 
 export type ItemFlowDeps = {
   db: IDBPDatabase<HoedokshilDB>;
@@ -76,6 +90,43 @@ async function renderResult(
         : el('div', { className: 'muted', text: '이 시도는 복습 일정에 반영되지 않았습니다.' }),
     ]),
   );
+
+  // 실제 기출 확장 계층: 이 항목이 AnalysisUnit(선지별 판단)에서 온 것이면
+  // 문항 이미지 + 해설(출처 구분)을 함께 보여준다(5.2 "결론→...→기본서 문단→유사 기출" 구조 중
+  // 근거/해설 부분). 공식 정답이 없으므로 "정답 비교"는 참고용임을 항상 밝힌다.
+  const analysisUnit = await getAnalysisUnit(item.id, deps.db);
+  if (analysisUnit) {
+    const question = await getExamQuestion(analysisUnit.questionId, deps.db);
+    if (question?.questionAssetId) {
+      const imgCard = el('div', { className: 'card' });
+      container.append(imgCard);
+      void renderAssetImage(imgCard, question.questionAssetId, deps.db, '문항 원문 이미지');
+    }
+    if (question) {
+      container.append(
+        el('div', { className: 'card' }, [
+          el('div', { className: 'reason', text: `${question.examName} ${question.examYear} 제${question.examNumber}번 (공식 정답 미확인)` }),
+          el('div', { className: 'muted', text: `제공 해설 답: ${question.providedAnswer.value?.join(', ') ?? '없음'} · AI 추정 답: ${question.aiInferredAnswer.value?.join(', ') ?? '없음'} (둘 다 공식 정답 아님)` }),
+        ]),
+      );
+    }
+
+    const evidenceLinks = await getEvidenceLinksForAnalysisUnit(analysisUnit.id, deps.db);
+    const segmentIds = [...new Set(evidenceLinks.map((l) => l.explanationSegmentId).filter((id): id is string => id !== null))];
+    if (segmentIds.length > 0) {
+      container.append(el('h2', { text: '해설 (출처 구분)' }));
+      for (const segId of segmentIds) {
+        const seg = await getExplanationSegment(segId, deps.db);
+        if (!seg) continue;
+        container.append(
+          el('div', { className: 'card' }, [
+            el('span', { className: 'pill', text: EXPLANATION_ORIGIN_LABEL[seg.origin] }),
+            el('p', { text: seg.textOriginal }),
+          ]),
+        );
+      }
+    }
+  }
 
   if (deps.onViewParagraph) {
     const paragraphIds = await getLinkedParagraphIdsForItem(item.id, deps.db);

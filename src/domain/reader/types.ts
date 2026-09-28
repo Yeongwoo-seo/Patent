@@ -13,7 +13,11 @@ export type ParagraphRole =
   | 'example'
   | 'formula'
   | 'figure'
-  | 'narrative';
+  | 'narrative'
+  /** 개념 정의 문단 (실제 기출 콘텐츠 base.blocks.block_type='definition' 등에서 옴). */
+  | 'definition'
+  /** 풀이/유도 과정의 한 단계 (block_type='derivation_step'). */
+  | 'derivation_step';
 
 export type TextbookParagraph = {
   id: string;

@@ -40,7 +40,9 @@ export type ItemKind =
   | 'formula_conditions'
   | 'diagram_interpretation'
   | 'approach_recall'
-  | 'independent_problem';
+  | 'independent_problem'
+  /** 실제 기출 문항에서 추출한 개별 선지/판단 단위(과목 불문). 5.1 "선지 회독"과 같은 메커니즘. */
+  | 'exam_statement';
 
 export type Verification = 'verified' | 'needs_review' | 'unverified' | 'disputed';
 
@@ -220,8 +222,10 @@ export type SourceAsset = {
   isSynthetic: boolean;
   licenseScope: string;
   sourceLocation: string | null;
-  /** 텍스트 기반 자산의 원본 내용(svg/json 등). 바이너리 자산은 이번 세션에 지원하지 않는다. */
+  /** 텍스트 기반 자산의 원본 내용(svg/json 등). */
   textContent: string | null;
+  /** 이미지 등 바이너리 자산(webp/png/jpg). IndexedDB는 Blob을 그대로 저장할 수 있다. */
+  binaryContent: Blob | null;
 };
 
 /** 18.2 ContentPack — 어떤 패키지가 언제 반영되었는지의 이력(수입기 감사 로그). */

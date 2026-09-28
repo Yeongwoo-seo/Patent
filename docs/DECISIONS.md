@@ -135,12 +135,16 @@
   키로 엮여 있지도 않다(LearningItem을 통해서만 간접 영향) — 그래서 이들은
   단순 "새 id/내용 동일/내용 다름" 3분류(`diffById`)만 쓰고, 학습 이력
   보호가 실제로 걸려 있는 LearningItem만 5분류(`diffLearningItems`)를 쓴다.
-- **파일 선택은 `<input type=file multiple>` + 파일명 매칭**으로 구현했다.
-  `webkitdirectory`로 폴더 전체를 선택하는 방식은 브라우저별 동작 차이와
-  자동화 테스트(Playwright) 안정성 문제가 있어 피했다. 대신 패키지 안의
-  모든 파일명이 서로 겹치지 않는다는 전제(README_FOR_CLAUDE.md의 고정
-  레이아웃)로 basename만 보고 역할을 매칭한다 — 여러 패키지를 동시에
-  선택하면 오동작할 수 있다는 뜻이고, KNOWN_LIMITATIONS.md에 적어뒀다.
+- **(수정됨 — 아래 "실전 콘텐츠 통합" 절 참고) 파일 선택은 `<input type=file
+  webkitdirectory multiple>` + 패키지 루트 기준 상대경로 매칭**으로 바꿨다.
+  원래는 `<input type=file multiple>` + basename 매칭이었는데, 실제 기출
+  콘텐츠에서 서로 다른 과목 폴더에 같은 파일명(`0006.webp`)이 겹치는 사례를
+  발견해 더 이상 안전하지 않다고 판단했다. `webkitdirectory`는 Playwright
+  `setInputFiles(dirPath)`로도 문제없이 자동화 테스트가 가능함을 실제로
+  확인했다(우려했던 자동화 안정성 문제는 없었다). 폴더 선택을 지원하지 않는
+  환경(구형 브라우저 등)에서는 `file.webkitRelativePath`가 비어 있어
+  basename으로 대체되므로, 그 경우엔 여전히 동일 파일명 충돌 위험이
+  남는다 — KNOWN_LIMITATIONS.md에 명시.
 - **ZIP 압축 해제는 구현하지 않았다.** 브라우저에서 zip을 풀려면 라이브러리가
   필요한데(예: fflate), 이번 세션은 "의존 패키지 최소화"를 우선했다. 사용자가
   압축을 풀어 파일들을 직접 선택해야 한다.
@@ -156,6 +160,61 @@
   파싱/참조무결성 오류에만 반응하고 epoch_conflict 자체로는 false가 되지
   않는다 — 이 충돌은 "일부 항목만 보류"이지 "패키지 전체가 깨짐"이 아니기
   때문이다.
+
+## 실전 콘텐츠 통합(자연과학 Astra 패키지) 관련 결정
+
+- **실제 콘텐츠(720문항 규모, 실제 변리사 1차 자연과학 기출 2009~2026 + 실제
+  기본서 본문 + "제공 해설")를 사용자가 8개 zip 파트로 업로드**했다. 무결성은
+  패키지 자체 내장 검증기(`validate_final.py`, jsonschema+Pillow 기반)를
+  직접 읽고 실행해 확인했다(0 errors / 45 datasets / 55,402 records /
+  280,731 참조 검사 / 2,284개 이미지 디코딩 통과). 실행 전 4개 파이썬
+  스크립트 전문을 읽어 네트워크 호출·파괴적 동작·경로 이스케이프 취약점이
+  없음을 확인했다.
+- **스키마를 패키지 수준으로 확장하기로 했다(사용자 명시적 선택)**. 원본
+  패키지는 39개 필드짜리 문항, 선지별 판단 단위, 문자 단위 근거 스팬, 공식
+  정답/제공 해설 정답/AI 추정 정답의 3중 구분 등 우리 앱의 LearningItem/
+  GradingSpec보다 훨씬 세밀하다. 얕게 우리 스키마에 욱여넣는 대신
+  `src/domain/exam/types.ts`에 병렬 도메인 계층(`ExamQuestion`/
+  `AnalysisUnit`/`EvidenceLink`/`ExplanationSegment`/`FormulaRecord` 등)을
+  새로 만들었다. LearningItem/GradingSpec은 여전히 복습 엔진이 보는 단순
+  계약으로 남기고(`AnalysisUnit.id === LearningItem.id`로 연결), 리치한
+  정보는 화면 표시 전용으로 exam 계층에서 가져온다 — 기존 OX 흐름·채점
+  엔진·"근거 문단 보기" UI를 거의 그대로 재사용할 수 있었다.
+- **공식 정답이 전혀 없다(720문항 전부).** 그래서 변환기는 모든
+  `LearningItem.verification`을 예외 없이 `'unverified'`로 만든다 — 실제
+  풀이는 채점되지 않고("채점 보류") 복습 일정에도 반영되지 않는다. 제공
+  해설 답과 AI 추정 답은 화면에 "둘 다 공식 정답 아님"이라고 명시하며
+  나란히 보여줄 뿐, 절대 공식 정답으로 취급하지 않는다.
+- **바이너리 자산(webp/png/jpg)을 이제 지원한다.** `SourceAsset`에
+  `binaryContent: Blob | null`을 추가하고(`textContent`와 상호 배타),
+  `URL.createObjectURL`로 렌더링한다. object URL은 세션 동안 명시적으로
+  revoke하지 않는다(SPA 화면 전환이 잦아 정교한 해제 시점 관리는 이번
+  범위 밖 — KNOWN_LIMITATIONS.md).
+- **basename 충돌 버그를 자체 발견해 수정**: 실제 자산 파일 중
+  `0006.webp`가 물리(P)·생물(B) 두 과목 폴더에 동시에 존재해, 기존
+  basename 매칭 방식대로면 하나가 다른 하나를 덮어썼을 것이다. 사용자가
+  보고하기 전에 `find ... | xargs -n1 basename | sort | uniq -d`로 먼저
+  발견해 `RawContentPackageFiles.assetTextByBasename/assetBinaryByBasename`
+  → `assetTextByPath/assetBinaryByPath`(패키지 루트 기준 전체 상대경로 키)로
+  바꾸고, 수입기 UI도 `webkitdirectory`로 전환했다. Chromium에서 실제 두
+  `0006.webp`를 동시에 가져와 IndexedDB에 서로 다른 바이트 크기(145,766 vs
+  124,040)로 정확히 분리 저장되는 것과, 리더 화면에서 올바른 이미지가
+  렌더되는 것까지 확인했다.
+- **이번 세션에는 공식 샘플 4개 dossier(P001/C099/B001/E083)만 우리 포맷으로
+  변환·검증했다.** 720문항 전체 배치 변환은 `astra-import/tools/
+  convert_astra_samples.py`의 `SAMPLE_IDS` 목록만 확장하면 되도록 만들어
+  뒀지만, 실제로 720개를 다 돌리는 것과 그 결과(수백MB급 이미지 자산 포함)를
+  어디에 보관할지는 이번 세션에서 결정하지 않았다 — 아래 git 저장 관련
+  결정과 KNOWN_LIMITATIONS.md 참고.
+- **실제 저작물 콘텐츠(변환된 JSONL, 이미지 등)는 이번 커밋에 포함하지
+  않는다.** `licenseScope: "personal-exam-prep-restricted"`로 표시된 개인용
+  제한 콘텐츠이고, 이 저장소는 공개(public) 저장소다(사용자가 "이미
+  공개해도 괜찮음"이라 확인한 것은 **코드**에 대한 것이지 실제 기출
+  콘텐츠 유출에 대한 명시적 동의로 보지 않았다). 저장소에는 변환기
+  코드(`astra-import/tools/convert_astra_samples.py`)만 커밋하고, 실제
+  패키지와 변환 결과물은 `/tmp` 등 저장소 밖에 둔다. 실제 콘텐츠를 커밋할지,
+  커밋한다면 private 저장소로 옮길지는 다음 세션에 사용자와 확인이
+  필요하다.
 
 ## 로컬 전용 모드
 

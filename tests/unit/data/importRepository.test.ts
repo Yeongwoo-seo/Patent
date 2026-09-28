@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { getDb, closeDb } from '@/data/indexeddb/db';
 import { DB_NAME } from '@/data/indexeddb/schema';
-import { parseContentPackage, type RawContentPackageFiles } from '@/domain/import/parseContentPackage';
+import { emptyRawContentPackageFiles, parseContentPackage, type RawContentPackageFiles } from '@/domain/import/parseContentPackage';
 import { applyImport, runImportDryRun } from '@/data/repositories/importRepository';
 import { submitAttempt } from '@/data/repositories/attemptRepository';
 import type { GradingSpec, LearningItem } from '@/domain/types';
@@ -21,6 +21,7 @@ function readOrNull(rel: string): string | null {
 
 function loadRealPackage(): RawContentPackageFiles {
   return {
+    ...emptyRawContentPackageFiles(),
     manifestText: readOrNull('manifest.json'),
     learningItemsText: readOrNull('data/learning-items.jsonl'),
     gradingSpecsText: readOrNull('data/grading-specs.jsonl'),
@@ -29,10 +30,10 @@ function loadRealPackage(): RawContentPackageFiles {
     contentLinksText: readOrNull('data/content-links.jsonl'),
     choiceOptionsText: readOrNull('data/choice-options.jsonl'),
     sourceAssetsText: readOrNull('data/source-assets.jsonl'),
-    assetTextByBasename: {
-      'demo-asset-trademark-mark-1.svg': readOrNull('assets/images/demo-asset-trademark-mark-1.svg') ?? '',
-      'demo-asset-earth-plate-map-1.svg': readOrNull('assets/images/demo-asset-earth-plate-map-1.svg') ?? '',
-      'demo-formula-physics-newton-second-law.json': readOrNull('assets/formulas/demo-formula-physics-newton-second-law.json') ?? '',
+    assetTextByPath: {
+      'assets/images/demo-asset-trademark-mark-1.svg': readOrNull('assets/images/demo-asset-trademark-mark-1.svg') ?? '',
+      'assets/images/demo-asset-earth-plate-map-1.svg': readOrNull('assets/images/demo-asset-earth-plate-map-1.svg') ?? '',
+      'assets/formulas/demo-formula-physics-newton-second-law.json': readOrNull('assets/formulas/demo-formula-physics-newton-second-law.json') ?? '',
     },
   };
 }

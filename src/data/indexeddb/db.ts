@@ -64,6 +64,30 @@ export function getDb(): Promise<IDBPDatabase<HoedokshilDB>> {
           db.createObjectStore('choiceOptions', { keyPath: 'itemId' });
           db.createObjectStore('contentPackImports', { keyPath: 'id' });
         }
+
+        if (oldVersion < 4) {
+          const examQuestions = db.createObjectStore('examQuestions', { keyPath: 'id' });
+          examQuestions.createIndex('bySubject', 'subjectId');
+
+          const analysisUnits = db.createObjectStore('analysisUnits', { keyPath: 'id' });
+          analysisUnits.createIndex('byQuestion', 'questionId');
+
+          const evidenceLinks = db.createObjectStore('evidenceLinks', { keyPath: 'id' });
+          evidenceLinks.createIndex('byAnalysisUnit', 'analysisUnitId');
+          evidenceLinks.createIndex('byQuestion', 'questionId');
+
+          const explanationSegments = db.createObjectStore('explanationSegments', { keyPath: 'id' });
+          explanationSegments.createIndex('byQuestion', 'questionId');
+
+          const formulas = db.createObjectStore('formulas', { keyPath: 'id' });
+          formulas.createIndex('byBlock', 'blockId');
+
+          const hints = db.createObjectStore('hints', { keyPath: 'id' });
+          hints.createIndex('byQuestion', 'questionId');
+
+          const reviewQuestions = db.createObjectStore('reviewQuestions', { keyPath: 'id' });
+          reviewQuestions.createIndex('byQuestion', 'questionId');
+        }
       },
     });
   }

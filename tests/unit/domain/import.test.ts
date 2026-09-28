@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { parseContentPackage, type RawContentPackageFiles } from '@/domain/import/parseContentPackage';
+import { emptyRawContentPackageFiles, parseContentPackage, type RawContentPackageFiles } from '@/domain/import/parseContentPackage';
 import { validatePackage } from '@/domain/import/validatePackage';
 import { diffById, diffLearningItems, findRemovedIds } from '@/domain/import/diffContentPackage';
 import type { LearningItem } from '@/domain/types';
@@ -18,6 +18,7 @@ function readOrNull(rel: string): string | null {
 
 function loadRealPackage(): RawContentPackageFiles {
   return {
+    ...emptyRawContentPackageFiles(),
     manifestText: readOrNull('manifest.json'),
     learningItemsText: readOrNull('data/learning-items.jsonl'),
     gradingSpecsText: readOrNull('data/grading-specs.jsonl'),
@@ -26,10 +27,10 @@ function loadRealPackage(): RawContentPackageFiles {
     contentLinksText: readOrNull('data/content-links.jsonl'),
     choiceOptionsText: readOrNull('data/choice-options.jsonl'),
     sourceAssetsText: readOrNull('data/source-assets.jsonl'),
-    assetTextByBasename: {
-      'demo-asset-trademark-mark-1.svg': readOrNull('assets/images/demo-asset-trademark-mark-1.svg') ?? '',
-      'demo-asset-earth-plate-map-1.svg': readOrNull('assets/images/demo-asset-earth-plate-map-1.svg') ?? '',
-      'demo-formula-physics-newton-second-law.json': readOrNull('assets/formulas/demo-formula-physics-newton-second-law.json') ?? '',
+    assetTextByPath: {
+      'assets/images/demo-asset-trademark-mark-1.svg': readOrNull('assets/images/demo-asset-trademark-mark-1.svg') ?? '',
+      'assets/images/demo-asset-earth-plate-map-1.svg': readOrNull('assets/images/demo-asset-earth-plate-map-1.svg') ?? '',
+      'assets/formulas/demo-formula-physics-newton-second-law.json': readOrNull('assets/formulas/demo-formula-physics-newton-second-law.json') ?? '',
     },
   };
 }
@@ -52,15 +53,9 @@ describe('parseContentPackage + validatePackage — against the real content-pac
 describe('parseContentPackage — malformed input', () => {
   it('collects a parse issue per bad JSONL line instead of throwing', () => {
     const raw: RawContentPackageFiles = {
+      ...emptyRawContentPackageFiles(),
       manifestText: '{"schemaVersion":"1.0.0"}',
       learningItemsText: '{"id":"a"}\n{not valid json\n{"id":"b"}',
-      gradingSpecsText: null,
-      durationRulesText: null,
-      textbookParagraphsText: null,
-      contentLinksText: null,
-      choiceOptionsText: null,
-      sourceAssetsText: null,
-      assetTextByBasename: {},
     };
     const parsed = parseContentPackage(raw);
     expect(parsed.learningItems).toHaveLength(2);
@@ -71,15 +66,9 @@ describe('parseContentPackage — malformed input', () => {
 
   it('flags a source asset whose file content was not uploaded', () => {
     const raw: RawContentPackageFiles = {
+      ...emptyRawContentPackageFiles(),
       manifestText: '{}',
-      learningItemsText: null,
-      gradingSpecsText: null,
-      durationRulesText: null,
-      textbookParagraphsText: null,
-      contentLinksText: null,
-      choiceOptionsText: null,
       sourceAssetsText: JSON.stringify({ id: 'asset-1', kind: 'image', path: 'assets/images/missing.svg', mimeType: 'image/svg+xml', sha256: 'x', byteSize: 1, isSynthetic: true, licenseScope: 'test-only', sourceLocation: null }),
-      assetTextByBasename: {},
     };
     const parsed = parseContentPackage(raw);
     expect(parsed.sourceAssets[0]?.textContent).toBeNull();
@@ -129,15 +118,9 @@ describe('validatePackage — injected defects', () => {
 
 function rawFrom(parts: { learningItems?: LearningItem[] }): RawContentPackageFiles {
   return {
+    ...emptyRawContentPackageFiles(),
     manifestText: '{}',
     learningItemsText: (parts.learningItems ?? []).map((i) => JSON.stringify(i)).join('\n'),
-    gradingSpecsText: '',
-    durationRulesText: '',
-    textbookParagraphsText: '',
-    contentLinksText: '',
-    choiceOptionsText: '',
-    sourceAssetsText: '',
-    assetTextByBasename: {},
   };
 }
 

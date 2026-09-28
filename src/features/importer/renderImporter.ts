@@ -1,11 +1,11 @@
 import type { IDBPDatabase } from 'idb';
 import { el } from '../../app/dom';
-import { parseContentPackage, type RawContentPackageFiles } from '../../domain/import/parseContentPackage';
+import { emptyRawContentPackageFiles, parseContentPackage, type RawContentPackageFiles } from '../../domain/import/parseContentPackage';
 import type { ParsedContentPackage } from '../../domain/import/types';
 import { applyImport, runImportDryRun, type ImportDryRunReport } from '../../data/repositories/importRepository';
 import type { HoedokshilDB } from '../../data/indexeddb/schema';
 
-type TextFileRole = Exclude<keyof RawContentPackageFiles, 'assetTextByBasename'>;
+type TextFileRole = Exclude<keyof RawContentPackageFiles, 'assetTextByPath' | 'assetBinaryByPath'>;
 
 const ROLE_BY_BASENAME: Record<string, TextFileRole> = {
   'manifest.json': 'manifestText',
@@ -16,28 +16,53 @@ const ROLE_BY_BASENAME: Record<string, TextFileRole> = {
   'content-links.jsonl': 'contentLinksText',
   'choice-options.jsonl': 'choiceOptionsText',
   'source-assets.jsonl': 'sourceAssetsText',
+  'exam-questions.jsonl': 'examQuestionsText',
+  'analysis-units.jsonl': 'analysisUnitsText',
+  'evidence-links.jsonl': 'evidenceLinksText',
+  'explanation-segments.jsonl': 'explanationSegmentsText',
+  'formulas.jsonl': 'formulasText',
+  'hints.jsonl': 'hintsText',
+  'review-questions.jsonl': 'reviewQuestionsText',
 };
 
+const BINARY_ASSET_EXTENSIONS = ['.webp', '.png', '.jpg', '.jpeg'];
+
+function isBinaryAsset(filename: string): boolean {
+  const lower = filename.toLowerCase();
+  return BINARY_ASSET_EXTENSIONS.some((ext) => lower.endsWith(ext));
+}
+
+/**
+ * 폴더 선택(webkitdirectory)이면 브라우저가 file.webkitRelativePath에
+ * "선택한폴더/data/exam-questions.jsonl" 형태로 전체 경로를 채워준다. 여기서 맨 앞의
+ * "선택한폴더" 세그먼트만 제거하면 패키지 루트 기준 상대경로(source-assets.jsonl의 path와
+ * 동일한 값)가 된다. 개별 파일 선택(webkitdirectory 미지원 환경 포함)만 한 경우엔
+ * webkitRelativePath가 비어 있으므로 file.name(=basename)으로 대체한다 — 이 경우
+ * 서로 다른 과목 폴더의 동일 파일명 자산은 여전히 구분할 수 없다는 한계가 남는다.
+ */
+function relativePathOf(file: File): string {
+  const webkitPath = (file as File & { webkitRelativePath?: string }).webkitRelativePath;
+  if (webkitPath && webkitPath.includes('/')) {
+    return webkitPath.slice(webkitPath.indexOf('/') + 1);
+  }
+  return file.name;
+}
+
 async function filesToRaw(files: FileList): Promise<RawContentPackageFiles> {
-  const raw: RawContentPackageFiles = {
-    manifestText: null,
-    learningItemsText: null,
-    gradingSpecsText: null,
-    durationRulesText: null,
-    textbookParagraphsText: null,
-    contentLinksText: null,
-    choiceOptionsText: null,
-    sourceAssetsText: null,
-    assetTextByBasename: {},
-  };
+  const raw = emptyRawContentPackageFiles();
   for (const file of Array.from(files)) {
-    // webkitdirectory로 선택하면 상대경로가 섞여 들어올 수 있으므로 basename만 본다
-    // (패키지 안에서 파일명이 전부 고유하다는 전제 - README_FOR_CLAUDE.md의 고정 레이아웃).
-    const basename = file.name.split('/').pop() ?? file.name;
-    const text = await file.text();
+    const relativePath = relativePathOf(file);
+    // manifest.json/*.jsonl은 패키지 안에서 이름이 고정·고유하므로 basename으로 찾는다.
+    // 자산(이미지 등)만 전체 상대경로로 구분한다 — 과목 폴더별로 basename이 겹칠 수 있어서다.
+    const basename = relativePath.split('/').pop() ?? relativePath;
     const role = ROLE_BY_BASENAME[basename];
-    if (role) raw[role] = text;
-    else raw.assetTextByBasename[basename] = text;
+    if (role) {
+      raw[role] = await file.text();
+    } else if (isBinaryAsset(basename)) {
+      raw.assetBinaryByPath[relativePath] = file;
+    } else {
+      raw.assetTextByPath[relativePath] = await file.text();
+    }
   }
   return raw;
 }
@@ -68,10 +93,19 @@ function renderDiffSummary(title: string, entries: { kind: string }[]): HTMLElem
 export function renderImporter(main: HTMLElement, db: IDBPDatabase<HoedokshilDB>): void {
   main.append(el('h2', { text: '콘텐츠 패키지 가져오기 (20장)' }));
   main.append(
-    el('p', { className: 'muted', text: 'manifest.json과 data/*.jsonl, assets/* 파일을 한 번에 선택하세요. 학습 기록(attemptEvents/reviewStates)은 이 가져오기가 건드리지 않습니다.' }),
+    el('p', {
+      className: 'muted',
+      text:
+        '패키지 폴더 전체(manifest.json, data/*.jsonl, assets/*)를 선택하세요. 폴더 선택을 지원하지 않는 환경이면 파일을 개별 선택할 수 있지만, 이 경우 서로 다른 과목 폴더에 같은 파일명(예: 0006.webp)의 자산이 있으면 구분되지 않습니다. 학습 기록(attemptEvents/reviewStates)은 이 가져오기가 건드리지 않습니다.',
+    }),
   );
 
-  const input = el('input', { type: 'file', multiple: true, accept: '.json,.jsonl,.svg' });
+  const input = el('input', {
+    type: 'file',
+    multiple: true,
+    webkitdirectory: true,
+    accept: '.json,.jsonl,.svg,.webp,.png,.jpg,.jpeg',
+  });
   const resultArea = el('div');
   main.append(el('div', { className: 'card' }, [input, resultArea]));
 
@@ -117,6 +151,13 @@ export function renderImporter(main: HTMLElement, db: IDBPDatabase<HoedokshilDB>
     resultArea.append(renderDiffSummary('문단 연결', report.contentLinkDiffs));
     resultArea.append(renderDiffSummary('자산', report.sourceAssetDiffs));
     resultArea.append(renderDiffSummary('선택지', report.choiceOptionDiffs));
+    resultArea.append(renderDiffSummary('기출 문항', report.examQuestionDiffs));
+    resultArea.append(renderDiffSummary('선지별 판단', report.analysisUnitDiffs));
+    resultArea.append(renderDiffSummary('근거 연결', report.evidenceLinkDiffs));
+    resultArea.append(renderDiffSummary('해설 구간', report.explanationSegmentDiffs));
+    resultArea.append(renderDiffSummary('수식', report.formulaDiffs));
+    resultArea.append(renderDiffSummary('힌트', report.hintDiffs));
+    resultArea.append(renderDiffSummary('복습 질문', report.reviewQuestionDiffs));
 
     if (report.removedLearningItemIds.length > 0) {
       resultArea.append(

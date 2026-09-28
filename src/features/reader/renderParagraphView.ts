@@ -9,6 +9,7 @@ import {
 } from '../../data/repositories/contentRepository';
 import { getAnnotationsForParagraph, toggleHighlight } from '../../data/repositories/annotationRepository';
 import { computeParagraphStats } from '../../domain/reader/paragraphStats';
+import { renderAssetImage } from '../asset/renderAssetImage';
 import type { HoedokshilDB } from '../../data/indexeddb/schema';
 
 const ROLE_LABEL: Record<string, string> = {
@@ -20,6 +21,8 @@ const ROLE_LABEL: Record<string, string> = {
   formula: '공식',
   figure: '그림',
   narrative: '설명',
+  definition: '정의',
+  derivation_step: '풀이 단계',
 };
 
 export type ParagraphViewDeps = {
@@ -80,6 +83,12 @@ export async function renderParagraphView(main: HTMLElement, paragraphId: string
       [el('p', { text: paragraph.text })],
     ),
   );
+
+  if (paragraph.assetIds.length > 0) {
+    const imageCard = el('div', { className: 'card' });
+    main.append(imageCard);
+    void renderAssetImage(imageCard, paragraph.assetIds[0]!, deps.db, '원문 페이지 이미지');
+  }
 
   main.append(el('h2', { text: '연결된 학습 항목' }));
   main.append(

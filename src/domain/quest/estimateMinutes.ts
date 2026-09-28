@@ -18,6 +18,7 @@ const DEFAULT_MINUTES_BY_KIND: Record<ItemKind, number> = {
   diagram_interpretation: 3,
   approach_recall: 2,
   independent_problem: 5,
+  exam_statement: 1,
 };
 
 export function estimateMinutesForKind(kind: ItemKind): number {

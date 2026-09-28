@@ -1,5 +1,14 @@
 import type { DurationRule, GradingSpec, LearningItem, SourceAsset } from '../types';
 import type { ContentLink, TextbookParagraph } from '../reader/types';
+import type {
+  AnalysisUnit,
+  EvidenceLink,
+  ExamHint,
+  ExamQuestion,
+  ExamReviewQuestion,
+  ExplanationSegment,
+  FormulaRecord,
+} from '../exam/types';
 
 /** content-package/schema/choice-option.schema.json과 대응 */
 export type ChoiceOptionSet = {
@@ -50,5 +59,13 @@ export type ParsedContentPackage = {
   contentLinks: ContentLink[];
   choiceOptions: ChoiceOptionSet[];
   sourceAssets: SourceAsset[];
+  /** 실제 기출 콘텐츠 확장 계층(src/domain/exam/types.ts) — 없는 패키지는 빈 배열. */
+  examQuestions: ExamQuestion[];
+  analysisUnits: AnalysisUnit[];
+  evidenceLinks: EvidenceLink[];
+  explanationSegments: ExplanationSegment[];
+  formulas: FormulaRecord[];
+  hints: ExamHint[];
+  reviewQuestions: ExamReviewQuestion[];
   parseErrors: ParseIssue[];
 };

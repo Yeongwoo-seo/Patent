@@ -6,7 +6,7 @@ import {
   demoLearningItems,
   demoTextbookParagraphs,
 } from '../fixtures/demoContent';
-import type { GradingSpec, LearningItem, ReviewState, SubjectId } from '../../domain/types';
+import type { GradingSpec, LearningItem, ReviewState, SourceAsset, SubjectId } from '../../domain/types';
 import type { ContentLink, TextbookParagraph } from '../../domain/reader/types';
 import type { HoedokshilDB } from '../indexeddb/schema';
 import { getDb } from '../indexeddb/db';
@@ -120,4 +120,15 @@ export async function getLinkedItemIdsForParagraph(
 export async function getContentLinks(db?: IDBPDatabase<HoedokshilDB>): Promise<ContentLink[]> {
   const database = db ?? (await getDb());
   return database.getAll('contentLinks');
+}
+
+export async function getSourceAsset(id: string, db?: IDBPDatabase<HoedokshilDB>): Promise<SourceAsset | undefined> {
+  const database = db ?? (await getDb());
+  return database.get('sourceAssets', id);
+}
+
+/** SourceAsset.binaryContent(Blob)를 <img src>로 쓸 수 있는 object URL로 바꾼다. 호출자가 다 쓴 뒤 revokeObjectURL 책임진다. */
+export function sourceAssetObjectUrl(asset: SourceAsset): string | null {
+  if (!asset.binaryContent) return null;
+  return URL.createObjectURL(asset.binaryContent);
 }

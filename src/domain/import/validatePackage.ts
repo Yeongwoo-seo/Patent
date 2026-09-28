@@ -40,6 +40,13 @@ export function validatePackage(pkg: ParsedContentPackage): ValidationIssue[] {
   issues.push(...findDuplicates(pkg.contentLinks, (l) => l.id, 'content-links.jsonl'));
   issues.push(...findDuplicates(pkg.sourceAssets, (a) => a.id, 'source-assets.jsonl'));
   issues.push(...findDuplicates(pkg.choiceOptions, (c) => c.itemId, 'choice-options.jsonl'));
+  issues.push(...findDuplicates(pkg.examQuestions, (q) => q.id, 'exam-questions.jsonl'));
+  issues.push(...findDuplicates(pkg.analysisUnits, (a) => a.id, 'analysis-units.jsonl'));
+  issues.push(...findDuplicates(pkg.evidenceLinks, (l) => l.id, 'evidence-links.jsonl'));
+  issues.push(...findDuplicates(pkg.explanationSegments, (s) => s.id, 'explanation-segments.jsonl'));
+  issues.push(...findDuplicates(pkg.formulas, (f) => f.id, 'formulas.jsonl'));
+  issues.push(...findDuplicates(pkg.hints, (h) => h.id, 'hints.jsonl'));
+  issues.push(...findDuplicates(pkg.reviewQuestions, (r) => r.id, 'review-questions.jsonl'));
 
   const itemIds = new Set(pkg.learningItems.map((i) => i.id));
   const paragraphIds = new Set(pkg.textbookParagraphs.map((p) => p.id));
@@ -81,8 +88,8 @@ export function validatePackage(pkg: ParsedContentPackage): ValidationIssue[] {
   }
 
   for (const asset of pkg.sourceAssets) {
-    if (asset.textContent === null) {
-      issues.push({ check: 'asset_content_missing', file: asset.path, id: asset.id, message: '자산 내용이 업로드되지 않음(텍스트 자산만 지원)' });
+    if (asset.textContent === null && asset.binaryContent === null) {
+      issues.push({ check: 'asset_content_missing', file: asset.path, id: asset.id, message: '자산 내용이 업로드되지 않음' });
     }
   }
 
@@ -100,6 +107,65 @@ export function validatePackage(pkg: ParsedContentPackage): ValidationIssue[] {
           }
         }
       }
+    }
+  }
+
+  // 실제 기출 확장 계층(src/domain/exam/types.ts)의 참조 무결성.
+  const questionIds = new Set(pkg.examQuestions.map((q) => q.id));
+  const analysisUnitIds = new Set(pkg.analysisUnits.map((a) => a.id));
+
+  for (const q of pkg.examQuestions) {
+    if (q.questionAssetId !== null && !assetIds.has(q.questionAssetId)) {
+      issues.push({ check: 'missing_asset', file: 'exam-questions.jsonl', id: q.id, message: `questionAssetId '${q.questionAssetId}' 가 source-assets.jsonl에 없음` });
+    }
+  }
+  for (const a of pkg.analysisUnits) {
+    if (!questionIds.has(a.questionId)) {
+      issues.push({ check: 'broken_reference', file: 'analysis-units.jsonl', id: a.id, message: `questionId '${a.questionId}' 를 찾을 수 없음` });
+    }
+    for (const linkId of a.evidenceLinkIds) {
+      if (!pkg.evidenceLinks.some((l) => l.id === linkId)) {
+        issues.push({ check: 'broken_reference', file: 'analysis-units.jsonl', id: a.id, message: `evidenceLinkIds '${linkId}' 를 찾을 수 없음` });
+      }
+    }
+  }
+  for (const l of pkg.evidenceLinks) {
+    if (!analysisUnitIds.has(l.analysisUnitId)) {
+      issues.push({ check: 'broken_reference', file: 'evidence-links.jsonl', id: l.id, message: `analysisUnitId '${l.analysisUnitId}' 를 찾을 수 없음` });
+    }
+    if (!questionIds.has(l.questionId)) {
+      issues.push({ check: 'broken_reference', file: 'evidence-links.jsonl', id: l.id, message: `questionId '${l.questionId}' 를 찾을 수 없음` });
+    }
+    if (!paragraphIds.has(l.textbookBlockId)) {
+      issues.push({ check: 'broken_reference', file: 'evidence-links.jsonl', id: l.id, message: `textbookBlockId '${l.textbookBlockId}' 를 textbook-paragraphs.jsonl에서 찾을 수 없음` });
+    }
+  }
+  for (const s of pkg.explanationSegments) {
+    if (!questionIds.has(s.questionId)) {
+      issues.push({ check: 'broken_reference', file: 'explanation-segments.jsonl', id: s.id, message: `questionId '${s.questionId}' 를 찾을 수 없음` });
+    }
+    if (s.analysisUnitId !== null && !analysisUnitIds.has(s.analysisUnitId)) {
+      issues.push({ check: 'broken_reference', file: 'explanation-segments.jsonl', id: s.id, message: `analysisUnitId '${s.analysisUnitId}' 를 찾을 수 없음` });
+    }
+  }
+  for (const f of pkg.formulas) {
+    if (!paragraphIds.has(f.blockId)) {
+      issues.push({ check: 'broken_reference', file: 'formulas.jsonl', id: f.id, message: `blockId '${f.blockId}' 를 textbook-paragraphs.jsonl에서 찾을 수 없음` });
+    }
+    for (const assetId of f.sourceAssetIds) {
+      if (!assetIds.has(assetId)) {
+        issues.push({ check: 'missing_asset', file: 'formulas.jsonl', id: f.id, message: `sourceAssetIds '${assetId}' 가 source-assets.jsonl에 없음` });
+      }
+    }
+  }
+  for (const h of pkg.hints) {
+    if (!questionIds.has(h.questionId)) {
+      issues.push({ check: 'broken_reference', file: 'hints.jsonl', id: h.id, message: `questionId '${h.questionId}' 를 찾을 수 없음` });
+    }
+  }
+  for (const r of pkg.reviewQuestions) {
+    if (!questionIds.has(r.questionId)) {
+      issues.push({ check: 'broken_reference', file: 'review-questions.jsonl', id: r.id, message: `questionId '${r.questionId}' 를 찾을 수 없음` });
     }
   }
 

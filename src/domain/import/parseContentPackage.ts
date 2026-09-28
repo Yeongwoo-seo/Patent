@@ -1,5 +1,14 @@
 import type { DurationRule, GradingSpec, LearningItem, SourceAsset } from '../types';
 import type { ContentLink, TextbookParagraph } from '../reader/types';
+import type {
+  AnalysisUnit,
+  EvidenceLink,
+  ExamHint,
+  ExamQuestion,
+  ExamReviewQuestion,
+  ExplanationSegment,
+  FormulaRecord,
+} from '../exam/types';
 import type { ChoiceOptionSet, ContentPackManifest, ParseIssue, ParsedContentPackage } from './types';
 
 /**
@@ -17,13 +26,43 @@ export type RawContentPackageFiles = {
   contentLinksText: string | null;
   choiceOptionsText: string | null;
   sourceAssetsText: string | null;
-  /** basename(예: 'demo-asset-trademark-mark-1.svg') -> 텍스트 내용 */
-  assetTextByBasename: Record<string, string>;
+  examQuestionsText: string | null;
+  analysisUnitsText: string | null;
+  evidenceLinksText: string | null;
+  explanationSegmentsText: string | null;
+  formulasText: string | null;
+  hintsText: string | null;
+  reviewQuestionsText: string | null;
+  /**
+   * 패키지 루트 기준 상대경로(예: 'assets/base/assets/pages/P/0006.webp', source-assets.jsonl의
+   * path와 동일한 값) -> 텍스트 자산 내용. basename만으로 매칭하지 않는다 — 실제 기출 콘텐츠는
+   * 서로 다른 과목 폴더에 같은 파일명(예: 여러 과목의 페이지 0006.webp)이 흔히 겹친다.
+   */
+  assetTextByPath: Record<string, string>;
+  /** 패키지 루트 기준 상대경로 -> 바이너리 자산(webp/png/jpg 등 이미지). */
+  assetBinaryByPath: Record<string, Blob>;
 };
 
-function basenameOf(path: string): string {
-  const parts = path.split('/');
-  return parts[parts.length - 1] ?? path;
+export function emptyRawContentPackageFiles(): RawContentPackageFiles {
+  return {
+    manifestText: null,
+    learningItemsText: null,
+    gradingSpecsText: null,
+    durationRulesText: null,
+    textbookParagraphsText: null,
+    contentLinksText: null,
+    choiceOptionsText: null,
+    sourceAssetsText: null,
+    examQuestionsText: null,
+    analysisUnitsText: null,
+    evidenceLinksText: null,
+    explanationSegmentsText: null,
+    formulasText: null,
+    hintsText: null,
+    reviewQuestionsText: null,
+    assetTextByPath: {},
+    assetBinaryByPath: {},
+  };
 }
 
 function parseJsonl<T>(text: string | null, file: string, issues: ParseIssue[]): T[] {
@@ -65,15 +104,27 @@ export function parseContentPackage(raw: RawContentPackageFiles): ParsedContentP
   const textbookParagraphs = parseJsonl<TextbookParagraph>(raw.textbookParagraphsText, 'textbook-paragraphs.jsonl', parseErrors);
   const contentLinks = parseJsonl<ContentLink>(raw.contentLinksText, 'content-links.jsonl', parseErrors);
   const choiceOptions = parseJsonl<ChoiceOptionSet>(raw.choiceOptionsText, 'choice-options.jsonl', parseErrors);
-  const sourceAssetsRaw = parseJsonl<Omit<SourceAsset, 'textContent'>>(raw.sourceAssetsText, 'source-assets.jsonl', parseErrors);
+  const examQuestions = parseJsonl<ExamQuestion>(raw.examQuestionsText, 'exam-questions.jsonl', parseErrors);
+  const analysisUnits = parseJsonl<AnalysisUnit>(raw.analysisUnitsText, 'analysis-units.jsonl', parseErrors);
+  const evidenceLinks = parseJsonl<EvidenceLink>(raw.evidenceLinksText, 'evidence-links.jsonl', parseErrors);
+  const explanationSegments = parseJsonl<ExplanationSegment>(raw.explanationSegmentsText, 'explanation-segments.jsonl', parseErrors);
+  const formulas = parseJsonl<FormulaRecord>(raw.formulasText, 'formulas.jsonl', parseErrors);
+  const hints = parseJsonl<ExamHint>(raw.hintsText, 'hints.jsonl', parseErrors);
+  const reviewQuestions = parseJsonl<ExamReviewQuestion>(raw.reviewQuestionsText, 'review-questions.jsonl', parseErrors);
+
+  const sourceAssetsRaw = parseJsonl<Omit<SourceAsset, 'textContent' | 'binaryContent'>>(
+    raw.sourceAssetsText,
+    'source-assets.jsonl',
+    parseErrors,
+  );
 
   const sourceAssets: SourceAsset[] = sourceAssetsRaw.map((a) => {
-    const basename = basenameOf(a.path);
-    const textContent = raw.assetTextByBasename[basename] ?? null;
-    if (textContent === null) {
-      parseErrors.push({ file: 'source-assets.jsonl', message: `자산 파일 '${basename}' (id=${a.id}) 이 업로드된 파일 목록에 없음` });
+    const binaryContent = raw.assetBinaryByPath[a.path] ?? null;
+    const textContent = binaryContent ? null : raw.assetTextByPath[a.path] ?? null;
+    if (binaryContent === null && textContent === null) {
+      parseErrors.push({ file: 'source-assets.jsonl', message: `자산 파일 '${a.path}' (id=${a.id}) 이 업로드된 파일 목록에 없음` });
     }
-    return { ...a, textContent };
+    return { ...a, textContent, binaryContent };
   });
 
   return {
@@ -85,6 +136,13 @@ export function parseContentPackage(raw: RawContentPackageFiles): ParsedContentP
     contentLinks,
     choiceOptions,
     sourceAssets,
+    examQuestions,
+    analysisUnits,
+    evidenceLinks,
+    explanationSegments,
+    formulas,
+    hints,
+    reviewQuestions,
     parseErrors,
   };
 }

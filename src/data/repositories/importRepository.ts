@@ -18,6 +18,13 @@ export type ImportDryRunReport = {
   contentLinkDiffs: SimpleDiffEntry[];
   sourceAssetDiffs: SimpleDiffEntry[];
   choiceOptionDiffs: SimpleDiffEntry[];
+  examQuestionDiffs: SimpleDiffEntry[];
+  analysisUnitDiffs: SimpleDiffEntry[];
+  evidenceLinkDiffs: SimpleDiffEntry[];
+  explanationSegmentDiffs: SimpleDiffEntry[];
+  formulaDiffs: SimpleDiffEntry[];
+  hintDiffs: SimpleDiffEntry[];
+  reviewQuestionDiffs: SimpleDiffEntry[];
   /** 파싱/검증 오류가 하나라도 있으면 false — 그 상태에서는 적용을 막는다(20.2 dry-run 원칙). */
   canApply: boolean;
   summary: {
@@ -51,16 +58,37 @@ export async function runImportDryRun(
 ): Promise<ImportDryRunReport> {
   const database = db ?? (await getDb());
 
-  const [existingItems, existingSpecs, existingRules, existingParagraphs, existingLinks, existingAssets, existingChoiceOptions] =
-    await Promise.all([
-      database.getAll('learningItems'),
-      database.getAll('gradingSpecs'),
-      database.getAll('durationRules'),
-      database.getAll('textbookParagraphs'),
-      database.getAll('contentLinks'),
-      database.getAll('sourceAssets'),
-      database.getAll('choiceOptions'),
-    ]);
+  const [
+    existingItems,
+    existingSpecs,
+    existingRules,
+    existingParagraphs,
+    existingLinks,
+    existingAssets,
+    existingChoiceOptions,
+    existingQuestions,
+    existingAnalysisUnits,
+    existingEvidenceLinks,
+    existingExplanationSegments,
+    existingFormulas,
+    existingHints,
+    existingReviewQuestions,
+  ] = await Promise.all([
+    database.getAll('learningItems'),
+    database.getAll('gradingSpecs'),
+    database.getAll('durationRules'),
+    database.getAll('textbookParagraphs'),
+    database.getAll('contentLinks'),
+    database.getAll('sourceAssets'),
+    database.getAll('choiceOptions'),
+    database.getAll('examQuestions'),
+    database.getAll('analysisUnits'),
+    database.getAll('evidenceLinks'),
+    database.getAll('explanationSegments'),
+    database.getAll('formulas'),
+    database.getAll('hints'),
+    database.getAll('reviewQuestions'),
+  ]);
 
   const validationIssues = validatePackage(parsed);
   const learningItemDiffs = diffLearningItems(existingItems, parsed.learningItems);
@@ -74,6 +102,13 @@ export async function runImportDryRun(
     existingChoiceOptions.map((c) => ({ ...c, id: c.itemId })),
     parsed.choiceOptions.map((c) => ({ ...c, id: c.itemId })),
   );
+  const examQuestionDiffs = diffById(existingQuestions, parsed.examQuestions);
+  const analysisUnitDiffs = diffById(existingAnalysisUnits, parsed.analysisUnits);
+  const evidenceLinkDiffs = diffById(existingEvidenceLinks, parsed.evidenceLinks);
+  const explanationSegmentDiffs = diffById(existingExplanationSegments, parsed.explanationSegments);
+  const formulaDiffs = diffById(existingFormulas, parsed.formulas);
+  const hintDiffs = diffById(existingHints, parsed.hints);
+  const reviewQuestionDiffs = diffById(existingReviewQuestions, parsed.reviewQuestions);
 
   return {
     manifest: parsed.manifest,
@@ -87,6 +122,13 @@ export async function runImportDryRun(
     contentLinkDiffs,
     sourceAssetDiffs,
     choiceOptionDiffs,
+    examQuestionDiffs,
+    analysisUnitDiffs,
+    evidenceLinkDiffs,
+    explanationSegmentDiffs,
+    formulaDiffs,
+    hintDiffs,
+    reviewQuestionDiffs,
     canApply: parsed.parseErrors.length === 0 && validationIssues.length === 0,
     summary: summarizeLearningItemDiffs(learningItemDiffs),
   };
@@ -112,7 +154,23 @@ export async function applyImport(
   const itemsToApply = parsed.learningItems.filter((i) => !skipIds.has(i.id));
 
   const tx = database.transaction(
-    ['learningItems', 'gradingSpecs', 'durationRules', 'textbookParagraphs', 'contentLinks', 'sourceAssets', 'choiceOptions', 'contentPackImports'],
+    [
+      'learningItems',
+      'gradingSpecs',
+      'durationRules',
+      'textbookParagraphs',
+      'contentLinks',
+      'sourceAssets',
+      'choiceOptions',
+      'contentPackImports',
+      'examQuestions',
+      'analysisUnits',
+      'evidenceLinks',
+      'explanationSegments',
+      'formulas',
+      'hints',
+      'reviewQuestions',
+    ],
     'readwrite',
   );
   await Promise.all([
@@ -123,6 +181,13 @@ export async function applyImport(
     ...parsed.contentLinks.map((l) => tx.objectStore('contentLinks').put(l)),
     ...parsed.sourceAssets.map((a) => tx.objectStore('sourceAssets').put(a)),
     ...parsed.choiceOptions.map((c) => tx.objectStore('choiceOptions').put(c)),
+    ...parsed.examQuestions.map((q) => tx.objectStore('examQuestions').put(q)),
+    ...parsed.analysisUnits.map((a) => tx.objectStore('analysisUnits').put(a)),
+    ...parsed.evidenceLinks.map((l) => tx.objectStore('evidenceLinks').put(l)),
+    ...parsed.explanationSegments.map((s) => tx.objectStore('explanationSegments').put(s)),
+    ...parsed.formulas.map((f) => tx.objectStore('formulas').put(f)),
+    ...parsed.hints.map((h) => tx.objectStore('hints').put(h)),
+    ...parsed.reviewQuestions.map((r) => tx.objectStore('reviewQuestions').put(r)),
   ]);
 
   const nowIso = now().toISOString();
