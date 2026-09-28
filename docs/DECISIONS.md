@@ -200,12 +200,40 @@
   `0006.webp`를 동시에 가져와 IndexedDB에 서로 다른 바이트 크기(145,766 vs
   124,040)로 정확히 분리 저장되는 것과, 리더 화면에서 올바른 이미지가
   렌더되는 것까지 확인했다.
-- **이번 세션에는 공식 샘플 4개 dossier(P001/C099/B001/E083)만 우리 포맷으로
-  변환·검증했다.** 720문항 전체 배치 변환은 `astra-import/tools/
-  convert_astra_samples.py`의 `SAMPLE_IDS` 목록만 확장하면 되도록 만들어
-  뒀지만, 실제로 720개를 다 돌리는 것과 그 결과(수백MB급 이미지 자산 포함)를
-  어디에 보관할지는 이번 세션에서 결정하지 않았다 — 아래 git 저장 관련
-  결정과 KNOWN_LIMITATIONS.md 참고.
+- **처음에는 공식 샘플 4개 dossier(P001/C099/B001/E083)만 변환·검증했고,
+  이후 사용자 요청("자연과학 변환 ㄱㄱ")으로 720문항 전체를 실제로
+  변환·가져오기까지 검증했다.** dossier 추출은 패키지 자체의
+  `tools/export_question.py`(파일당 매번 패키지 재로딩)를 그대로 720번
+  부르는 대신, `packlib.load()`로 한 번만 로딩한 뒤 그 `tables`를
+  `build_dossier()`에 재사용하는 짧은 드라이버를 새로 짜서 14초 만에 720개를
+  뽑았다(export_question.py 자체는 건드리지 않았다 — 이미 안전성을 확인한
+  코드를 그대로 재사용). `convert_astra_samples.py`에 `--dossier-dir`/
+  `--pack-id`/`--content-version`/`--generated-by` 옵션을 추가해 전체 배치도
+  지원하도록 확장했다(기본 동작인 샘플 4개 경로는 회귀 테스트로 재확인 —
+  결과 동일).
+  - **실제 규모 데이터로 버그 2건을 발견해 고쳤다** (4개 샘플만으로는
+    드러나지 않던 문제들):
+    1. 1,370개 분석 단위 중 88%(1,213개)는 아직 확정 근거 연결이 없는
+       "후보 매핑만" 단계라 원래 코드가 가정한 `evidence_link_review`
+       객체 자체가 없고 최상위 `review_status` 필드만 있어 `KeyError`로
+       전체 변환이 실패했다. 최상위 필드로 폴백하되, 유일한 새 값
+       (`mapping_and_evidence_candidates_only`)만 우리
+       `EvidenceVerificationStatus`의 `'not_reviewed'`로 매핑했다 — 나머지
+       4가지 실제 값(`verified_direct`/`verified_rule_application`/
+       `partial`/`unlinked`)은 이미 우리 enum과 정확히 일치했다.
+    2. `ExamQuestion.currentLawAnswer`(민법 통합 때 추가한 4번째 답 축)를
+       화면에서 무조건 `.value`로 접근해, 이 필드 자체가 없는 자연과학
+       데이터에서 `Cannot read properties of undefined` 런타임 오류가
+       났다. `currentLawAnswer`를 선택 필드(`?: ExamAnswerClaim`)로 바꾸고
+       화면 코드를 옵셔널 체이닝으로 고쳤다 — 패키지마다 있는 선택 필드
+       구성이 다를 수 있다는 걸 실제 데이터로 보여준 사례다.
+  - Chromium에서 파싱 0오류·검증 0이슈(1,370개 학습 항목/720개 문항/989개
+    문단/821개 자산 등 정확히 일치) → dry-run/적용(신규 1,370·충돌 0) →
+    연결된 문단 35개 중 21개 표본을 O/X 풀이까지 진행해 pageerror 0건까지
+    확인했다.
+  - 이 720문항 결과물(49MB)은 여전히 이 저장소에 커밋하지 않는다 — 아래
+    git 저장 관련 결정과 KNOWN_LIMITATIONS.md 참고. 변환 자체는 재현
+    가능하니(같은 두 명령) 다음 세션에 다시 필요할 때 재실행하면 된다.
 - **실제 저작물 콘텐츠(변환된 JSONL, 이미지 등)는 이번 커밋에 포함하지
   않는다.** `licenseScope: "personal-exam-prep-restricted"`로 표시된 개인용
   제한 콘텐츠이고, 이 저장소는 공개(public) 저장소다(사용자가 "이미

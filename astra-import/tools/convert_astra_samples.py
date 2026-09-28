@@ -1,17 +1,32 @@
 #!/usr/bin/env python3
-"""Astra 자연과학 최종 콘텐츠 패키지의 완결 샘플 dossier 4개(P001/C099/B001/E083)를
-회독실 앱의 content-package 포맷(JSONL, 도메인 타입 1:1 대응)으로 변환한다.
+"""Astra 자연과학 최종 콘텐츠 패키지의 문항 dossier를 회독실 앱의 content-package
+포맷(JSONL, 도메인 타입 1:1 대응)으로 변환한다.
 
 이 스크립트는 "만드는" 쪽만 담당한다. 실제 반영(가져오기)은
 src/features/importer/renderImporter.ts + src/data/repositories/importRepository.ts가 한다.
 
-전체 720문항으로 확장하려면: 원본 패키지의 tools/export_question.py로 각 문항 ID의
-dossier JSON을 뽑은 뒤, 이 스크립트의 SAMPLE_IDS 목록에 추가하고 --pack/--out만
-바꿔 다시 실행하면 된다(로직은 바뀌지 않는다).
+기본값은 공식 샘플 4개(P001/C099/B001/E083, --pack/samples/{ID}.json)만 변환한다.
 
-실행: python3 astra-import/tools/convert_astra_samples.py \
+720문항 전체로 확장하려면: 먼저 원본 패키지의 tools/export_question.py(또는 packlib.load()로
+한 번만 로딩한 뒤 export_question.build_dossier()를 720번 호출하는 짧은 드라이버 - 매번
+전체 패키지를 다시 여는 것보다 훨씬 빠르다)로 각 문항 ID의 dossier JSON을 낱개 디렉터리에
+뽑은 뒤, --dossier-dir로 그 디렉터리를 가리키고 --samples에 전체 720개 ID를 넘기면 된다
+(변환 로직 자체는 바뀌지 않는다). 자산은 --dossier-dir가 아니라 항상 --pack(원본 패키지
+루트)에서 pack_path 기준으로 읽어 중복 없이 dedupe하므로, dossier를 뽑을 때 자산까지
+복사할 필요는 없다.
+
+실행(샘플 4개): python3 astra-import/tools/convert_astra_samples.py \
         --pack /tmp/astra-ns/Astra_NaturalScience_Final_Content_v1.0.0 \
         --out /tmp/astra-converted
+
+실행(720문항 전체, dossier를 먼저 /tmp/astra-full-dossiers/에 뽑아 둔 경우):
+    python3 astra-import/tools/convert_astra_samples.py \
+        --pack /tmp/astra-ns/Astra_NaturalScience_Final_Content_v1.0.0 \
+        --dossier-dir /tmp/astra-full-dossiers \
+        --out /tmp/astra-converted-full \
+        --samples $(python3 -c "import json,pathlib; print(' '.join(sorted(p.stem for p in pathlib.Path('/tmp/astra-full-dossiers').glob('*.json'))))") \
+        --pack-id hoedoksil-natural-science-full-v1 --content-version 1.0.0 \
+        --generated-by "astra-import/tools/convert_astra_samples.py (720문항 전체)"
 """
 from __future__ import annotations
 import argparse
@@ -42,6 +57,13 @@ ROLE_MAP = {
 EXPLANATION_ORIGIN_MAP = {
     "existing_batch_ai_explanation_not_new": "ai_reasoning",
     "existing_provided_learning_explanation_range": "provided_explanation",
+}
+
+# analysis.review_status(evidence_link_review가 없을 때의 최상위 필드) -> 앱
+# EvidenceVerificationStatus. 매핑 없는 값은 원래 문자열 그대로 둔다(720문항 전체
+# 조사 결과 이 값 하나만 우리 enum에 없었다 - 아직 확정 근거 연결이 없다는 뜻).
+REVIEW_STATUS_MAP = {
+    "mapping_and_evidence_candidates_only": "not_reviewed",
 }
 
 
@@ -182,6 +204,12 @@ class Converter:
         for a in d["analyses"]:
             aid = a["id"]
             target_text = resolve_component_text(q, a["target_component_id"]) or a.get("question_core") or ""
+            # 720문항 전체 중 다수(약 88%)는 아직 확정 근거 연결이 없는 "후보 매핑만" 단계라
+            # evidence_link_review 자체가 없다 - 공식 샘플 4개는 전부 검토가 끝난 문항이라
+            # 이 분기가 필요 없었다. 그런 경우 최상위 review_status만 있고, 값은 우리
+            # EvidenceVerificationStatus의 'not_reviewed'에 대응한다.
+            link_review = a.get("evidence_link_review")
+            review_status = link_review["status"] if link_review else REVIEW_STATUS_MAP.get(a.get("review_status"), a.get("review_status") or "not_reviewed")
             self.analysis_units[aid] = {
                 "id": aid,
                 "questionId": qid,
@@ -192,9 +220,9 @@ class Converter:
                 "reasoningAi": a["decisive_evidence"].get("reasoning_ai"),
                 "truthValueAi": a.get("truth_value_ai"),
                 "truthStatus": a.get("truth_status") or "unresolved_or_not_applicable",
-                "reviewStatus": a["evidence_link_review"]["status"],
+                "reviewStatus": review_status,
                 "standaloneOxEligible": bool(a.get("standalone_ox_eligible")),
-                "evidenceLinkIds": list(a["evidence_link_review"]["evidence_link_ids"]),
+                "evidenceLinkIds": list(link_review["evidence_link_ids"]) if link_review else [],
             }
             self.learning_items[aid] = {
                 "id": aid,
@@ -298,7 +326,8 @@ class Converter:
         path.write_text("\n".join(lines) + ("\n" if lines else ""), encoding="utf8")
         return f"data/{name}", len(records)
 
-    def write_all(self) -> None:
+    def write_all(self, pack_id: str = "hoedoksil-natural-science-samples-v1", content_version: str = "1.0.0-samples",
+                  generated_by: str = "astra-import/tools/convert_astra_samples.py (샘플 4문항만 - 720문항 전체 아님)") -> None:
         files = []
         for name, records in [
             ("learning-items.jsonl", self.learning_items),
@@ -325,13 +354,13 @@ class Converter:
 
         manifest = {
             "schemaVersion": "1.0.0",
-            "packId": "hoedoksil-natural-science-samples-v1",
+            "packId": pack_id,
             "namespace": "astra-natural-science",
-            "contentVersion": "1.0.0-samples",
+            "contentVersion": content_version,
             "isSynthetic": False,
             "subjectIds": sorted({q["subjectId"] for q in self.exam_questions.values()}),
             "generatedAt": "1970-01-01T00:00:00Z",
-            "generatedBy": "astra-import/tools/convert_astra_samples.py (샘플 4문항만 - 720문항 전체 아님)",
+            "generatedBy": generated_by,
             "licenseScope": "personal-exam-prep-restricted",
             "files": files,
             "legacyIdMap": {},
@@ -342,15 +371,26 @@ class Converter:
 
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--pack", type=Path, required=True, help="병합된 Astra 자연과학 패키지 루트")
+    p.add_argument("--pack", type=Path, required=True, help="병합된 Astra 자연과학 패키지 루트(자산은 항상 여기서 읽는다)")
     p.add_argument("--out", type=Path, required=True, help="출력 디렉터리(회독실 content-package 포맷)")
-    p.add_argument("--samples", nargs="*", default=SAMPLE_IDS)
+    p.add_argument("--samples", nargs="*", default=SAMPLE_IDS, help="변환할 문항 ID 목록 (기본값: 공식 샘플 4개)")
+    p.add_argument(
+        "--dossier-dir",
+        type=Path,
+        default=None,
+        help="문항 dossier JSON이 있는 디렉터리(파일명 '{문항ID}.json'). 생략하면 --pack/samples/{ID}.json을 쓴다"
+        " - 720문항 전체 변환 시 export_question.py로 미리 뽑아 둔 디렉터리를 여기에 지정한다.",
+    )
+    p.add_argument("--pack-id", default="hoedoksil-natural-science-samples-v1")
+    p.add_argument("--content-version", default="1.0.0-samples")
+    p.add_argument("--generated-by", default="astra-import/tools/convert_astra_samples.py (샘플 4문항만 - 720문항 전체 아님)")
     args = p.parse_args()
 
     conv = Converter(args.pack, args.out)
+    dossier_dir = args.dossier_dir or (args.pack / "samples")
     for sid in args.samples:
-        conv.convert_dossier(args.pack / "samples" / f"{sid}.json")
-    conv.write_all()
+        conv.convert_dossier(dossier_dir / f"{sid}.json")
+    conv.write_all(pack_id=args.pack_id, content_version=args.content_version, generated_by=args.generated_by)
 
     print(f"변환 완료: learningItems={len(conv.learning_items)} examQuestions={len(conv.exam_questions)} "
           f"analysisUnits={len(conv.analysis_units)} evidenceLinks={len(conv.evidence_links)} "

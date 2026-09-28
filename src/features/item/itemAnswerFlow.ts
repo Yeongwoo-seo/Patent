@@ -106,7 +106,7 @@ async function renderResult(
         el('div', { className: 'card' }, [
           el('div', { className: 'reason', text: `${question.examName} ${question.examYear} 제${question.examNumber}번 (공식 정답 미확인)` }),
           el('div', { className: 'muted', text: `제공 해설 답: ${question.providedAnswer.value?.join(', ') ?? '없음'} · AI 추정 답: ${question.aiInferredAnswer.value?.join(', ') ?? '없음'} (둘 다 공식 정답 아님)` }),
-          question.currentLawAnswer.value || question.currentLawAnswer.status !== 'not_reviewed'
+          question.currentLawAnswer && (question.currentLawAnswer.value || question.currentLawAnswer.status !== 'not_reviewed')
             ? el('div', { className: 'muted', text: `현행법 재검토 답: ${question.currentLawAnswer.value?.join(', ') ?? '미검토'}` })
             : '',
         ]),

@@ -33,8 +33,12 @@ export type ExamQuestion = {
   officialAnswer: ExamAnswerClaim;
   providedAnswer: ExamAnswerClaim;
   aiInferredAnswer: ExamAnswerClaim;
-  /** 현행법 기준 재검토 답(민법 패키지에서 처음 등장 — 4번째 답 축). 공식/제공/AI 답과 서로 대체 불가. */
-  currentLawAnswer: ExamAnswerClaim;
+  /**
+   * 현행법 기준 재검토 답(민법 패키지에서 처음 등장 — 4번째 답 축). 공식/제공/AI 답과 서로
+   * 대체 불가. 선택 필드다 — 이 축 자체가 없는(자연과학 등) 기존 패키지의 실제 데이터에는
+   * 필드 자체가 없다(파싱 시 타입만으로 존재를 보장할 수 없다 - 반드시 옵셔널 체이닝으로 읽는다).
+   */
+  currentLawAnswer?: ExamAnswerClaim;
   standaloneOxEnabled: boolean;
   isSynthetic: boolean;
 };

@@ -67,11 +67,11 @@ npm run typecheck
   해설/기본서 회수 중 무엇인지)을 다루며, 공식 정답이 없는 항목은 항상
   `verification: 'unverified'`로 남아 채점 보류·복습 일정 미반영을 유지한다.
 - 앱이 기본으로 시딩하는 콘텐츠는 여전히 **테스트용 가상 자료**다. 실제
-  변리사 1차시험 자연과학 기출 샘플 4문항(`astra-import/tools/
-  convert_astra_samples.py`)과 민법 기출 공식 샘플 2문항(`civil-import/
-  tools/convert_civil_samples.py`)을 위 수입기로 실제 가져와 화면까지
-  렌더링되는 것은 확인했지만, 그 결과물 자체(실제 원문·해설)는 이
-  저장소에 포함하지 않았다 — 통합 현황은
+  변리사 1차시험 자연과학 기출 720문항 전체(`astra-import/tools/
+  convert_astra_samples.py`, `--dossier-dir`로 전체 배치 변환 지원)와 민법
+  기출 공식 샘플 2문항(`civil-import/tools/convert_civil_samples.py`)을 위
+  수입기로 실제 가져와 화면까지 렌더링되는 것은 확인했지만, 그 결과물
+  자체(실제 원문·해설)는 이 저장소에 포함하지 않았다 — 통합 현황은
   `docs/DECISIONS.md`·`docs/KNOWN_LIMITATIONS.md`를 본다.
 
 ## 프로젝트 구조
